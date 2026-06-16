@@ -9,6 +9,10 @@
     />
     <title>一起去大阪 | 交通地圖</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -41,25 +45,16 @@
       </section>
 
       <section class="section map-section">
-        <div class="map-shell">
-          <aside class="map-panel">
+        <div class="real-map-shell">
+          <aside class="map-panel map-status-panel">
             <p class="panel-kicker">NEAREST STATION</p>
             <h2 id="nearestTitle">尚未定位</h2>
-            <p id="nearestBody">按下 GPS 後，瀏覽器會詢問是否允許使用目前位置。不允許也沒關係，可以手動點地圖上的站。</p>
+            <p id="nearestBody">按下 GPS 後，瀏覽器會詢問是否允許使用目前位置。若你現在人在台灣，頁面會提醒等抵達大阪再按，不會硬把關西機場當成有意義的最近站。</p>
             <div id="nearestMeta" class="nearest-meta"></div>
           </aside>
 
-          <div class="schematic-map" aria-label="大阪行程交通示意圖">
-            <svg viewBox="0 0 980 640" role="img" aria-labelledby="mapTitle mapDesc">
-              <title id="mapTitle">大阪行程交通示意圖</title>
-              <desc id="mapDesc">以新今宮為基地，連接難波、奈良、USJ、心齋橋、長居、關西機場。</desc>
-              <path class="line jr" d="M160 370 C250 320 330 290 430 270 C540 248 680 210 820 130" />
-              <path class="line metro" d="M470 80 L455 150 L440 230 L415 330 L400 430 L390 560" />
-              <path class="line nankai" d="M380 360 L310 420 L230 500 L120 590" />
-              <path class="line kintetsu" d="M430 310 L560 315 L700 330 L870 360" />
-              <path class="line usj-line" d="M245 250 L150 210 L90 180" />
-              <g id="stationLayer"></g>
-            </svg>
+          <div class="real-map-card">
+            <div id="osakaMap" class="osaka-map" aria-label="大阪真實座標互動地圖"></div>
           </div>
 
           <aside class="map-panel station-detail">
@@ -68,6 +63,7 @@
             <p id="stationText">後三晚住宿基地，接 JR、南海，旁邊可用動物園前站進 Metro。</p>
             <div id="stationTags" class="tag-list"></div>
             <a id="stationMaps" class="button small" href="https://maps.google.com/?q=Shin-Imamiya%20Station%20Osaka" target="_blank" rel="noreferrer">用 Google Maps 開啟</a>
+            <div id="stationList" class="station-list" aria-label="站點清單"></div>
           </aside>
         </div>
       </section>
@@ -77,7 +73,7 @@
           <p>TRIP ROUTES</p>
           <h2>這幾條線先記住就夠</h2>
         </div>
-        <div id="routeCards" class="route-cards"></div>
+        <div id="routeCards" class="route-cards route-cards-map"></div>
       </section>
 
       <section class="section pdf-section">
@@ -109,6 +105,7 @@
       </div>
     </footer>
 
-    <script src="map.js?v=20260616-usj-map-2"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="map.js?v=20260616-real-map-1"></script>
   </body>
 </html>
