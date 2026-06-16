@@ -12,6 +12,7 @@ const images = {
     "https://commons.wikimedia.org/wiki/Special:FilePath/Deer%20at%20nara%20park%201.jpg",
   tsuruhashi:
     "https://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20Ikuno%20Korea%20Town%20001.jpg",
+  usj: "https://commons.wikimedia.org/wiki/Special:FilePath/Universal%20Studios%20Japan%20entrance.jpg",
 };
 
 const days = [
@@ -89,13 +90,13 @@ const days = [
   },
   {
     kicker: "Day 2 / 11.29 Sun",
-    title: "搬到新今宮、大阪城、天滿、梅田寶可夢",
-    note: "先處理換住宿，再用 JR / Metro 串大阪城、天滿商店街、梅田百貨。",
+    title: "搬到新今宮、奈良餵鹿、鶴橋、SpaWorld",
+    note: "先處理換住宿，再去奈良。晚上回大阪吃鶴橋或新世界，泡湯當恢復選項。",
     base: "住宿：Apartment Hotel 11 Shinimamiya 3",
-    transport: "主交通：JR 環狀線 / Metro / 南海",
+    transport: "主交通：南海 / 近鐵 / JR 環狀線",
     slots: [
       {
-        time: "09:30-11:00",
+        time: "08:45-10:15",
         buffer: "換住宿日多留 30 分鐘",
         image: images.shinsekai,
         options: [
@@ -116,58 +117,7 @@ const days = [
         ],
       },
       {
-        time: "11:30-14:30",
-        buffer: "公園 + 午餐都留鬆",
-        image: images.castle,
-        options: [
-          {
-            title: "大阪城公園 + 森之宮周邊午餐",
-            body: "不一定進天守閣，重點是公園、護城河、外觀。午餐在森之宮或天滿橋附近找小店。",
-            eats: ["喫茶店午餐", "咖哩", "定食", "麵類"],
-            transport: "JR 環狀線到森之宮 / 大阪城公園。",
-            walk: "出站到公園 5-15 分鐘。",
-          },
-          {
-            title: "雨天：大阪歷史博物館 + 谷町午餐",
-            body: "雨天把公園縮短，改室內看大阪城周邊視角。",
-            eats: ["谷町四丁目定食", "咖啡", "烏龍麵"],
-            transport: "Metro 谷町四丁目。",
-            walk: "站到博物館約 5 分鐘。",
-          },
-        ],
-      },
-      {
-        time: "15:00-20:30",
-        buffer: "天滿吃法 + 梅田購物",
-        image: images.umeda,
-        options: [
-          {
-            title: "天神橋筋商店街 → 梅田 Pokémon Center OSAKA",
-            body: "下午先去天滿吃商店街，傍晚再進梅田百貨。Pokémon Center OSAKA、Nintendo OSAKA 可放一起。",
-            eats: ["壽司小店", "關東煮", "炸物", "老喫茶"],
-            transport: "天滿 / 扇町 → 梅田，JR 或 Metro。",
-            walk: "商店街沿線走走停停，梅田站到百貨 5-10 分鐘。",
-          },
-          {
-            title: "備案：只跑梅田室內",
-            body: "雨天或累了就直接梅田。百貨地下街吃飯、逛寶可夢和任天堂。",
-            eats: ["地下街定食", "甜點", "百貨熟食", "拉麵"],
-            transport: "JR 大阪站 / Metro 梅田。",
-            walk: "全程靠車站連通道。",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    kicker: "Day 3 / 11.30 Mon",
-    title: "奈良餵鹿、鶴橋市場、SpaWorld",
-    note: "這天是最像你要的版本：近鐵奈良白天，回大阪吃鶴橋，晚上泡湯或新世界。",
-    base: "住宿：新今宮",
-    transport: "主交通：近鐵 / JR 環狀線 / Metro",
-    slots: [
-      {
-        time: "08:30-15:00",
+        time: "10:45-16:00",
         buffer: "奈良步行多，午餐不趕",
         image: images.nara,
         options: [
@@ -188,44 +138,95 @@ const days = [
         ],
       },
       {
-        time: "16:30-19:30",
+        time: "17:00-22:00",
         buffer: "回大阪後直接吃在地",
         image: images.tsuruhashi,
         options: [
           {
-            title: "鶴橋市場 / 商店街晚餐",
-            body: "回大阪後不用回難波，直接鶴橋吃。這裡比觀光商圈更 local，煙火氣很強。",
-            eats: ["燒肉", "泡菜", "韓式小菜", "蒸豬肉"],
-            transport: "近鐵奈良 → 鶴橋，或 JR 環狀線接新今宮。",
-            walk: "鶴橋站出來就是商店街與小店。",
+            title: "鶴橋市場晚餐 → SpaWorld 泡湯",
+            body: "奈良回大阪可在鶴橋下車吃燒肉、泡菜和小菜。還有體力就回新今宮泡湯收尾。",
+            eats: ["燒肉", "泡菜", "韓式小菜", "泡湯後牛奶"],
+            transport: "近鐵奈良 → 鶴橋 → JR 新今宮 / Metro 動物園前。",
+            walk: "鶴橋站出來就是商店街，SpaWorld 在住宿附近。",
           },
           {
-            title: "備案：新世界串炸晚餐",
+            title: "備案：新世界串炸 + 回房洗衣",
             body: "如果奈良走太累，直接回新今宮旁邊吃新世界，比再去鶴橋省力。",
-            eats: ["串炸", "土手燒", "高球", "關東煮"],
+            eats: ["串炸", "土手燒", "關東煮", "超市熟食"],
             transport: "JR 新今宮 / Metro 動物園前。",
-            walk: "住宿到新世界步行可處理。",
+            walk: "住宿、新世界、SpaWorld 都在步行圈。",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    kicker: "Day 3 / 11.30 Mon",
+    title: "Universal Studios Japan 一日",
+    note: "USJ 需要完整一天。從新今宮用 JR 到西九條轉夢咲線，出 Universal City 後步行進園。",
+    base: "住宿：新今宮",
+    transport: "主交通：JR 環狀線 / JR 夢咲線",
+    slots: [
+      {
+        time: "07:30-09:30",
+        buffer: "入園日抓早，預留轉車與排隊",
+        image: images.usj,
+        options: [
+          {
+            title: "新今宮 → 西九條 → Universal City",
+            body: "早點到比較舒服。官方 App 先裝好，SUPER NINTENDO WORLD 可能需要整理券或指定入場。",
+            eats: ["便利店早餐", "車站咖啡", "入園前補水"],
+            transport: "JR 新今宮 → 西九條轉 JR 夢咲線 → Universal City。",
+            walk: "Universal City 站到 USJ 入口約 5 分鐘。",
+          },
+          {
+            title: "備案：晚一點入園",
+            body: "如果前一天奈良太累，就把早鳥策略改成晚一點入園，先保留想玩的 3-4 個重點。",
+            eats: ["飯店早餐", "CityWalk 咖啡", "園區小食"],
+            transport: "同樣 JR 到 Universal City。",
+            walk: "減少園外移動，把體力留給園內。",
           },
         ],
       },
       {
-        time: "20:00-22:30",
-        buffer: "泡湯是選配，不硬排",
-        image: images.shinsekai,
+        time: "09:30-18:30",
+        buffer: "園區完整日，不再排其他景點",
+        image: images.usj,
         options: [
           {
-            title: "SpaWorld 泡湯收尾",
-            body: "想泡溫泉就選這晚，離住宿近，奈良走一整天後很合理。",
-            eats: ["泡湯後牛奶", "便利店甜點", "宵夜小吃"],
-            transport: "動物園前 / 新今宮步行圈。",
-            walk: "住宿附近，晚上回程單純。",
+            title: "USJ 園區日：Nintendo、Harry Potter、熱門設施",
+            body: "這天不追 local 食物，重點是園區體驗。用 App 看等待時間、整理券、表演和餐廳狀態。",
+            eats: ["園區限定餐", "桶裝爆米花", "CityWalk 晚餐", "水和小點"],
+            transport: "園內步行，回程同 JR。",
+            walk: "園區會走很多，鞋子優先。",
           },
           {
-            title: "備案：回房洗衣 + 超市熟食",
-            body: "Apartment 有洗衣機和廚房，這晚可以整理衣服、買水果熟食回去吃。",
+            title: "雨天：室內設施 + CityWalk",
+            body: "下雨也能玩，但用雨衣、室內設施、商店和 CityWalk 調整節奏。",
+            eats: ["熱飲", "室內餐廳", "CityWalk 晚餐", "便利店補給"],
+            transport: "JR 進出，避免多換線。",
+            walk: "園內濕滑，減少來回折返。",
+          },
+        ],
+      },
+      {
+        time: "19:00-22:00",
+        buffer: "回程保留體力與晚餐",
+        image: images.usj,
+        options: [
+          {
+            title: "Universal CityWalk 晚餐 → 回新今宮",
+            body: "不急著擠出站，先在 CityWalk 吃飯或買伴手禮，再回新今宮。",
+            eats: ["CityWalk 晚餐", "甜點", "便利店熱飲"],
+            transport: "Universal City → 西九條 → 新今宮。",
+            walk: "回住宿後不再跨區。",
+          },
+          {
+            title: "備案：提早回房洗衣",
+            body: "如果園區走到腿痠，直接回 Apartment 洗衣、泡澡、整理戰利品。",
             eats: ["超市熟食", "水果", "泡麵", "飲料"],
-            transport: "新今宮周邊步行。",
-            walk: "不再移動，讓體力回血。",
+            transport: "JR 回新今宮。",
+            walk: "把最後一段步行降到最低。",
           },
         ],
       },
