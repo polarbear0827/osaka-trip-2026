@@ -10,57 +10,78 @@ const images = {
     "https://commons.wikimedia.org/wiki/Special:FilePath/Osaka_Umeda_Sky_Building_Panoramablick_05.jpg",
   nara:
     "https://commons.wikimedia.org/wiki/Special:FilePath/Deer%20at%20nara%20park%201.jpg",
+  tsuruhashi:
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20Ikuno%20Korea%20Town%20001.jpg",
 };
 
 const days = [
   {
     kicker: "Day 1 / 11.28 Sat",
-    title: "關西機場、難波、道頓堀",
-    note: "第一天先把入境、進市區、放行李排順，晚上只鎖一個吃飯區。",
-    base: "建議住：難波 / 心齋橋",
-    transport: "主交通：南海 / Metro",
+    title: "難波放行李、道頓堀、裏難波",
+    note: "第一晚住難波核心。抵達後不跨區，直接用步行圈吃大阪第一餐。",
+    base: "住宿：難波 2 Chome-3-9",
+    transport: "主交通：南海 / Metro / 步行",
     slots: [
       {
         time: "13:10-16:30",
-        buffer: "含入境 + 30 分鐘緩衝",
+        buffer: "入境 + 進市區 + 30 分鐘緩衝",
         image: images.dotonbori,
         options: [
           {
-            title: "KIX T2 → 難波 / 心齋橋放行李",
-            body: "落地後不要急著排景點，先處理交通卡、行李和飯店 check-in。",
-            eats: ["機場簡單補水", "難波車站買飯糰或甜點"],
-            transport: "南海電鐵到難波，或利木津巴士到飯店附近。",
+            title: "KIX T2 → 南海難波 → 住宿放行李",
+            body: "第一天先穩穩進市區。到難波後放行李、整理交通卡，再開始吃。",
+            eats: ["難波車站飯糰", "便利店熱飲", "百貨地下街小甜點"],
+            transport: "南海到難波，住宿在難波核心步行圈。",
+            walk: "到站後以步行 10-15 分鐘內為目標。",
           },
           {
-            title: "若入境很慢：直接去飯店休息",
-            body: "第一天晚餐區域不變，只把下午購物刪掉。",
-            eats: ["便利商店熱食", "飯店附近咖啡"],
-            transport: "用 Google Maps 看最少轉乘路線。",
+            title: "備案：入境慢就砍掉下午點",
+            body: "如果出關拖到 15:00 後，直接去住宿休息，不硬塞景點。",
+            eats: ["車站便當", "超商補水", "飯店附近咖啡"],
+            transport: "南海或利木津，以少轉乘為主。",
+            walk: "晚餐仍在難波步行圈處理。",
           },
         ],
       },
       {
-        time: "17:30-21:00",
-        buffer: "晚餐前後各留 30 分鐘",
+        time: "16:45-18:00",
+        buffer: "短點，不超過一站距離",
+        image: images.kuromon,
+        options: [
+          {
+            title: "難波八阪神社或道具屋筋",
+            body: "如果體力好，先補一個近距離點。神社拍照、道具屋筋看廚具雜貨都不累。",
+            eats: ["可樂餅", "咖啡", "小份章魚燒"],
+            transport: "難波周邊步行。",
+            walk: "全程步行，不需要再轉車。",
+          },
+          {
+            title: "備案：黑門市場只看不吃飽",
+            body: "黑門偏觀光，但順路可以先看一圈，回程日再決定要不要補吃。",
+            eats: ["玉子燒", "水果", "烤物小份"],
+            transport: "日本橋站或難波步行。",
+            walk: "從難波步行約 10-15 分鐘。",
+          },
+        ],
+      },
+      {
+        time: "18:30-21:30",
+        buffer: "晚餐 + 散步，不趕下一站",
         image: images.dotonbori,
         options: [
           {
-            title: "道頓堀 + 法善寺橫丁",
-            body: "第一晚用最大阪的夜景開場。散步比排太多店更舒服。",
-            eats: ["章魚燒", "御好燒", "拉麵", "居酒屋小菜"],
-            transport: "Metro 難波 / 日本橋，步行串起來。",
+            title: "道頓堀、法善寺、裏難波晚餐",
+            body: "第一晚吃氣氛和巷弄。主街拍照，真正坐下吃可往法善寺或裏難波鑽。",
+            eats: ["立飲小菜", "串燒", "御好燒", "章魚燒分食"],
+            transport: "難波 / 日本橋站步行圈。",
+            walk: "吃完直接走回住宿，第一晚最省腦。",
           },
           {
-            title: "備案 1：裏難波居酒屋",
-            body: "想吃得比較像在地晚上，就往裏難波找串燒、海鮮、立飲。",
-            eats: ["串燒", "生魚片小盤", "炸物", "啤酒"],
-            transport: "難波站步行。",
-          },
-          {
-            title: "備案 2：心齋橋百貨晚餐",
-            body: "下雨或太累就進百貨吃，不需要在戶外排隊。",
-            eats: ["炸豬排", "洋食", "甜點", "咖啡"],
-            transport: "Metro 心齋橋站。",
+            title: "備案：百貨地下街 + 早點睡",
+            body: "如果飛機日太累，進高島屋或 Namba Walk 吃，不在戶外排隊。",
+            eats: ["炸豬排", "洋食", "便當熟食", "甜點"],
+            transport: "難波地下街。",
+            walk: "全程室內或地下街。",
           },
         ],
       },
@@ -68,46 +89,71 @@ const days = [
   },
   {
     kicker: "Day 2 / 11.29 Sun",
-    title: "大阪城、梅田、Pokémon Center OSAKA",
-    note: "上午戶外、下午百貨，晴雨都能接。梅田很好買也很好休息。",
-    base: "建議住：難波 / 本町 / 梅田",
-    transport: "主交通：JR 環狀線 / Metro",
+    title: "搬到新今宮、大阪城、天滿、梅田寶可夢",
+    note: "先處理換住宿，再用 JR / Metro 串大阪城、天滿商店街、梅田百貨。",
+    base: "住宿：Apartment Hotel 11 Shinimamiya 3",
+    transport: "主交通：JR 環狀線 / Metro / 南海",
     slots: [
       {
-        time: "09:30-12:30",
-        buffer: "公園散步 + 30 分鐘咖啡餘裕",
-        image: images.castle,
+        time: "09:30-11:00",
+        buffer: "換住宿日多留 30 分鐘",
+        image: images.shinsekai,
         options: [
           {
-            title: "大阪城公園慢走",
-            body: "不一定要進天守閣；拍外觀、護城河、公園就很完整。",
-            eats: ["咖啡", "便利店早餐", "公園附近輕食"],
-            transport: "JR 森之宮 / 大阪城公園，或 Metro 谷町四丁目。",
+            title: "難波退房 → 新今宮放行李",
+            body: "如果公寓不能寄放，改用難波或新今宮置物櫃。這段先把後三晚基地安頓好。",
+            eats: ["便利店早餐", "車站咖啡", "超市水果先買一點"],
+            transport: "難波 → 新今宮，南海或 Metro + 步行。",
+            walk: "站到住宿抓 10 分鐘上下，走大路。",
           },
           {
-            title: "備案 1：大阪歷史博物館",
-            body: "下雨時比公園舒服，也能看到大阪城附近城市視角。",
-            eats: ["博物館周邊咖啡", "谷町四丁目午餐"],
-            transport: "Metro 谷町四丁目。",
+            title: "備案：行李先鎖難波車站",
+            body: "若自助入住太晚才能進房，行李先放 locker，下午回程再取。",
+            eats: ["難波地下街早餐", "咖啡", "飯糰"],
+            transport: "用難波當臨時基地。",
+            walk: "不拖行李進市場或景點。",
           },
         ],
       },
       {
-        time: "14:00-18:30",
-        buffer: "購物不要排死，留找路時間",
+        time: "11:30-14:30",
+        buffer: "公園 + 午餐都留鬆",
+        image: images.castle,
+        options: [
+          {
+            title: "大阪城公園 + 森之宮周邊午餐",
+            body: "不一定進天守閣，重點是公園、護城河、外觀。午餐在森之宮或天滿橋附近找小店。",
+            eats: ["喫茶店午餐", "咖哩", "定食", "麵類"],
+            transport: "JR 環狀線到森之宮 / 大阪城公園。",
+            walk: "出站到公園 5-15 分鐘。",
+          },
+          {
+            title: "雨天：大阪歷史博物館 + 谷町午餐",
+            body: "雨天把公園縮短，改室內看大阪城周邊視角。",
+            eats: ["谷町四丁目定食", "咖啡", "烏龍麵"],
+            transport: "Metro 谷町四丁目。",
+            walk: "站到博物館約 5 分鐘。",
+          },
+        ],
+      },
+      {
+        time: "15:00-20:30",
+        buffer: "天滿吃法 + 梅田購物",
         image: images.umeda,
         options: [
           {
-            title: "梅田 Pokémon Center OSAKA + 百貨",
-            body: "大丸梅田、LUCUA、Nintendo OSAKA 可以放一起，不用跨區。",
-            eats: ["百貨美食街", "甜點", "咖啡", "伴手禮先買一點"],
-            transport: "JR 大阪站 / Metro 梅田站。",
+            title: "天神橋筋商店街 → 梅田 Pokémon Center OSAKA",
+            body: "下午先去天滿吃商店街，傍晚再進梅田百貨。Pokémon Center OSAKA、Nintendo OSAKA 可放一起。",
+            eats: ["壽司小店", "關東煮", "炸物", "老喫茶"],
+            transport: "天滿 / 扇町 → 梅田，JR 或 Metro。",
+            walk: "商店街沿線走走停停，梅田站到百貨 5-10 分鐘。",
           },
           {
-            title: "備案 1：Umeda Sky Building 夜景",
-            body: "天氣好就傍晚去，天氣差就留在百貨地下街。",
-            eats: ["滝見小路", "梅田地下街", "拉麵"],
-            transport: "JR 大阪站步行約 10-15 分鐘。",
+            title: "備案：只跑梅田室內",
+            body: "雨天或累了就直接梅田。百貨地下街吃飯、逛寶可夢和任天堂。",
+            eats: ["地下街定食", "甜點", "百貨熟食", "拉麵"],
+            transport: "JR 大阪站 / Metro 梅田。",
+            walk: "全程靠車站連通道。",
           },
         ],
       },
@@ -115,52 +161,71 @@ const days = [
   },
   {
     kicker: "Day 3 / 11.30 Mon",
-    title: "奈良半日，或大阪慢慢吃",
-    note: "這天不要硬衝京都。奈良半日比較輕鬆，不想出城就改新世界。",
-    base: "建議：看天氣與體力決定",
-    transport: "主交通：近鐵 / JR / Metro",
+    title: "奈良餵鹿、鶴橋市場、SpaWorld",
+    note: "這天是最像你要的版本：近鐵奈良白天，回大阪吃鶴橋，晚上泡湯或新世界。",
+    base: "住宿：新今宮",
+    transport: "主交通：近鐵 / JR 環狀線 / Metro",
     slots: [
       {
-        time: "08:30-15:30",
-        buffer: "來回交通 + 午餐都留餘裕",
+        time: "08:30-15:00",
+        buffer: "奈良步行多，午餐不趕",
         image: images.nara,
         options: [
           {
-            title: "奈良公園 + 東大寺半日",
-            body: "從大阪難波搭近鐵到近鐵奈良，步行就能串主要區域。",
+            title: "近鐵奈良 → 奈良公園 → 東大寺",
+            body: "從大阪難波或近鐵日本橋出發到近鐵奈良。出站後步行串鹿、東大寺、東向商店街。",
             eats: ["釜飯", "柿葉壽司", "茶粥", "和菓子"],
-            transport: "近鐵大阪難波 → 近鐵奈良。",
+            transport: "新今宮 → 難波 / 日本橋轉近鐵奈良。",
+            walk: "近鐵奈良到公園 5-15 分鐘，園區內慢走。",
           },
           {
-            title: "備案 1：留大阪走新世界",
-            body: "如果天氣差或想睡晚一點，下午再去通天閣、新世界吃串炸。",
-            eats: ["串炸", "土手燒", "啤酒", "章魚燒"],
-            transport: "Metro 動物園前 / 惠美須町，JR 新今宮。",
-          },
-          {
-            title: "備案 2：黑門市場 + 日本橋",
-            body: "更懶一點就在難波附近吃吃逛逛，補藥妝和扭蛋。",
-            eats: ["海鮮小吃", "玉子燒", "草莓", "烤扇貝"],
-            transport: "Metro 日本橋站步行。",
+            title: "備案：晚起奈良縮短版",
+            body: "如果起不來，只做奈良公園 + 東向商店街，不硬塞春日大社。",
+            eats: ["商店街午餐", "麻糬", "咖啡", "柿葉壽司外帶"],
+            transport: "近鐵奈良來回。",
+            walk: "把步行集中在站前到公園。",
           },
         ],
       },
       {
-        time: "18:00-21:00",
-        buffer: "晚餐區域固定，選擇自由",
+        time: "16:30-19:30",
+        buffer: "回大阪後直接吃在地",
+        image: images.tsuruhashi,
+        options: [
+          {
+            title: "鶴橋市場 / 商店街晚餐",
+            body: "回大阪後不用回難波，直接鶴橋吃。這裡比觀光商圈更 local，煙火氣很強。",
+            eats: ["燒肉", "泡菜", "韓式小菜", "蒸豬肉"],
+            transport: "近鐵奈良 → 鶴橋，或 JR 環狀線接新今宮。",
+            walk: "鶴橋站出來就是商店街與小店。",
+          },
+          {
+            title: "備案：新世界串炸晚餐",
+            body: "如果奈良走太累，直接回新今宮旁邊吃新世界，比再去鶴橋省力。",
+            eats: ["串炸", "土手燒", "高球", "關東煮"],
+            transport: "JR 新今宮 / Metro 動物園前。",
+            walk: "住宿到新世界步行可處理。",
+          },
+        ],
+      },
+      {
+        time: "20:00-22:30",
+        buffer: "泡湯是選配，不硬排",
         image: images.shinsekai,
         options: [
           {
-            title: "新世界串炸夜",
-            body: "復古招牌很適合晚上拍照；吃串炸不要排太滿，留散步時間。",
-            eats: ["串炸蝦", "蓮藕串", "牛筋土手燒", "高球"],
-            transport: "Metro 惠美須町 / 動物園前。",
+            title: "SpaWorld 泡湯收尾",
+            body: "想泡溫泉就選這晚，離住宿近，奈良走一整天後很合理。",
+            eats: ["泡湯後牛奶", "便利店甜點", "宵夜小吃"],
+            transport: "動物園前 / 新今宮步行圈。",
+            walk: "住宿附近，晚上回程單純。",
           },
           {
-            title: "備案：天王寺 Harukas / Q's Mall",
-            body: "下雨或想逛室內，天王寺商場比新世界更穩。",
-            eats: ["商場餐廳", "甜點", "咖啡"],
-            transport: "JR / Metro 天王寺。",
+            title: "備案：回房洗衣 + 超市熟食",
+            body: "Apartment 有洗衣機和廚房，這晚可以整理衣服、買水果熟食回去吃。",
+            eats: ["超市熟食", "水果", "泡麵", "飲料"],
+            transport: "新今宮周邊步行。",
+            walk: "不再移動，讓體力回血。",
           },
         ],
       },
@@ -168,58 +233,71 @@ const days = [
   },
   {
     kicker: "Day 4 / 12.01 Tue",
-    title: "心齋橋 Pokémon DX、Cafe、teamLab",
-    note: "這天放你最想去的點。Cafe 和 teamLab 都要出發前再確認預約與開放。",
-    base: "建議住：心齋橋 / 難波",
+    title: "心齋橋寶可夢、堀江、美國村、長居 teamLab",
+    note: "這天主線是御堂筋線：心齋橋逛寶可夢，晚上到長居看 teamLab。",
+    base: "住宿：新今宮",
     transport: "主交通：Metro 御堂筋線",
     slots: [
       {
-        time: "10:30-16:30",
-        buffer: "Cafe 前後各 30 分鐘",
+        time: "10:30-14:30",
+        buffer: "Cafe 前後留找路與排隊",
         image: images.dotonbori,
         options: [
           {
             title: "Pokémon Center OSAKA DX + Pokémon Cafe",
-            body: "同在心齋橋大丸，最適合排成半天。Cafe 沒訂到也能逛店和百貨。",
-            eats: ["Pokémon Cafe", "百貨甜點", "心齋橋午餐", "咖啡"],
-            transport: "Metro 心齋橋站。",
+            body: "同在心齋橋大丸。Cafe 有訂到就坐，沒訂到就逛店、買周邊、改百貨午餐。",
+            eats: ["Pokémon Cafe", "百貨地下熟食", "心齋橋定食", "咖啡"],
+            transport: "動物園前 / 大國町 → 心齋橋。",
+            walk: "心齋橋站到大丸 5 分鐘內。",
           },
           {
-            title: "備案 1：美國村 + Orange Street",
-            body: "如果 Cafe 時段不漂亮，就把下午變成逛街、古著、咖啡。",
-            eats: ["漢堡", "咖啡", "甜甜圈", "可麗餅"],
-            transport: "心齋橋步行。",
-          },
-          {
-            title: "備案 2：難波室內購物",
-            body: "下雨時改走 Namba Parks、Marui、高島屋。",
-            eats: ["百貨餐廳", "拉麵", "甜點"],
-            transport: "Metro 難波站。",
+            title: "備案：Cafe 沒訂到就改漂亮午餐",
+            body: "這天可以安排一餐漂亮飯，讓整趟不是只有市場和小店。",
+            eats: ["洋食", "咖啡甜點", "壽司午餐", "百貨餐廳"],
+            transport: "心齋橋站周邊。",
+            walk: "全部在心齋橋步行圈。",
           },
         ],
       },
       {
-        time: "18:00-21:30",
-        buffer: "夜間展 + 回程都留餘裕",
+        time: "15:00-17:30",
+        buffer: "逛街不跨區",
+        image: images.dotonbori,
+        options: [
+          {
+            title: "美國村 / Orange Street / 堀江",
+            body: "寶可夢後不跑遠，改走古著、雜貨、咖啡和街區散步。",
+            eats: ["漢堡", "咖啡", "甜甜圈", "小酒館前菜"],
+            transport: "心齋橋步行。",
+            walk: "心齋橋到堀江約 10-15 分鐘。",
+          },
+          {
+            title: "雨天：難波 Parks / 高島屋",
+            body: "如果下雨，就往難波室內商場移動，保持同一條線。",
+            eats: ["百貨餐廳", "甜點", "拉麵", "熟食"],
+            transport: "心齋橋 → 難波。",
+            walk: "以地下街和商場為主。",
+          },
+        ],
+      },
+      {
+        time: "18:30-21:45",
+        buffer: "夜間戶外展 + 回程緩衝",
         image: images.umeda,
         options: [
           {
             title: "teamLab Botanical Garden Osaka",
-            body: "長居植物園夜間戶外展，穿好走的鞋。雨天或強風要看當日公告。",
-            eats: ["長居前簡單晚餐", "回難波宵夜", "便利店熱飲"],
-            transport: "Metro 御堂筋線到長居。",
+            body: "長居植物園夜間戶外展，官方提醒場地暗、路面不平，要穿好走鞋；雨天強風需看公告。",
+            eats: ["展前簡單晚餐", "回新今宮宵夜", "便利店熱飲"],
+            transport: "御堂筋線到長居，再步行到植物園。",
+            walk: "長居站出站後抓 10-15 分鐘。",
           },
           {
-            title: "備案 1：梅田百貨 + 夜景",
-            body: "若 teamLab 天氣不穩，梅田室內替代性最高。",
-            eats: ["百貨美食街", "蛋糕", "拉麵", "地下街小吃"],
-            transport: "Metro 御堂筋線到梅田。",
-          },
-          {
-            title: "備案 2：道頓堀第二輪",
-            body: "最後一晚想放鬆，就回難波吃沒吃到的清單。",
-            eats: ["御好燒", "串炸", "拉麵", "居酒屋"],
-            transport: "Metro 難波 / 日本橋。",
+            title: "雨天：天王寺 / 阿倍野室內夜",
+            body: "如果 teamLab 天氣不穩，改天王寺商場或 Harukas 周邊。",
+            eats: ["商場定食", "甜點", "地下街小吃"],
+            transport: "御堂筋線到天王寺，回新今宮很近。",
+            walk: "站內商場為主。",
           },
         ],
       },
@@ -227,40 +305,57 @@ const days = [
   },
   {
     kicker: "Day 5 / 12.02 Wed",
-    title: "黑門市場、補買、回機場",
-    note: "15:25 起飛，這天只排近距離。12:00 前後離開市區比較安心。",
-    base: "建議：住難波最省心",
-    transport: "主交通：南海 / 機場接駁",
+    title: "木津市場或黑門、難波補買、回機場",
+    note: "15:25 起飛，這天只排南區短距離。12:00-12:20 左右離開市區比較安心。",
+    base: "住宿：新今宮 → KIX T2",
+    transport: "主交通：南海 / JR / Metro",
     slots: [
       {
-        time: "09:30-11:30",
-        buffer: "行李 + 退房 + 市區移動",
+        time: "09:00-10:45",
+        buffer: "退房 + 早餐，不拖行李進市場",
         image: images.kuromon,
         options: [
           {
-            title: "黑門市場早午餐",
-            body: "當作最後一個大阪味散步，不要把整餐期待都壓在市場。",
-            eats: ["玉子燒", "海鮮小份", "草莓", "烤物"],
-            transport: "Metro 日本橋站，難波步行可到。",
+            title: "木津市場早午餐",
+            body: "比黑門更偏批發市場感，離大國町近。適合吃海鮮、定食、玉子、熟食。",
+            eats: ["海鮮定食", "玉子燒", "炸物", "市場咖啡"],
+            transport: "新今宮 / 大國町一帶步行或一站移動。",
+            walk: "大國町站步行約 5-10 分鐘。",
           },
           {
-            title: "備案 1：飯店附近咖啡",
-            body: "如果前一天太累，睡飽比硬逛更重要。",
-            eats: ["咖啡", "吐司", "飯糰", "便利店甜點"],
-            transport: "步行。",
+            title: "備案：黑門市場 + 日本橋",
+            body: "如果想回到第一晚熟悉區域，就黑門小吃 + 日本橋補買。",
+            eats: ["水果", "烤物小份", "玉子燒", "咖啡"],
+            transport: "Metro 日本橋 / 近鐵日本橋。",
+            walk: "站到市場約 5 分鐘。",
+          },
+          {
+            title: "晚起：飯店附近早餐",
+            body: "如果前一晚太累，睡飽退房，把時間留給機場和補買。",
+            eats: ["咖啡", "便利店早餐", "超市熟食"],
+            transport: "新今宮周邊步行。",
+            walk: "不再跨區。",
           },
         ],
       },
       {
-        time: "12:00-15:25",
-        buffer: "機場 T2 報到保守抓",
+        time: "11:00-12:10",
+        buffer: "最後補買，不排景點",
         image: images.dotonbori,
         options: [
           {
-            title: "難波 → 關西機場 T2",
-            body: "先把伴手禮和行李整理好，抓早一點到機場最安心。",
+            title: "難波高島屋 / Namba Parks 補買",
+            body: "買伴手禮、藥妝、零食，行李整理好就往機場。",
+            eats: ["百貨熟食", "甜點", "機場前咖啡"],
+            transport: "難波站周邊。",
+            walk: "商場與車站步行圈。",
+          },
+          {
+            title: "備案：直接新今宮搭南海去機場",
+            body: "如果行李多或天氣差，從新今宮直接走，少折返難波。",
             eats: ["機場簡餐", "便利店補貨", "飲料"],
-            transport: "南海難波到關西機場，T2 需接駁或依航空指示。",
+            transport: "南海新今宮 → 關西機場，T2 依航空指示接駁。",
+            walk: "優先減少拖行李步行。",
           },
         ],
       },
@@ -270,79 +365,94 @@ const days = [
 
 const foodGuides = [
   {
-    key: "namba",
-    tab: "難波 / 道頓堀",
-    area: "夜晚、招牌、第一餐",
-    title: "難波 / 道頓堀",
-    image: images.dotonbori,
-    intro: "適合第一晚或最後一晚。重點不是排名店，而是把散步、拍照、宵夜留鬆。",
-    dishes: [
-      ["章魚燒", "先買一份分著吃，不要第一站就吃飽。"],
-      ["御好燒", "適合當正餐，排隊太長就換店。"],
-      ["拉麵", "宵夜備案，雨天也穩。"],
-      ["居酒屋", "想坐久一點聊天就選它。"],
-    ],
-    tips: ["法善寺橫丁比主街安靜，適合飯後散步。", "不要在同一條街連吃三攤炸物，胃會先投降。"],
-  },
-  {
     key: "shinsekai",
-    tab: "新世界",
-    area: "串炸、通天閣、復古夜景",
-    title: "新世界",
+    tab: "新今宮 / 新世界",
+    area: "住宿基地、宵夜、泡湯後",
+    title: "新今宮 / 新世界",
     image: images.shinsekai,
-    intro: "晚上很有大阪味。串炸店很多，選不用排太久、座位舒服的更適合情侶旅行。",
+    intro: "後三晚的生活區。不是精緻飯店區，但最適合把新世界、SpaWorld、天王寺、回房洗衣串在一起。",
     dishes: [
-      ["串炸", "蝦、蓮藕、牛肉、起司都適合混點。"],
-      ["土手燒", "牛筋味噌燉，適合配飲料。"],
-      ["高球 / 啤酒", "不喝酒就改烏龍茶，重點是氣氛。"],
-      ["鯛魚燒 / 甜點", "飯後散步時再補。"],
+      ["串炸", "蝦、蓮藕、牛肉、起司混點，不要一次吃太滿。"],
+      ["土手燒", "牛筋味噌燉，適合當小菜。"],
+      ["關東煮", "晚上想坐一下可以找老派小店。"],
+      ["超市熟食", "房內有微波爐和廚房，回房吃也合理。"],
     ],
-    tips: ["新世界可接天王寺，天氣差就直接往商場移動。", "串炸不要沾第二次醬，很多店會有規則。"],
+    tips: ["晚上回住宿走大路，優先用新今宮 / 動物園前 / 大國町。", "SpaWorld 當奈良日後的恢復選項。"],
   },
   {
-    key: "kuromon",
-    tab: "黑門市場",
-    area: "早午餐、小份吃",
-    title: "黑門市場",
+    key: "tenma",
+    tab: "天滿 / 天神橋筋",
+    area: "商店街、立飲、老喫茶",
+    title: "天滿 / 天神橋筋",
     image: images.kuromon,
-    intro: "觀光市場感比較強，適合少量多樣，排回程日上午剛剛好。",
+    intro: "比心齋橋更生活感。適合排在大阪城後，下午到晚餐慢慢吃，不硬追名店。",
     dishes: [
-      ["玉子燒", "便宜、好分食、當早餐很剛好。"],
-      ["烤海鮮", "挑小份，不要一次買太貴。"],
-      ["水果", "草莓、蜜柑類適合邊走邊吃。"],
-      ["咖啡", "市場逛完找店坐一下。"],
+      ["壽司小店", "找排隊不誇張、翻桌快的小店。"],
+      ["立飲", "點小份炸物、煮物、刺身，吃氣氛。"],
+      ["老喫茶", "下午回血，適合坐著休息。"],
+      ["可樂餅 / 炸物", "商店街邊走邊補一點。"],
     ],
-    tips: ["市場人多時不要拖行李進去。", "價格落差大，先看一圈再買。"],
+    tips: ["這區適合少量多攤，不適合一開始就吃大餐。", "回梅田或新今宮都能接 JR / Metro。"],
   },
   {
-    key: "umeda",
-    tab: "梅田",
-    area: "百貨、甜點、雨天最強",
-    title: "梅田",
-    image: images.umeda,
-    intro: "交通複雜但室內選擇多。排 Pokémon Center OSAKA、Nintendo OSAKA、夜景都順。",
+    key: "tsuruhashi",
+    tab: "鶴橋",
+    area: "市場、燒肉、泡菜",
+    title: "鶴橋",
+    image: images.tsuruhashi,
+    intro: "奈良回大阪最順的 local 晚餐點。站一出來就是商店街和燒肉味，喜歡在地感會很有趣。",
     dishes: [
-      ["百貨美食街", "下雨、冷天、想坐舒服就選這個。"],
-      ["甜點咖啡", "逛街中段回血。"],
-      ["地下街拉麵", "不用跨區，很多選擇。"],
-      ["伴手禮", "先買一部分，回程比較輕鬆。"],
+      ["燒肉", "不用追名店，挑座位舒服、排隊不長的。"],
+      ["泡菜", "可買小份回房間配宵夜。"],
+      ["韓式小菜", "煎餅、蒸豬肉、湯類都適合。"],
+      ["市場水果", "看到漂亮水果可買回公寓。"],
     ],
-    tips: ["梅田地下街容易迷路，約定用 JR 大阪站或百貨門口集合。", "Umeda Sky Building 晴天傍晚比較值得。"],
+    tips: ["衣服可能會有燒肉味，剛好住宿有洗衣機。", "從近鐵奈良回來可直接在鶴橋下車。"],
+  },
+  {
+    key: "namba",
+    tab: "難波 / 日本橋",
+    area: "第一晚、補買、近鐵奈良入口",
+    title: "難波 / 日本橋",
+    image: images.dotonbori,
+    intro: "不是只看觀光主街。往法善寺、裏難波、道具屋筋、日本橋小巷走，會比心齋橋更適合吃。",
+    dishes: [
+      ["立飲小菜", "晚餐前後很彈性。"],
+      ["御好燒", "當正餐，排太久就換。"],
+      ["章魚燒", "分一份就好，留胃給下一攤。"],
+      ["百貨熟食", "回程補買或雨天很好用。"],
+    ],
+    tips: ["近鐵日本橋 / 大阪難波是奈良日的重要入口。", "黑門偏觀光，少量吃、不要把整餐賭在市場。"],
   },
   {
     key: "nara",
     tab: "奈良",
-    area: "半日小旅行",
+    area: "餵鹿、商店街、午餐",
     title: "奈良",
     image: images.nara,
-    intro: "比京都輕鬆很多。近鐵奈良下車後步行串公園、東大寺和商店街。",
+    intro: "近鐵奈良下車後步行就能串奈良公園、東大寺、東向商店街。餵鹿好玩，但鹿是野生動物。",
     dishes: [
-      ["釜飯", "適合午餐，但名店可能要等。"],
-      ["柿葉壽司", "可買小份，帶著當點心。"],
-      ["和菓子", "下午茶感很舒服。"],
+      ["釜飯", "適合午餐，但熱門店可能要等。"],
+      ["柿葉壽司", "可買小份帶著吃。"],
       ["茶粥", "想吃清淡可以找這類。"],
+      ["和菓子 / 麻糬", "下午茶或伴手禮。"],
     ],
-    tips: ["鹿是野生動物，餵食時注意手上紙袋和地圖。", "不想走太多就只排東大寺 + 公園。"],
+    tips: ["鹿餅拿出來後不要逗鹿，餵完攤手讓牠知道沒了。", "秋冬傍晚涼，奈良步行日要穿好走的鞋。"],
+  },
+  {
+    key: "kizu",
+    tab: "木津 / 黑門",
+    area: "回程日上午、市場早午餐",
+    title: "木津市場 / 黑門市場",
+    image: images.kuromon,
+    intro: "回程日從新今宮出發，木津市場比黑門更偏在地；黑門則比較順路補買與拍照。",
+    dishes: [
+      ["海鮮定食", "木津市場可優先找坐下來吃的。"],
+      ["玉子燒", "小份、好分食。"],
+      ["水果", "買回飯店或路上吃。"],
+      ["烤物", "不要一次買太貴，先看一圈。"],
+    ],
+    tips: ["市場早上比較有感，回程日別拖到太晚。", "拖大行李不要進市場，先寄放或直接去機場。"],
   },
 ];
 
@@ -368,7 +478,7 @@ function modeFallbackIndex(slot) {
 
 function currentOption(dayIndex, slotIndex, slot) {
   const saved = choices[choiceKey(dayIndex, slotIndex)];
-  return Number.isInteger(saved) ? saved : modeFallbackIndex(slot);
+  return Number.isInteger(saved) && saved < slot.options.length ? saved : modeFallbackIndex(slot);
 }
 
 function renderDay() {
@@ -406,10 +516,22 @@ function renderDay() {
             <div class="option-row">${options}</div>
             <h4>${selected.title}</h4>
             <p>${selected.body}</p>
-            <ul class="mini-list">
-              ${selected.eats.map((eat) => `<li>吃：${eat}</li>`).join("")}
-            </ul>
-            <div class="transport-line">${selected.transport}</div>
+            <div class="detail-grid">
+              <div>
+                <span>吃法</span>
+                <ul class="mini-list">
+                  ${selected.eats.map((eat) => `<li>${eat}</li>`).join("")}
+                </ul>
+              </div>
+              <div>
+                <span>交通</span>
+                <p>${selected.transport}</p>
+              </div>
+              <div>
+                <span>步行規則</span>
+                <p>${selected.walk}</p>
+              </div>
+            </div>
           </div>
         </article>
       `;
