@@ -1,18 +1,18 @@
 const images = {
   dotonbori:
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Dotonbori%2C%20Osaka%2C%20at%20night%2C%20November%202016.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/4/47/Dotonbori%2C_Osaka%2C_at_night%2C_November_2016.jpg",
   castle:
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20Castle%2002bs3200.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/e/e4/Osaka_Castle_02bs3200.jpg",
   shinsekai:
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Shinsekai%20and%20Tsutenkaku%20at%20night%202019-04-12.jpg",
-  kuromon: "https://commons.wikimedia.org/wiki/Special:FilePath/JP-osaka-arkade.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/9/95/Shinsekai_and_Tsutenkaku_at_night_2019-04-12.jpg",
+  kuromon: "https://upload.wikimedia.org/wikipedia/commons/9/9b/JP-osaka-arkade.jpg",
   umeda:
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Osaka_Umeda_Sky_Building_Panoramablick_05.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/7/77/Osaka_Umeda_Sky_Building_Panoramablick_05.jpg",
   nara:
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Deer%20at%20nara%20park%201.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/2/29/Deer_at_nara_park_1.jpg",
   tsuruhashi:
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20Ikuno%20Korea%20Town%20001.jpg",
-  usj: "https://commons.wikimedia.org/wiki/Special:FilePath/Universal%20Studios%20Japan%20entrance.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/4/4b/Osaka_Ikuno_Korea_Town_001.jpg",
+  usj: "https://upload.wikimedia.org/wikipedia/commons/b/b5/Universal_Studios_Japan_entrance.jpg",
 };
 
 const days = [
