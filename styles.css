@@ -628,22 +628,62 @@ h1 {
   margin: 22px 0;
 }
 
-.dish-grid article {
-  padding: 13px;
+.dish-grid .restaurant-card {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-height: 190px;
+  padding: 15px;
   background: #f7f5ef;
   border: 1px solid var(--line);
   border-radius: var(--radius);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
-.dish-grid strong {
+.dish-grid .restaurant-card:hover {
+  background: #fff;
+  border-color: var(--teal);
+  transform: translateY(-2px);
+}
+
+.restaurant-card strong {
   display: block;
-  margin-bottom: 4px;
+  font-size: 1.16rem;
+  line-height: 1.2;
 }
 
-.dish-grid span,
+.restaurant-card em {
+  color: var(--teal-dark);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.restaurant-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.restaurant-kind,
+.restaurant-order,
 .tip-list span {
   color: var(--muted);
   font-size: 13px;
+}
+
+.restaurant-kind {
+  color: var(--teal);
+  font-weight: 950;
+}
+
+.restaurant-order {
+  margin-top: auto;
+  color: #2f3d3a;
+  font-weight: 850;
 }
 
 .tip-list {
@@ -816,7 +856,8 @@ h1 {
   padding-top: 28px;
 }
 
-.map-shell {
+.map-shell,
+.real-map-shell {
   display: grid;
   grid-template-columns: 300px minmax(0, 1fr) 300px;
   gap: 14px;
@@ -825,7 +866,9 @@ h1 {
 
 .map-panel,
 .schematic-map,
-.route-cards article {
+.route-cards article,
+.route-cards button.route-card,
+.real-map-card {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -869,6 +912,133 @@ h1 {
 
 .station-detail .button {
   margin-top: auto;
+}
+
+.real-map-shell {
+  grid-template-columns: 320px minmax(420px, 1fr) 320px;
+}
+
+.real-map-card {
+  min-height: 650px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.osaka-map {
+  width: 100%;
+  height: 100%;
+  min-height: 650px;
+  background: #dfe7df;
+}
+
+.leaflet-container {
+  color: var(--ink);
+  font-family: inherit;
+}
+
+.station-map-marker,
+.place-map-marker {
+  background: transparent;
+  border: 0;
+}
+
+.station-map-marker::before,
+.place-map-marker::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  border: 3px solid #102724;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(16, 39, 36, 0.22);
+  content: "";
+  transform: translate(-50%, -50%);
+}
+
+.station-map-marker.is-active::before {
+  width: 24px;
+  height: 24px;
+  background: var(--gold);
+}
+
+.station-map-marker span,
+.place-map-marker span {
+  position: absolute;
+  left: 18px;
+  top: 3px;
+  width: max-content;
+  max-width: 140px;
+  padding: 4px 6px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(16, 39, 36, 0.14);
+  border-radius: 6px;
+  color: #102724;
+  font-size: 12px;
+  font-weight: 950;
+  line-height: 1.15;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(16, 39, 36, 0.12);
+}
+
+.place-map-marker::before {
+  border-color: var(--teal);
+  background: #dcefeb;
+}
+
+.place-map-marker span {
+  color: var(--teal-dark);
+}
+
+.station-list {
+  display: grid;
+  gap: 7px;
+  max-height: 310px;
+  margin-top: 6px;
+  overflow: auto;
+  padding-right: 3px;
+}
+
+.station-list button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 10px;
+  background: #f7f5ef;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.station-list button.is-active {
+  background: #edf4f1;
+  border-color: var(--teal);
+}
+
+.station-list strong {
+  font-size: 14px;
+}
+
+.station-list span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.map-load-fallback {
+  display: grid;
+  min-height: 650px;
+  place-items: center;
+  padding: 24px;
+  color: var(--muted);
+  font-weight: 850;
+  text-align: center;
 }
 
 .schematic-map {
@@ -944,10 +1114,26 @@ h1 {
   gap: 12px;
 }
 
-.route-cards article {
+.route-cards article,
+.route-cards button.route-card {
   min-height: 190px;
   padding: 18px;
   box-shadow: none;
+}
+
+.route-cards button.route-card {
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.route-cards button.route-card:hover,
+.route-cards button.route-card.is-active {
+  background: #fff;
+  border-color: var(--teal);
+  transform: translateY(-2px);
 }
 
 .route-cards span {
@@ -956,6 +1142,10 @@ h1 {
   color: var(--teal);
   font-size: 12px;
   font-weight: 950;
+}
+
+.route-cards-map span {
+  color: var(--route-color, var(--teal));
 }
 
 .route-cards strong {
@@ -1006,7 +1196,8 @@ h1 {
   .planner-shell,
   .food-layout,
   .food-card,
-  .map-shell {
+  .map-shell,
+  .real-map-shell {
     grid-template-columns: 1fr;
   }
 
@@ -1019,6 +1210,12 @@ h1 {
     position: static;
     grid-column: 1;
     grid-row: auto;
+  }
+
+  .real-map-card,
+  .osaka-map,
+  .map-load-fallback {
+    min-height: 560px;
   }
 
   .photo-rail,
@@ -1084,6 +1281,12 @@ h1 {
   .schematic-map {
     min-height: 360px;
     padding: 4px;
+  }
+
+  .real-map-card,
+  .osaka-map,
+  .map-load-fallback {
+    min-height: 460px;
   }
 
   .schematic-map svg {
