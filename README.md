@@ -1,6 +1,13 @@
 # 一起去大阪
 
-2026/11/28 - 2026/12/02 的大阪五天四夜行程網頁。這是一個純靜態 GitHub Pages 專案，不需要安裝套件。
+2026/11/28 - 2026/12/02 的大阪五天四夜旅行手冊。這是一個純靜態 GitHub Pages 專案，不需要安裝套件。
+
+新版重點：
+
+- `ROUTE PLANNER` 直接整合行程、交通、餐廳與 Google Maps 連結。
+- 每個行程點都有獨立 `activity.html?id=...` 詳情頁。
+- 住宿、行李、簡易日文、伴手禮各自成頁。
+- 不做自製地圖，改用 Google Maps 真實地點與大眾運輸路線。
 
 ## 本機查看
 
@@ -10,7 +17,7 @@
 python3 -m http.server 8787
 ```
 
-然後開 `http://127.0.0.1:8787/`。
+然後開 `http://localhost:8787/`。
 
 ## 部署到 GitHub Pages
 
@@ -18,9 +25,3 @@ python3 -m http.server 8787
 2. 到 repository 的 `Settings` → `Pages`。
 3. Source 選 `GitHub Actions`。
 4. 推送到 `main` 後，`.github/workflows/pages.yml` 會自動部署。
-
-## 需要出發前再確認
-
-- Pokémon Cafe Osaka 預約開放日、候補與營業時間。
-- teamLab Botanical Garden Osaka 在 2026/11/28 - 2026/12/01 的夜間開放與雨天公告。
-- 住宿位置與回程當天從市區到關西機場 T2 的交通時間。
