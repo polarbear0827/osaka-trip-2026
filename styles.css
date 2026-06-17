@@ -381,6 +381,23 @@ h1 {
   min-width: 0;
 }
 
+.route-group-topline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.route-group-topline strong {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 950;
+}
+
 .route-group-strip {
   display: flex;
   gap: 14px;
@@ -391,6 +408,11 @@ h1 {
   padding: 2px 2px 16px;
   scroll-snap-type: x mandatory;
   scrollbar-color: rgba(255, 255, 255, 0.45) transparent;
+}
+
+.route-group-strip::after {
+  content: "";
+  flex: 0 0 6px;
 }
 
 .route-card {
@@ -408,8 +430,12 @@ h1 {
 }
 
 .route-image {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 5;
   min-height: 270px;
   background: #dbe1d9;
+  text-decoration: none;
 }
 
 .route-image img {
@@ -417,6 +443,20 @@ h1 {
   height: 100%;
   min-height: 270px;
   object-fit: cover;
+}
+
+.image-subject {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  padding: 7px 9px;
+  background: rgba(23, 33, 31, 0.76);
+  border-radius: var(--radius);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.35;
 }
 
 .route-content {
@@ -512,14 +552,25 @@ h1 {
 }
 
 .mini-list {
-  display: grid;
-  gap: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.mini-list li,
+.mini-list li {
+  padding: 5px 8px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--teal-dark);
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
 .route-facts p {
   margin: 0;
   color: #47524f;
@@ -638,10 +689,35 @@ h1 {
   padding: clamp(34px, 6vw, 78px) clamp(18px, 5vw, 64px);
 }
 
-.activity-hero img {
-  min-height: 520px;
+.activity-hero-media {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+}
+
+.activity-hero img {
+  min-height: 520px;
+}
+
+.activity-hero-media figcaption {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  padding: 8px 10px;
+  background: rgba(23, 33, 31, 0.78);
+  border-radius: var(--radius);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.activity-hero-media figcaption a,
+.detail-gallery small a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .activity-hero h1 {
@@ -676,7 +752,7 @@ h1 {
 .detail-gallery figcaption {
   position: absolute;
   right: 10px;
-  bottom: 10px;
+  bottom: 32px;
   left: 10px;
   padding: 9px 11px;
   background: rgba(23, 33, 31, 0.78);
@@ -685,6 +761,17 @@ h1 {
   font-size: 13px;
   font-weight: 900;
   line-height: 1.45;
+}
+
+.detail-gallery small {
+  position: absolute;
+  right: 10px;
+  bottom: 9px;
+  left: 10px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 11px;
+  font-weight: 850;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
 }
 
 .detail-section {

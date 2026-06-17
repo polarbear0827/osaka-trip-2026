@@ -1,23 +1,179 @@
+function image(url, alt, sourceName, sourceUrl, subject) {
+  return { url, alt, sourceName, sourceUrl, subject };
+}
+
 const images = {
-  dotonbori:
+  dotonbori: image(
     "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/4/47/Dotonbori%2C_Osaka%2C_at_night%2C_November_2016.jpg/1280px-Dotonbori%2C_Osaka%2C_at_night%2C_November_2016.jpg&w=1280",
-  shinsekai:
+    "大阪道頓堀夜景與戎橋招牌",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Dotonbori,_Osaka,_at_night,_November_2016.jpg",
+    "道頓堀"
+  ),
+  shinsekai: image(
     "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/9/95/Shinsekai_and_Tsutenkaku_at_night_2019-04-12.jpg/1280px-Shinsekai_and_Tsutenkaku_at_night_2019-04-12.jpg&w=1280",
-  kuromon:
+    "大阪新世界與通天閣夜景",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Shinsekai_and_Tsutenkaku_at_night_2019-04-12.jpg",
+    "新世界"
+  ),
+  kuromon: image(
     "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/9/9b/JP-osaka-arkade.jpg/1280px-JP-osaka-arkade.jpg&w=1280",
-  nara:
+    "大阪黑門市場拱廊",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:JP-osaka-arkade.jpg",
+    "黑門市場"
+  ),
+  nara: image(
     "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/2/29/Deer_at_nara_park_1.jpg/1280px-Deer_at_nara_park_1.jpg&w=1280",
-  tsuruhashi:
+    "奈良公園的鹿",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Deer_at_nara_park_1.jpg",
+    "奈良公園"
+  ),
+  todaiji: image(
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Daibutsu-den_in_Todaiji_Nara01bs3200.jpg?width=1280",
+    "奈良東大寺大佛殿",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Daibutsu-den_in_Todaiji_Nara01bs3200.jpg",
+    "東大寺"
+  ),
+  kintetsuNara: image(
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Kintetsu_Nara_Station_20110409_(8406710279).jpg?width=1280",
+    "近鐵奈良站外觀",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Kintetsu_Nara_Station_20110409_(8406710279).jpg",
+    "近鐵奈良"
+  ),
+  tsuruhashi: image(
     "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Osaka_Ikuno_Korea_Town_001.jpg/1280px-Osaka_Ikuno_Korea_Town_001.jpg&w=1280",
-  usj:
+    "大阪生野韓國城商店街",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Osaka_Ikuno_Korea_Town_001.jpg",
+    "鶴橋 / 生野"
+  ),
+  tsuruhashiMarket: image(
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Tsuruhashi_market_by_andyket_in_Higashinari,_Osaka.jpg?width=1280",
+    "大阪鶴橋市場街景",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Tsuruhashi_market_by_andyket_in_Higashinari,_Osaka.jpg",
+    "鶴橋市場"
+  ),
+  kimchiShop: image(
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Kimchi_shop_by_Ken_OHYAMA_in_Tsuruhashi_Market,_Osaka.jpg?width=1280",
+    "鶴橋市場泡菜店",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Kimchi_shop_by_Ken_OHYAMA_in_Tsuruhashi_Market,_Osaka.jpg",
+    "鶴橋小菜"
+  ),
+  spaWorld: image(
+    "https://commons.wikimedia.org/wiki/Special:FilePath/SpaWorld.jpg?width=1280",
+    "大阪 SpaWorld 建築外觀",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:SpaWorld.jpg",
+    "SpaWorld"
+  ),
+  usj: image(
     "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Universal_Studios_Japan_entrance.jpg/1280px-Universal_Studios_Japan_entrance.jpg&w=1280",
-  umeda:
+    "大阪環球影城入口",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Universal_Studios_Japan_entrance.jpg",
+    "USJ"
+  ),
+  citywalk: image(
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Universal_Citywalk_Osaka_at_night_2.jpg?width=1280",
+    "Universal CityWalk Osaka 夜景",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Universal_Citywalk_Osaka_at_night_2.jpg",
+    "Universal CityWalk"
+  ),
+  umeda: image(
     "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/7/77/Osaka_Umeda_Sky_Building_Panoramablick_05.jpg/1280px-Osaka_Umeda_Sky_Building_Panoramablick_05.jpg&w=1280",
-  pokemon:
+    "大阪梅田空中庭園視角",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Osaka_Umeda_Sky_Building_Panoramablick_05.jpg",
+    "梅田"
+  ),
+  pokemon: image(
     "https://shop.pokemon.co.jp/en/shop/pokemoncenter-osakadx/images/mv-pokemoncenter-osakadx-001.webp",
-  nambaYasaka:
+    "Pokémon Center OSAKA DX 官方主視覺",
+    "Pokémon Center",
+    "https://shop.pokemon.co.jp/en/shop/pokemoncenter-osakadx/",
+    "Pokémon Center OSAKA DX"
+  ),
+  teamlab: image(
+    "https://assets.team-lab.com/b5EBo9Uo-OK6SM09ZTkEZQ/9cf18fad-ce15-4688-c57a-4c886f573f00/width=1200,format=jpeg",
+    "teamLab Botanical Garden Osaka 夜間戶外作品",
+    "teamLab",
+    "https://www.teamlab.art/e/botanicalgarden/",
+    "teamLab Botanical Garden Osaka"
+  ),
+  nambaYasaka: image(
     "https://commons.wikimedia.org/wiki/Special:FilePath/Namba-yasaka-jinja%20shishibutai.jpg?width=1280",
+    "難波八阪神社獅子殿",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Namba-yasaka-jinja_shishibutai.jpg",
+    "難波八阪神社"
+  ),
+  doguyasuji: image(
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Doguyasuji_South.jpg?width=1280",
+    "千日前道具屋筋商店街",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Doguyasuji_South.jpg",
+    "道具屋筋"
+  ),
+  hozenji: image(
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Hozenji_Yokocho_at_night.jpg?width=1280",
+    "大阪法善寺橫丁夜景",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Hozenji_Yokocho_at_night.jpg",
+    "法善寺橫丁"
+  ),
+  nambaParks: image(
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Namba_Parks.jpg?width=1280",
+    "大阪 Namba Parks 商業設施",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Namba_Parks.jpg",
+    "Namba Parks"
+  ),
+  nankaiNamba: image(
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Nankai_namba_station05s3200.jpg?width=1280",
+    "南海難波站月台",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Nankai_namba_station05s3200.jpg",
+    "南海難波"
+  ),
+  kixT2: image(
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Kansai_International_Airport_Terminal2.JPG?width=1280",
+    "關西國際機場第二航廈",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Kansai_International_Airport_Terminal2.JPG",
+    "KIX T2"
+  ),
+  kizuMarket: image(
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Osaka_Kizu_Wholesale_Market_(40473538664).jpg?width=1280",
+    "大阪木津卸売市場",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Osaka_Kizu_Wholesale_Market_(40473538664).jpg",
+    "木津市場"
+  ),
+  daimaru: image(
+    "https://commons.wikimedia.org/wiki/Special:FilePath/DAIMARU_Shinsaibashi_store_Osaka_Japan01-r.jpg?width=1280",
+    "大丸心齋橋店外觀",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:DAIMARU_Shinsaibashi_store_Osaka_Japan01-r.jpg",
+    "大丸心齋橋"
+  ),
+  amerikamura: image(
+    "https://commons.wikimedia.org/wiki/Special:FilePath/JP-osaka-amerikamura.jpg?width=1280",
+    "大阪美國村街景",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:JP-osaka-amerikamura.jpg",
+    "美國村"
+  ),
 };
+
+const fallbackImage = images.dotonbori;
 
 const mapSearch = (query) =>
   `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
@@ -26,6 +182,19 @@ const mapDirections = (origin, destination) =>
   `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(
     origin
   )}&destination=${encodeURIComponent(destination)}&travelmode=transit`;
+
+function mediaUrl(asset) {
+  return (asset && asset.url) || fallbackImage.url;
+}
+
+function mediaAlt(asset, fallback = "大阪行程照片") {
+  return escapeText((asset && asset.alt) || fallback);
+}
+
+function mediaSource(asset) {
+  if (!asset?.sourceName || !asset?.sourceUrl) return "";
+  return `<a href="${asset.sourceUrl}" target="_blank" rel="noreferrer">${escapeText(asset.sourceName)}</a>`;
+}
 
 const nav = [
   ["行程", "index.html#planner"],
@@ -872,6 +1041,184 @@ const areaDefaults = {
   }
 };
 
+const defaultFoodPools = {
+  airport: [
+    food("南海難波站飯糰 / 便當", "Nankai Namba Station onigiri bento", "剛進市區先止餓，避免拖著行李找店。"),
+    food("高島屋大阪店地下食品", "Takashimaya Osaka depachika", "甜點、熟食、早餐補給都好用。"),
+    food("南海難波站咖啡", "coffee near Nankai Namba Station", "等入住或整理交通卡時用。"),
+    food("KIX Terminal 2 便利商店", "Kansai Airport Terminal 2 convenience store", "出關慢時先補水和簡單熱食。"),
+    food("南海なんば駅弁当", "南海なんば駅 弁当", "坐車前後最穩的補給。"),
+  ],
+  namba: [
+    food("福太郎 本店", "福太郎 本店 大阪", "御好燒與蔥燒，第一晚大阪粉物代表。"),
+    food("道頓堀 今井 本店", "道頓堀 今井 本店", "想吃溫柔一點就選大阪烏龍麵。"),
+    food("一芳亭 本店", "一芳亭 本店 難波", "老派燒賣中華定食，很像真的在難波吃飯。"),
+    food("自由軒 難波本店", "自由軒 難波本店", "名物咖哩飯，份量適合當散步中的一餐。"),
+    food("會津屋 なんば店", "会津屋 なんば店", "章魚燒可分食，不必當整餐。"),
+    food("裏難波居酒屋", "裏なんば 居酒屋", "現場看人潮和菜單挑小店。"),
+  ],
+  market: [
+    food("木津市場食堂", "大阪木津卸売市場 食堂", "市場日看當天開什麼，越早越有感。"),
+    food("天ぷら 大吉 なんば店", "天ぷら 大吉 なんば店", "市場系天婦羅，坐下吃比較穩。"),
+    food("黒門 三平", "黒門 三平 大阪", "黑門想坐下吃海鮮時的選項。"),
+    food("まぐろや黒銀", "まぐろや黒銀 黒門市場本店", "路過吃鮪魚，小份就好。"),
+    food("市場玉子 / 熟食", "Osaka Kizu Market tamagoyaki", "小份補吃，回程日不吃太撐。"),
+    food("日本橋咖啡", "Nipponbashi Osaka coffee", "市場後找地方坐一下。"),
+  ],
+  nara: [
+    food("志津香 公園店", "志津香 公園店 奈良", "釜飯，冷天很適合，排太久就換。"),
+    food("柿の葉ずし 平宗 奈良店", "柿の葉ずし 平宗 奈良店", "奈良特色，適合買小份。"),
+    food("中谷堂", "中谷堂 奈良", "草餅點心，觀光但有地方性。"),
+    food("春日荷茶屋", "春日荷茶屋 奈良", "走到春日大社方向時可用。"),
+    food("まほろば大仏プリン本舗", "まほろば大仏プリン本舗 近鉄奈良", "想買甜點或伴手禮小點。"),
+    food("東向商店街午餐", "Higashimuki Shopping Street lunch Nara", "排隊失敗時回商店街找飯。"),
+  ],
+  tsuruhashi: [
+    food("焼肉 空 鶴橋本店", "焼肉 空 鶴橋本店", "鶴橋代表型燒肉，衣服會有味道。"),
+    food("豊田商店 本店", "豊田商店 本店 鶴橋", "泡菜和小菜，適合買回公寓。"),
+    food("鶴橋まぐろ食堂", "鶴橋まぐろ食堂", "不吃燒肉時的市場感海鮮。"),
+    food("鶴橋商店街 チヂミ", "鶴橋商店街 チヂミ", "韓式煎餅，小份分食。"),
+    food("鶴橋ホルモン", "鶴橋 ホルモン", "想吃更 local 可以看內臟燒肉。"),
+    food("SpaWorld 牛奶 / 飲料", "SpaWorld Osaka milk drink", "泡完湯的收尾儀式。"),
+  ],
+  shinsekai: [
+    food("八重勝", "八重勝 新世界 大阪", "新世界老派串炸代表。"),
+    food("串かつ てんぐ", "串かつ てんぐ 新世界 大阪", "排隊較可控時可選。"),
+    food("なべや", "なべや 西成 大阪", "冷天鍋物，坐下來吃比較恢復。"),
+    food("喫茶ドレミ", "喫茶ドレミ 新世界", "復古喫茶，適合慢慢休息。"),
+    food("スーパー玉出 新今宮", "スーパー玉出 新今宮", "回房熟食、飲料、隔天早餐補給。"),
+    food("ジャンジャン横丁 小吃", "ジャンジャン横丁 グルメ", "不用排名店，沿路看想吃什麼。"),
+  ],
+  usj: [
+    food("便利商店早餐", "convenience store near Shin-Imamiya Station", "入園前先吃，不要空腹排隊。"),
+    food("Kinopio's Cafe", "Kinopio's Cafe Universal Studios Japan", "Nintendo 區主題餐，依整理券和排隊狀況。"),
+    food("Three Broomsticks", "Three Broomsticks Universal Studios Japan", "Harry Potter 區氣氛餐。"),
+    food("USJ 桶裝爆米花", "Universal Studios Japan popcorn", "補給兼紀念品。"),
+    food("Universal CityWalk Osaka", "Universal CityWalk Osaka restaurants", "出園後最省力的晚餐。"),
+    food("大阪たこ焼きミュージアム", "大阪たこ焼きミュージアム Universal CityWalk", "CityWalk 補粉物。"),
+  ],
+  shinsaibashi: [
+    food("Pokémon Cafe", "Pokemon Cafe Osaka", "有預約才穩，不要現場賭。"),
+    food("心齋橋大丸地下街", "Daimaru Shinsaibashi depachika", "沒訂到 Cafe 時很好用。"),
+    food("北極星 心齋橋本店", "北極星 心斎橋本店", "蛋包飯，觀光但有大阪感。"),
+    food("甲賀流 たこ焼き", "甲賀流 たこ焼き アメリカ村", "美國村小吃，可分食。"),
+    food("一芳亭 船場店", "一芳亭 船場店 大阪", "想吃老派燒賣可從心齋橋走過去。"),
+    food("堀江咖啡", "Horie cafe Osaka", "散步中間休息。"),
+  ],
+  nagai: [
+    food("釜ひろ", "釜ひろ 大阪", "長居附近手打烏龍麵，展前很順。"),
+    food("又三郎", "又三郎 長居 大阪", "熟成肉漂亮飯，預算較高。"),
+    food("長居站周邊定食", "長居駅 定食", "展前快速坐下吃。"),
+    food("長居站咖啡", "長居駅 カフェ", "入場前休息和充電。"),
+    food("天王寺地下街小吃", "Tennoji underground restaurants", "展覽取消時回天王寺解決。"),
+    food("便利商店熱飲", "convenience store near Nagai Station Osaka", "夜間戶外展前補熱飲。"),
+  ],
+};
+
+const foodIntros = {
+  airport: "這段重點是順利進市區，食物以車站補給和地下街為主。",
+  namba: "難波不要只吃主街連鎖，往法善寺、裏難波、千日前鑽會比較有味道。",
+  market: "市場食物建議少量多樣，現場看開店狀況，不把預算押在一攤。",
+  nara: "奈良午餐要彈性，排隊太久就改商店街或柿葉壽司外帶。",
+  tsuruhashi: "鶴橋就是燒肉、泡菜、小菜和站邊市場感，衣服有味道也合理。",
+  shinsekai: "新世界與新今宮適合恢復體力：串炸、鍋物、喫茶、超市熟食都能成立。",
+  usj: "USJ 日不要硬追 local，園區體驗和體力管理比餐廳名單重要。",
+  shinsaibashi: "心齋橋可以漂亮一點：寶可夢、百貨地下街、蛋包飯、咖啡都放在同一圈。",
+  nagai: "teamLab 前先吃好、喝熱的，進場後就不要再分心找飯。",
+};
+
+const mediaByActivity = {
+  "d1-arrive-namba": { hero: images.kixT2, gallery: [images.kixT2, images.nankaiNamba, images.dotonbori] },
+  "d1-arrive-slow": { hero: images.nankaiNamba, gallery: [images.nankaiNamba, images.nambaParks, images.dotonbori] },
+  "d1-namba-walk": { hero: images.nambaYasaka, gallery: [images.nambaYasaka, images.doguyasuji, images.hozenji] },
+  "d1-kuromon-lite": { hero: images.kuromon, gallery: [images.kuromon, images.doguyasuji, images.dotonbori] },
+  "d1-uranamba-dinner": { hero: images.hozenji, gallery: [images.hozenji, images.dotonbori, images.doguyasuji] },
+  "d1-indoor-dinner": { hero: images.nambaParks, gallery: [images.nambaParks, images.nankaiNamba, images.dotonbori] },
+  "d2-luggage-shinimamiya": { hero: images.shinsekai, gallery: [images.nankaiNamba, images.shinsekai, images.spaWorld] },
+  "d2-locker-backup": { hero: images.nankaiNamba, gallery: [images.nankaiNamba, images.nambaParks, images.dotonbori] },
+  "d2-nara-park": { hero: images.nara, gallery: [images.kintetsuNara, images.nara, images.todaiji] },
+  "d2-nara-short": { hero: images.kintetsuNara, gallery: [images.kintetsuNara, images.nara, images.todaiji] },
+  "d2-tsuruhashi-spa": { hero: images.tsuruhashiMarket, gallery: [images.tsuruhashiMarket, images.kimchiShop, images.spaWorld] },
+  "d2-shinsekai-dinner": { hero: images.shinsekai, gallery: [images.shinsekai, images.spaWorld, images.nambaParks] },
+  "d3-usj-arrive": { hero: images.citywalk, gallery: [images.nankaiNamba, images.citywalk, images.usj] },
+  "d3-usj-late": { hero: images.nankaiNamba, gallery: [images.nankaiNamba, images.citywalk, images.usj] },
+  "d3-usj-day": { hero: images.usj, gallery: [images.usj, images.citywalk, images.dotonbori] },
+  "d3-usj-rain": { hero: images.nambaParks, gallery: [images.nambaParks, images.usj, images.citywalk] },
+  "d3-citywalk-home": { hero: images.citywalk, gallery: [images.citywalk, images.usj, images.shinsekai] },
+  "d3-laundry-night": { hero: images.shinsekai, gallery: [images.shinsekai, images.spaWorld, images.nankaiNamba] },
+  "d4-pokemon": { hero: images.pokemon, gallery: [images.pokemon, images.daimaru, images.amerikamura] },
+  "d4-pretty-lunch": { hero: images.daimaru, gallery: [images.daimaru, images.nambaParks, images.hozenji] },
+  "d4-horie-walk": { hero: images.amerikamura, gallery: [images.amerikamura, images.daimaru, images.dotonbori] },
+  "d4-indoor-namba": { hero: images.nambaParks, gallery: [images.nambaParks, images.kuromon, images.nankaiNamba] },
+  "d4-teamlab": { hero: images.teamlab, gallery: [images.teamlab, images.nambaParks, images.shinsekai] },
+  "d4-tennoji-night": { hero: images.shinsekai, gallery: [images.shinsekai, images.nambaParks, images.spaWorld] },
+  "d5-kizu-market": { hero: images.kizuMarket, gallery: [images.kizuMarket, images.nankaiNamba, images.nambaParks] },
+  "d5-kuromon-nihonbashi": { hero: images.kuromon, gallery: [images.kuromon, images.doguyasuji, images.dotonbori] },
+  "d5-sleep-in": { hero: images.shinsekai, gallery: [images.shinsekai, images.spaWorld, images.nankaiNamba] },
+  "d5-namba-shopping": { hero: images.nambaParks, gallery: [images.nambaParks, images.nankaiNamba, images.daimaru] },
+  "d5-direct-airport": { hero: images.nankaiNamba, gallery: [images.nankaiNamba, images.kixT2, images.dotonbori] },
+};
+
+function activityKind(activity) {
+  if (activity.id.includes("arrive") || activity.area.includes("關西機場")) return "airport";
+  if (activity.area.includes("奈良")) return "nara";
+  if (activity.area.includes("鶴橋")) return "tsuruhashi";
+  if (activity.area.includes("USJ") || activity.area.includes("Universal")) return "usj";
+  if (activity.area.includes("心齋橋") || activity.area.includes("堀江") || activity.area.includes("南船場")) return "shinsaibashi";
+  if (activity.area.includes("長居")) return "nagai";
+  if (activity.area.includes("新今宮") || activity.area.includes("新世界") || activity.area.includes("天王寺")) return "shinsekai";
+  if (activity.area.includes("木津") || activity.area.includes("黑門") || activity.area.includes("日本橋")) return "market";
+  return "namba";
+}
+
+function normalizeFoods(activity) {
+  const kind = activityKind(activity);
+  const seen = new Set();
+  const merged = [...activity.foods, ...(defaultFoodPools[kind] || defaultFoodPools.namba)].filter((item) => {
+    if (seen.has(item.name)) return false;
+    seen.add(item.name);
+    return true;
+  });
+  activity.foods = merged.slice(0, Math.max(5, merged.length));
+  activity.foodIntro = activity.foodIntro || foodIntros[kind] || foodIntros.namba;
+}
+
+function normalizeMedia(activity) {
+  const assigned = mediaByActivity[activity.id] || {};
+  const hero = assigned.hero || activity.image || fallbackImage;
+  const gallery = uniqueMedia([...(assigned.gallery || []), hero, activity.image, fallbackImage]).slice(0, 3);
+  while (gallery.length < 3) gallery.push(fallbackImage);
+  activity.media = { hero, gallery };
+  activity.image = hero;
+}
+
+function uniqueMedia(items) {
+  const seen = new Set();
+  return items.filter((item) => {
+    const url = mediaUrl(item);
+    if (seen.has(url)) return false;
+    seen.add(url);
+    return true;
+  });
+}
+
+function normalizeFallbackPlan(activity) {
+  if (activity.fallbackPlan) return;
+  if (activity.type === "backup") {
+    activity.fallbackPlan = "這張本來就是備案；如果現場還是不順，就縮短停留，只保留吃飯和回住宿。";
+    return;
+  }
+  const kind = activityKind(activity);
+  const plans = {
+    nara: "奈良如果下雨或走太累，就只保留近鐵奈良、東向商店街、奈良公園入口，不硬走完整個東大寺圈。",
+    usj: "USJ 遇雨就優先室內設施、商店、表演和 CityWalk；不要為了拍照在雨裡硬撐。",
+    nagai: "teamLab 若天氣公告不穩，直接改天王寺 / 阿倍野室內夜，不要賭戶外展。",
+    market: "市場若太晚或店少，就轉難波 / 日本橋補買，回程日以不趕飛機為準。",
+    shinsaibashi: "Cafe 沒訂到或排隊太久，就改大丸地下街、北極星或堀江咖啡，不讓一間店卡死整天。",
+  };
+  activity.fallbackPlan = plans[kind] || "排隊超過 20-30 分鐘就換同區下一個點；這趟重點是順，不是把每間店打卡完。";
+}
+
 function source(name, url) {
   return { name, url };
 }
@@ -896,6 +1243,9 @@ function detailFallback(activity) {
 
 activities.forEach((activity) => {
   Object.assign(activity, detailFallback(activity), activityDetails[activity.id] || {});
+  normalizeFoods(activity);
+  normalizeMedia(activity);
+  normalizeFallbackPlan(activity);
 });
 
 const days = [
@@ -1039,10 +1389,15 @@ function renderDayGroups(dayActivities, mainActivities) {
 
   return groups
     .map((group) => {
-      const cards = [group.main, ...group.backups].filter(Boolean).map(renderActivityCard).join("");
+      const groupCards = [group.main, ...group.backups].filter(Boolean);
+      const cards = groupCards.map((activity, index) => renderActivityCard(activity, index, groupCards.length)).join("");
       const nextMain = group.main ? nextMainAfter(mainActivities, group.main.id) : null;
       return `
         <section class="route-group" aria-label="${group.main ? escapeText(group.main.time) : "備案"} 行程選項">
+          <div class="route-group-topline">
+            <span>${groupCards.length > 1 ? `左右滑看 ${groupCards.length} 個版本` : "單一路線"}</span>
+            <strong>${groupCards.map((item) => (item.type === "main" ? "主計畫" : "備案")).join(" / ")}</strong>
+          </div>
           <div class="route-group-strip">${cards}</div>
           ${nextMain ? renderConnector(group.main, nextMain) : ""}
         </section>
@@ -1056,19 +1411,21 @@ function nextMainAfter(mainActivities, id) {
   return index >= 0 ? mainActivities[index + 1] : null;
 }
 
-function renderActivityCard(activity) {
+function renderActivityCard(activity, index = 0, total = 1) {
   const label = activity.type === "main" ? "主計畫" : "備案";
-  const foods = activity.foods.slice(0, 4).map((item) => `<li>${escapeText(item.name)}</li>`).join("");
+  const foods = activity.foods.slice(0, 5).map((item) => `<li>${escapeText(item.name)}</li>`).join("");
   const stationPreview = activity.stationAccess?.[0] || activity.transit;
+  const optionLabel = total > 1 ? `${index + 1}/${total}` : "1/1";
   return `
     <article class="route-card ${activity.type === "backup" ? "is-backup" : ""}">
       <a class="route-image" href="activity.html?id=${activity.id}" aria-label="查看 ${escapeText(activity.title)} 詳情">
-        <img src="${activity.image}" alt="${escapeText(activity.title)}" loading="lazy" onerror="this.src='${images.dotonbori}'">
+        <img src="${mediaUrl(activity.media.hero)}" alt="${mediaAlt(activity.media.hero, activity.title)}" loading="lazy" onerror="this.src='${fallbackImage.url}'">
+        <span class="image-subject">${escapeText(activity.media.hero.subject || activity.area)}</span>
       </a>
       <div class="route-content">
         <div class="slot-topline">
           <span class="slot-time">${activity.time}</span>
-          <span class="type-pill">${label}</span>
+          <span class="type-pill">${label} ${optionLabel}</span>
         </div>
         <a class="route-title" href="activity.html?id=${activity.id}">${escapeText(activity.title)}</a>
         <span class="jp-name">${escapeText(activity.jpName || activity.area)}</span>
@@ -1099,7 +1456,7 @@ function renderConnector(current, next) {
     <div class="transit-connector">
       <span>${escapeText(origin)} → ${escapeText(destination)}</span>
       <a href="${mapDirections(origin, destination)}" target="_blank" rel="noreferrer">
-        查這段交通：${escapeText(current.title)} → ${escapeText(next.title)}
+        查下一段大眾運輸
       </a>
     </div>
   `;
@@ -1158,7 +1515,10 @@ function renderActivityDetail() {
   document.title = `${activity.title} | 一起去大阪`;
   detail.innerHTML = `
     <section class="activity-hero">
-      <img src="${activity.image}" alt="${escapeText(activity.title)}" onerror="this.src='${images.dotonbori}'">
+      <figure class="activity-hero-media">
+        <img src="${mediaUrl(activity.media.hero)}" alt="${mediaAlt(activity.media.hero, activity.title)}" onerror="this.src='${fallbackImage.url}'">
+        <figcaption>${mediaSource(activity.media.hero) || escapeText(activity.media.hero.subject || activity.title)}</figcaption>
+      </figure>
       <div>
         <p class="date-line">${day.kicker} / ${activity.time}</p>
         <h1>${escapeText(activity.title)}</h1>
@@ -1177,8 +1537,9 @@ function renderActivityDetail() {
         .map(
           (item) => `
             <figure>
-              <img src="${item.image}" alt="${escapeText(item.caption)}" loading="lazy" onerror="this.src='${images.dotonbori}'">
+              <img src="${mediaUrl(item.image)}" alt="${mediaAlt(item.image, item.caption)}" loading="lazy" onerror="this.src='${fallbackImage.url}'">
               <figcaption>${escapeText(item.caption)}</figcaption>
+              ${mediaSource(item.image) ? `<small>${mediaSource(item.image)}</small>` : ""}
             </figure>
           `
         )
@@ -1200,6 +1561,7 @@ function renderActivityDetail() {
         <article class="detail-panel">
           <p class="panel-kicker">FOOD AROUND</p>
           <h2>這張卡附近可以吃什麼</h2>
+          <p>${escapeText(activity.foodIntro)}</p>
           <div class="restaurant-list">
             ${activity.foods
               .map(
@@ -1218,6 +1580,7 @@ function renderActivityDetail() {
           <h2>現場提醒</h2>
           <ul class="tip-list plain">
             <li>建議停留：${escapeText(activity.duration)}</li>
+            <li>如果排隊或下雨：${escapeText(activity.fallbackPlan)}</li>
             ${activity.tips.map((tip) => `<li>${escapeText(tip)}</li>`).join("")}
           </ul>
           ${
@@ -1258,36 +1621,15 @@ function renderActivityDetail() {
 }
 
 function galleryFor(activity) {
-  const byArea = activity.area.includes("奈良")
-    ? [
-        { image: images.nara, caption: "奈良公園：慢慢走、慢慢餵鹿" },
-        { image: images.tsuruhashi, caption: "回大阪可接鶴橋市場晚餐" },
-        { image: images.shinsekai, caption: "累了就回新今宮泡湯休息" },
-      ]
-    : activity.area.includes("USJ") || activity.area.includes("Universal")
-      ? [
-          { image: images.usj, caption: "USJ 日重點是體力和園區節奏" },
-          { image: images.shinsekai, caption: "回新今宮後不再跨區" },
-          { image: images.dotonbori, caption: "伴手禮和宵夜留給回程路上" },
-        ]
-      : activity.id === "d4-pokemon"
-        ? [
-            { image: images.pokemon, caption: "Pokémon Center OSAKA DX：心齋橋大丸本館 9F" },
-            { image: images.dotonbori, caption: "心齋橋、道頓堀和難波可接成同一個步行圈" },
-            { image: images.umeda, caption: "晚上主線接長居 teamLab" },
-          ]
-        : activity.id === "d1-namba-walk"
-          ? [
-              { image: images.nambaYasaka, caption: "難波八阪神社：看獅子殿，不是難波神社" },
-              { image: images.kuromon, caption: "千日前道具屋筋：看廚具、食器、料理刀和食品模型" },
-              { image: images.dotonbori, caption: "晚餐再接道頓堀、法善寺、裏難波" },
-            ]
-          : [
-              { image: activity.image, caption: activity.title },
-              { image: images.dotonbori, caption: "難波周邊：吃飯、散步、補買都方便" },
-              { image: images.shinsekai, caption: "新今宮基地：晚上回房和洗衣都省力" },
-            ];
-  return byArea;
+  const captions = [
+    `${activity.media.gallery[0]?.subject || activity.area}：${activity.title}`,
+    activity.type === "main" ? "主線節奏：照這張卡慢慢走" : "備案節奏：少跑一點、保留體力",
+    activity.foodIntro,
+  ];
+  return activity.media.gallery.map((asset, index) => ({
+    image: asset,
+    caption: captions[index] || asset.subject || activity.title,
+  }));
 }
 
 document.addEventListener("DOMContentLoaded", () => {
