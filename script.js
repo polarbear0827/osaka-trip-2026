@@ -14,7 +14,9 @@ const images = {
   umeda:
     "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/7/77/Osaka_Umeda_Sky_Building_Panoramablick_05.jpg/1280px-Osaka_Umeda_Sky_Building_Panoramablick_05.jpg&w=1280",
   pokemon:
-    "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Daimaru_Shinsaibashi_main_building_2019.jpg/1280px-Daimaru_Shinsaibashi_main_building_2019.jpg&w=1280",
+    "https://shop.pokemon.co.jp/en/shop/pokemoncenter-osakadx/images/mv-pokemoncenter-osakadx-001.webp",
+  nambaYasaka:
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Namba-yasaka-jinja%20shishibutai.jpg?width=1280",
 };
 
 const mapSearch = (query) =>
@@ -115,9 +117,9 @@ const activities = [
     day: 0,
     type: "main",
     time: "16:45-18:00",
-    title: "難波八阪神社 / 道具屋筋短散步",
+    title: "難波八阪神社 / 千日前道具屋筋商店街短散步",
     area: "難波",
-    image: images.kuromon,
+    image: images.nambaYasaka,
     start: "2 Chome-3-9 Namba Osaka",
     end: "Namba Yasaka Shrine Osaka",
     mapQuery: "Namba Yasaka Shrine Osaka",
@@ -691,6 +693,211 @@ const activities = [
   },
 ];
 
+const activityDetails = {
+  "d1-arrive-namba": {
+    jpName: "関西国際空港 第2ターミナル → 南海なんば駅",
+    stationAccess: [
+      "Peach 抵達 KIX Terminal 2。出關後先找「AEROPLAZA / Terminal 1 / Railway」方向，搭免費接駁巴士到 Aeroplaza，官方時間約 7-9 分鐘。",
+      "Aeroplaza 連到「関西空港駅」。進站時看清楚南海電鐵 Nankai，不要走到 JR 閘口。",
+      "往難波可選南海 Airport Express，約 44 分鐘到南海なんば；或加價搭特急 Rapi:t，最快約 34 分鐘且有指定席。",
+      "南海なんば到第一晚住宿再用 Google Maps 步行。抵達日先不要拖行李進市場。"
+    ],
+    musts: {
+      eat: ["南海難波站飯糰或便當", "高島屋地下街甜點"],
+      drink: ["車站咖啡", "便利商店熱茶"],
+      experience: ["第一次看懂 KIX T2 → Aeroplaza → 鐵道站的動線", "先把行李放好再開始逛"]
+    },
+    article: [
+      "這張卡的核心不是景點，而是把第一天的節奏穩住。Peach 在關西機場 T2，T2 本身沒有鐵路站，所以第一步一定是搭免費接駁巴士到 Aeroplaza / 關西機場站。第一次來大阪最容易混亂的地方，就是以為一出航廈就能直接搭鐵路。",
+      "到關西機場站後，去難波最直覺的是南海電鐵。一般 Airport Express 比較便宜、不需指定席；Rapi:t 較快、有指定席與行李空間。你們抵達時間是下午，若出關順利可以看現場班次決定，不需要出發前把這段排死。",
+      "到南海難波後先去住宿，不要被道頓堀或黑門市場吸走。第一天身上有行李、手機電量也可能掉很快，先把房間、交通卡、現金和晚餐方向整理好，後面才會順。"
+    ],
+    sources: [
+      source("關西機場 T2 接駁", "https://www.kansai-airport.or.jp/en/access/t2"),
+      source("南海 Rapi:t", "https://www.nankai.co.jp/en_railway/traffic/express/rapit.html")
+    ]
+  },
+  "d1-namba-walk": {
+    titleNote: "正式名稱是「難波八阪神社」，不是「難波神社」。難波神社在本町/心齋橋北側，是另一間神社。",
+    jpName: "難波八阪神社（なんばやさかじんじゃ） / 千日前道具屋筋商店街（せんにちまえどうぐやすじしょうてんがい）",
+    stationAccess: [
+      "從第一晚難波住宿出發，以步行為主。",
+      "難波八阪神社官方交通：Osaka Metro 御堂筋線・四つ橋線「なんば」站步行約 6 分，或「大国町」站步行約 7 分；南海なんば站也約 6 分。",
+      "道具屋筋靠近南海なんば、なんば、近鐵日本橋；從神社回到難波站方向時順路接進去。"
+    ],
+    musts: {
+      eat: ["一芳亭燒賣", "裏難波小店的串燒或小菜"],
+      drink: ["道具屋筋周邊咖啡", "便利商店熱茶"],
+      experience: ["看獅子殿拍照", "逛料理刀、章魚燒器、食器、食品模型", "確認「難波八阪神社」日文名稱"]
+    },
+    article: [
+      "難波八阪神社最有辨識度的是巨大獅子殿，旅遊照片裡常看到一張大獅子嘴把舞台含在裡面。這裡不是難波神社；你在 Google Maps 或日本標示上要看「難波八阪神社」。若搜尋到「難波神社」，那會把你帶到心齋橋北邊，完全不同方向。",
+      "千日前道具屋筋商店街不是一般逛街街道，而是大阪餐飲文化的工具街。你會看到料理刀、鍋具、章魚燒器、關東煮鍋、餐具、咖啡器具、食品模型、餐廳招牌用品。就算不買，也很適合看大阪『吃倒太郎』背後的廚房工具。",
+      "這段放在第一晚剛好，因為兩個點都不用搭車。你們可以用神社拍照當開場，再鑽進道具屋筋看小物。真的想買刀具或玻璃器皿，建議先記店名和價格，最後一天再決定，避免第一晚就多一堆重量。"
+    ],
+    sources: [
+      source("難波八阪神社官方交通", "https://nambayasaka.jp/?page_id=142"),
+      source("大阪觀光局：道具屋筋", "https://osaka-info.jp/en/spot/sennichimae-doguyasuji-shopping-street/"),
+      source("Osaka Metro NiNE：道具屋筋", "https://metronine.osaka/en/spot-details/?spot_id=15623450142899")
+    ]
+  },
+  "d4-pokemon": {
+    jpName: "ポケモンセンターオーサカDX / ポケモンカフェ大阪",
+    stationAccess: [
+      "從動物園前或大國町搭 Osaka Metro 御堂筋線到「心斎橋」站。",
+      "官方交通是心齋橋站 4 號出口，地下通道直通大丸心齋橋店本館。",
+      "Pokémon Center OSAKA DX 在大丸心齋橋店本館 9F；Pokémon Cafe OSAKA 是附近設施，Cafe 以事前預約最穩。"
+    ],
+    musts: {
+      eat: ["Pokémon Cafe 主題餐點", "大丸地下街甜點"],
+      drink: ["Pokémon Cafe 飲料", "心齋橋咖啡"],
+      experience: ["看三聖鳥展示", "買大阪限定或小型周邊", "檢查扭蛋、貼紙、卡牌配件"]
+    },
+    article: [
+      "這張卡要拆成兩件事：Pokémon Center 是逛店買周邊；Pokémon Cafe 是餐廳體驗。兩者在同一個心齋橋大丸本館動線上，但 Cafe 不能當作臨時一定吃得到，建議把它視為有預約就上，沒預約就改漂亮午餐。",
+      "官方寫 OSAKA DX 在大丸心齋橋店本館 9F，從 Osaka Metro 御堂筋線心齋橋站 4 號出口可由地下通道直通。第一次去不用先鑽地面巷子，照著大丸本館與 9F 走比較不會迷路。",
+      "購物策略建議小物優先：吊飾、貼紙、襪子、文具、卡牌周邊最適合塞行李。大型娃娃很可愛，但你們後面還有 teamLab、回程補買和機場移動，真的要買就先想好箱子空間。"
+    ],
+    sources: [
+      source("Pokémon Center 官方頁", "https://shop.pokemon.co.jp/en/shop/pokemoncenter-osakadx/"),
+      source("Osaka Metro NiNE：Pokémon Center OSAKA DX", "https://metronine.osaka/en/spot-details/?spot_id=16889556312516")
+    ]
+  },
+  "d2-nara-park": {
+    jpName: "近鉄奈良駅 / 奈良公園 / 東大寺",
+    stationAccess: [
+      "從新今宮先到大阪難波或近鐵日本橋，轉近鐵奈良線到「近鉄奈良」站。",
+      "近鐵奈良站往東走就是奈良公園方向，官方觀光資訊寫奈良公園離近鐵奈良很近；JR 奈良則約 20 分鐘步行。",
+      "東大寺在公園深處，從近鐵奈良邊餵鹿邊走過去，比單純導航直衝更舒服。"
+    ],
+    musts: {
+      eat: ["志津香釜飯", "柿葉壽司", "中谷堂草餅"],
+      drink: ["商店街熱茶", "咖啡休息"],
+      experience: ["餵鹿餅", "東大寺大佛殿", "東向商店街補食"]
+    },
+    article: [
+      "奈良這天最適合用近鐵奈良站進出，因為一下車就能往奈良公園走。第一次去不要把地圖看成一串地名，而是想像成：車站 → 商店街 → 鹿開始變多的公園 → 東大寺。",
+      "鹿不是遊樂設施，是會靠近人的野生動物。鹿餅買了就快點餵，一片一片給，餵完把手攤開表示沒有了。紙袋、地圖、塑膠袋不要拿在手上晃。",
+      "午餐可以押志津香釜飯，但它熱門，排太久就改柿葉壽司或商店街。奈良的重點是慢走和看鹿，不是用餐廳把整天卡死。"
+    ],
+    sources: [
+      source("奈良官方旅遊：奈良公園", "https://www.visitnara.jp/destinations/area/nara-park/"),
+      source("Japan Travel：奈良公園交通", "https://www.japan.travel/en/destinations/kansai/nara/nara-park-and-around/")
+    ]
+  },
+  "d2-tsuruhashi-spa": {
+    jpName: "鶴橋 / 大阪コリアタウン / スパワールド",
+    stationAccess: [
+      "近鐵奈良回大阪時在「鶴橋」下車，不必先回難波。",
+      "鶴橋站周邊就是市場與燒肉街，JR 大阪環狀線、近鐵、Osaka Metro 千日前線都能到。",
+      "晚餐後可搭 JR 環狀線回新今宮，或用 Metro 回動物園前，再步行到 SpaWorld。"
+    ],
+    musts: {
+      eat: ["鶴橋燒肉", "泡菜小菜", "韓式煎餅"],
+      drink: ["泡湯後牛奶", "燒肉配烏龍茶或啤酒"],
+      experience: ["聞到整區燒肉味", "逛泡菜與韓式小菜店", "SpaWorld 放鬆腿"]
+    },
+    article: [
+      "鶴橋適合放在奈良回程，因為近鐵會經過。這裡不是精緻漂亮飯，而是市場、燒肉、泡菜、韓式小菜混在一起的站邊感。你們喜歡 local 食物，這段比回道頓堀吃連鎖更有意思。",
+      "官方與旅遊介紹都會提到鶴橋站周邊有多個市場與商店街，燒肉店非常密集。衣服可能會有味道，但你們住的公寓有洗衣機，反而很適合排這晚。",
+      "如果奈良走太累，就不要硬加 SpaWorld；直接回新今宮洗衣也很好。泡湯是恢復選項，不是任務。"
+    ],
+    sources: [
+      source("Osaka Info：鶴橋市場", "https://osaka-info.jp/en/spot/osaka-tsuruhashi-market/"),
+      source("The KANSAI Guide：鶴橋", "https://www.the-kansai-guide.com/en/directory/item/12304/")
+    ]
+  },
+  "d4-teamlab": {
+    jpName: "チームラボ ボタニカルガーデン 大阪 / 長居植物園",
+    stationAccess: [
+      "從心齋橋搭 Osaka Metro 御堂筋線到「長居」站。",
+      "Osaka Metro NiNE 與 Inside Osaka 都建議從長居站步行約 10 分鐘進長居公園 / 植物園方向。",
+      "這是夜間戶外展，入口與動線依官方當日公告為準。"
+    ],
+    musts: {
+      eat: ["釜ひろ烏龍麵", "長居站周邊定食"],
+      drink: ["展前熱飲", "回程便利商店飲料"],
+      experience: ["夜間植物園光影", "池邊作品", "用好走鞋慢慢走"]
+    },
+    article: [
+      "teamLab Botanical Garden Osaka 不是室內美術館，而是把長居植物園夜間變成戶外光影作品。官方介紹它位在長居公園內的長居植物園，植物園本身面積很大，晚上路面、池邊和樹影都會影響體驗。",
+      "這天一定要把鞋子、保暖和手機電量放在漂亮穿搭前面。下雨或強風時，官方可能調整開放狀態，所以天王寺備案要保留。",
+      "吃飯不要拖到展後才找。長居站附近先吃烏龍麵、定食或買熱飲，進展場後就專心走，出來再回新今宮宵夜。"
+    ],
+    sources: [
+      source("teamLab 官方頁", "https://www.teamlab.art/e/botanicalgarden/"),
+      source("Osaka Metro NiNE：teamLab 交通", "https://metronine.osaka/en/article_tour/20230901-teamlab-botanicalgarden/")
+    ]
+  },
+  "d5-kizu-market": {
+    jpName: "大阪木津卸売市場",
+    stationAccess: [
+      "從新今宮或大國町出發最順，大國町站步行約 5-10 分鐘可到木津市場一帶。",
+      "回程日不要拖大行李進市場；先寄放或留住宿，再用小包去吃早午餐。",
+      "吃完可往難波 / 南海なんば移動，準備搭南海往關西機場。"
+    ],
+    musts: {
+      eat: ["市場定食", "玉子燒", "天ぷら大吉"],
+      drink: ["市場咖啡", "熱茶"],
+      experience: ["看批發市場早晨感", "只買常溫好帶的小東西"]
+    },
+    article: [
+      "木津市場比黑門更像真正市場，不是每間店都為觀光客設計。這正好符合你想吃 local 的方向，但它也比較吃時間點，太晚到就少了市場感。",
+      "回程日的原則是短距離、不要拖行李、不要吃太撐。市場早午餐後就往難波補買，12 點前後開始往機場移動會比較安心。",
+      "如果看到生鮮很想買，請提醒自己：新鮮肉品、蔬果、需冷藏鮮食都不適合當回台伴手禮。吃在當地，帶走常溫的。"
+    ]
+  }
+};
+
+const areaDefaults = {
+  "難波": {
+    stationAccess: ["以 Osaka Metro / 南海 / 近鐵的難波站群為中心；第一次去請直接開 Google Maps 到該卡地點。", "站到點之間大多是步行圈，行李日避免鑽市場。"],
+    musts: { eat: ["粉物或老派定食"], drink: ["咖啡或熱茶"], experience: ["看街區招牌", "鑽巷弄找小店"] },
+    article: ["難波不是單一車站，而是一整片站群與商店街。第一次去最重要的是先分清楚南海なんば、Osaka Metro なんば、近鐵/阪神大阪難波、日本橋各自的位置，再用 Google Maps 接最後一段步行。", "這區很適合把吃飯放進散步裡：主街拍照，真正想吃 local 一點就往法善寺、裏難波、千日前和道具屋筋附近鑽。"]
+  },
+  "新今宮": {
+    stationAccess: ["用 JR 新今宮、南海新今宮、Osaka Metro 動物園前 / 大國町當回家錨點。", "晚上回房優先走大站與大路線，不硬抄小路。"],
+    musts: { eat: ["串炸", "鍋物", "超市熟食"], drink: ["泡湯後牛奶", "便利商店熱飲"], experience: ["回房洗衣", "SpaWorld 或新世界散步"] },
+    article: ["新今宮這幾天是基地，不是每次都要當景點玩。它的價值在於 JR、南海、Metro 交會，去奈良、USJ、長居、機場都能接上。", "晚上如果累了，直接在新世界或住宿附近吃，不要為了名店再跨區。房間有洗衣機和微波爐，超市熟食也是很好的旅行解法。"]
+  },
+  "奈良": {
+    stationAccess: ["從大阪難波 / 近鐵日本橋搭近鐵奈良線到近鉄奈良。", "近鐵奈良站往東步行就是奈良公園方向。"],
+    musts: { eat: ["柿葉壽司", "釜飯"], drink: ["熱茶"], experience: ["餵鹿", "慢走公園"] },
+    article: ["奈良適合慢慢走，不適合把地名塞成任務清單。近鐵奈良站出來後往公園方向走，鹿會慢慢變多，東大寺則在更裡面。", "把午餐當彈性選項，不要為一間店犧牲公園散步。"]
+  },
+  "USJ": {
+    stationAccess: ["從 JR 新今宮搭大阪環狀線到西九條，轉 JR 夢咲線到 Universal City。", "Universal City 出站後跟人潮步行約 5 分鐘到 USJ 入口。"],
+    musts: { eat: ["園區限定餐", "CityWalk 晚餐"], drink: ["熱飲"], experience: ["Nintendo / Harry Potter / 熱門設施", "用官方 App 看等待時間"] },
+    article: ["USJ 日不要追大阪 local 食物，這天重點是體力和園區體驗。早餐先吃、行動電源帶滿、雨衣比傘好用。", "出園後可以在 CityWalk 吃完再回新今宮，避開離園人潮。"]
+  }
+};
+
+function source(name, url) {
+  return { name, url };
+}
+
+function detailFallback(activity) {
+  const key = activity.area.includes("奈良")
+    ? "奈良"
+    : activity.area.includes("USJ") || activity.area.includes("Universal")
+      ? "USJ"
+      : activity.area.includes("新今宮") || activity.area.includes("新世界")
+        ? "新今宮"
+        : "難波";
+  const fallback = areaDefaults[key];
+  return {
+    jpName: activity.area,
+    stationAccess: fallback.stationAccess,
+    musts: fallback.musts,
+    article: fallback.article,
+    sources: [],
+  };
+}
+
+activities.forEach((activity) => {
+  Object.assign(activity, detailFallback(activity), activityDetails[activity.id] || {});
+});
+
 const days = [
   {
     kicker: "Day 1 / 11.28 Sat",
@@ -834,7 +1041,12 @@ function renderDayGroups(dayActivities, mainActivities) {
     .map((group) => {
       const cards = [group.main, ...group.backups].filter(Boolean).map(renderActivityCard).join("");
       const nextMain = group.main ? nextMainAfter(mainActivities, group.main.id) : null;
-      return `${cards}${nextMain ? renderConnector(group.main, nextMain) : ""}`;
+      return `
+        <section class="route-group" aria-label="${group.main ? escapeText(group.main.time) : "備案"} 行程選項">
+          <div class="route-group-strip">${cards}</div>
+          ${nextMain ? renderConnector(group.main, nextMain) : ""}
+        </section>
+      `;
     })
     .join("");
 }
@@ -847,10 +1059,11 @@ function nextMainAfter(mainActivities, id) {
 function renderActivityCard(activity) {
   const label = activity.type === "main" ? "主計畫" : "備案";
   const foods = activity.foods.slice(0, 4).map((item) => `<li>${escapeText(item.name)}</li>`).join("");
+  const stationPreview = activity.stationAccess?.[0] || activity.transit;
   return `
     <article class="route-card ${activity.type === "backup" ? "is-backup" : ""}">
       <a class="route-image" href="activity.html?id=${activity.id}" aria-label="查看 ${escapeText(activity.title)} 詳情">
-        <img src="${activity.image}" alt="${escapeText(activity.title)}">
+        <img src="${activity.image}" alt="${escapeText(activity.title)}" loading="lazy" onerror="this.src='${images.dotonbori}'">
       </a>
       <div class="route-content">
         <div class="slot-topline">
@@ -858,11 +1071,12 @@ function renderActivityCard(activity) {
           <span class="type-pill">${label}</span>
         </div>
         <a class="route-title" href="activity.html?id=${activity.id}">${escapeText(activity.title)}</a>
+        <span class="jp-name">${escapeText(activity.jpName || activity.area)}</span>
         <p>${escapeText(activity.summary)}</p>
         <div class="route-facts">
           <div>
-            <span>怎麼去</span>
-            <p>${escapeText(activity.transit)}</p>
+            <span>下哪站</span>
+            <p>${escapeText(stationPreview)}</p>
           </div>
           <div>
             <span>吃什麼</span>
@@ -879,10 +1093,12 @@ function renderActivityCard(activity) {
 }
 
 function renderConnector(current, next) {
+  const origin = current.end;
+  const destination = next.end;
   return `
     <div class="transit-connector">
-      <span>${escapeText(current.end)} → ${escapeText(next.start)}</span>
-      <a href="${mapDirections(current.end, next.start)}" target="_blank" rel="noreferrer">
+      <span>${escapeText(origin)} → ${escapeText(destination)}</span>
+      <a href="${mapDirections(origin, destination)}" target="_blank" rel="noreferrer">
         查這段交通：${escapeText(current.title)} → ${escapeText(next.title)}
       </a>
     </div>
@@ -936,15 +1152,19 @@ function renderActivityDetail() {
   const dayActivities = day.activityIds.map((id) => activityById[id]);
   const mainActivities = dayActivities.filter((item) => item.type === "main");
   const next = activity.type === "main" ? nextMainAfter(mainActivities, activity.id) : null;
+  const nextOrigin = activity.end;
+  const nextDestination = next?.end;
 
   document.title = `${activity.title} | 一起去大阪`;
   detail.innerHTML = `
     <section class="activity-hero">
-      <img src="${activity.image}" alt="${escapeText(activity.title)}">
+      <img src="${activity.image}" alt="${escapeText(activity.title)}" onerror="this.src='${images.dotonbori}'">
       <div>
         <p class="date-line">${day.kicker} / ${activity.time}</p>
         <h1>${escapeText(activity.title)}</h1>
+        <p class="jp-title">${escapeText(activity.jpName || activity.area)}</p>
         <p class="lead">${escapeText(activity.summary)}</p>
+        ${activity.titleNote ? `<p class="name-note">${escapeText(activity.titleNote)}</p>` : ""}
         <div class="hero-actions">
           <a class="button primary" href="${mapDirections(activity.start, activity.end)}" target="_blank" rel="noreferrer">查大眾運輸</a>
           <a class="button ghost" href="${mapSearch(activity.mapQuery)}" target="_blank" rel="noreferrer">開地點</a>
@@ -952,12 +1172,27 @@ function renderActivityDetail() {
         </div>
       </div>
     </section>
+    <section class="detail-gallery" aria-label="圖文導覽">
+      ${galleryFor(activity)
+        .map(
+          (item) => `
+            <figure>
+              <img src="${item.image}" alt="${escapeText(item.caption)}" loading="lazy" onerror="this.src='${images.dotonbori}'">
+              <figcaption>${escapeText(item.caption)}</figcaption>
+            </figure>
+          `
+        )
+        .join("")}
+    </section>
     <section class="section detail-section">
       <div class="detail-layout">
         <article class="detail-panel">
           <p class="panel-kicker">HOW TO MOVE</p>
           <h2>第一次去也看得懂的走法</h2>
           <p>${escapeText(activity.transit)}</p>
+          <div class="station-access">
+            ${activity.stationAccess.map((item) => `<span>${escapeText(item)}</span>`).join("")}
+          </div>
           <ol class="step-list">
             ${activity.steps.map((step) => `<li>${escapeText(step)}</li>`).join("")}
           </ol>
@@ -987,13 +1222,72 @@ function renderActivityDetail() {
           </ul>
           ${
             next
-              ? `<a class="button primary full" href="${mapDirections(activity.end, next.start)}" target="_blank" rel="noreferrer">下一段交通：${escapeText(activity.title)} → ${escapeText(next.title)}</a>`
+              ? `<a class="button primary full" href="${mapDirections(nextOrigin, nextDestination)}" target="_blank" rel="noreferrer">下一段交通：${escapeText(activity.title)} → ${escapeText(next.title)}</a>`
               : `<a class="button primary full" href="index.html#planner">這天主線到這裡，回行程看備案</a>`
           }
         </article>
       </div>
+      <div class="feature-grid">
+        <article>
+          <span>必吃</span>
+          ${activity.musts.eat.map((item) => `<strong>${escapeText(item)}</strong>`).join("")}
+        </article>
+        <article>
+          <span>必喝</span>
+          ${activity.musts.drink.map((item) => `<strong>${escapeText(item)}</strong>`).join("")}
+        </article>
+        <article>
+          <span>必體驗</span>
+          ${activity.musts.experience.map((item) => `<strong>${escapeText(item)}</strong>`).join("")}
+        </article>
+      </div>
+      <article class="story-panel">
+        <p class="panel-kicker">FIELD GUIDE</p>
+        <h2>把這張卡當成一段小旅行</h2>
+        ${activity.article.map((paragraph) => `<p>${escapeText(paragraph)}</p>`).join("")}
+        ${
+          activity.sources?.length
+            ? `<div class="source-links compact">${activity.sources
+                .map((item) => `<a href="${item.url}" target="_blank" rel="noreferrer">${escapeText(item.name)}</a>`)
+                .join("")}</div>`
+            : ""
+        }
+      </article>
     </section>
   `;
+}
+
+function galleryFor(activity) {
+  const byArea = activity.area.includes("奈良")
+    ? [
+        { image: images.nara, caption: "奈良公園：慢慢走、慢慢餵鹿" },
+        { image: images.tsuruhashi, caption: "回大阪可接鶴橋市場晚餐" },
+        { image: images.shinsekai, caption: "累了就回新今宮泡湯休息" },
+      ]
+    : activity.area.includes("USJ") || activity.area.includes("Universal")
+      ? [
+          { image: images.usj, caption: "USJ 日重點是體力和園區節奏" },
+          { image: images.shinsekai, caption: "回新今宮後不再跨區" },
+          { image: images.dotonbori, caption: "伴手禮和宵夜留給回程路上" },
+        ]
+      : activity.id === "d4-pokemon"
+        ? [
+            { image: images.pokemon, caption: "Pokémon Center OSAKA DX：心齋橋大丸本館 9F" },
+            { image: images.dotonbori, caption: "心齋橋、道頓堀和難波可接成同一個步行圈" },
+            { image: images.umeda, caption: "晚上主線接長居 teamLab" },
+          ]
+        : activity.id === "d1-namba-walk"
+          ? [
+              { image: images.nambaYasaka, caption: "難波八阪神社：看獅子殿，不是難波神社" },
+              { image: images.kuromon, caption: "千日前道具屋筋：看廚具、食器、料理刀和食品模型" },
+              { image: images.dotonbori, caption: "晚餐再接道頓堀、法善寺、裏難波" },
+            ]
+          : [
+              { image: activity.image, caption: activity.title },
+              { image: images.dotonbori, caption: "難波周邊：吃飯、散步、補買都方便" },
+              { image: images.shinsekai, caption: "新今宮基地：晚上回房和洗衣都省力" },
+            ];
+  return byArea;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
