@@ -171,9 +171,26 @@ const images = {
     "https://commons.wikimedia.org/wiki/File:JP-osaka-amerikamura.jpg",
     "美國村"
   ),
+  imamiyaEbisu: image(
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Imamiya-Ebisu-jinja_Torii.jpg?width=1280",
+    "大阪今宮戎神社鳥居",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Imamiya-Ebisu-jinja_Torii.jpg",
+    "今宮戎神社"
+  ),
+  sumiyoshiTaisha: image(
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Sumiyoshi_Taisha_Taikobashi_(drum_bridge)_1.jpg?width=1280",
+    "大阪住吉大社反橋",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Sumiyoshi_Taisha_Taikobashi_(drum_bridge)_1.jpg",
+    "住吉大社"
+  ),
 };
 
 const fallbackImage = images.dotonbori;
+const hiyoriHotelName = "Hiyori Hotel Osaka Shinsekai";
+const hiyoriHotelAddress = "2-10-9 Ebisuhigashi, Naniwa-ku, Osaka";
+const hiyoriHotelAddressJa = "大阪府大阪市浪速区恵美須東2-10-9";
 
 const mapSearch = (query) =>
   `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
@@ -219,16 +236,17 @@ const hotels = [
     ],
   },
   {
-    title: "後三晚：Apartment Hotel 11 Shinimamiya 3",
+    title: `後三晚：${hiyoriHotelName}`,
     dates: "11/29-12/02",
-    address: "大阪府大阪市西成区花園北1丁目1番3号",
-    role: "房間大、禁菸、私人衛浴、洗衣機、廚房、冰箱、微波爐，適合把奈良、USJ、teamLab 和回機場都串起來。",
-    stations: ["新今宮", "動物園前", "花園町", "大國町"],
+    address: hiyoriHotelAddressJa,
+    role: "位在新世界核心，JR 新今宮東口與 Metro 動物園前 5 號出口都約步行 2 分鐘；通天閣約 3 分鐘、SpaWorld 約 2 分鐘。館內 1 樓有投幣洗衣與 24 小時微波爐。",
+    stations: ["JR 新今宮（東口）", "動物園前（5 號出口）", "南海新今宮（西口）", "阪堺 新今宮駅前"],
     links: [
-      ["附近便利商店", "convenience store near 大阪市西成区花園北1丁目1番3号"],
-      ["24 小時超市", "24 hour supermarket near Shin-Imamiya Osaka"],
-      ["藥妝補貨", "drugstore near Shin-Imamiya Osaka"],
-      ["宵夜小店", "late night food near Shin-Imamiya Osaka"],
+      ["飯店 Google Maps", hiyoriHotelName],
+      ["附近便利商店", `convenience store near ${hiyoriHotelName}`],
+      ["24 小時店家", `24 hour store near ${hiyoriHotelName}`],
+      ["藥妝補貨", `drugstore near ${hiyoriHotelName}`],
+      ["宵夜小店", `late night food near ${hiyoriHotelName}`],
     ],
   },
 ];
@@ -372,16 +390,16 @@ const activities = [
     day: 1,
     type: "main",
     time: "08:45-10:15",
-    title: "難波退房 → 新今宮放行李",
+    title: "難波退房 → Hiyori Hotel 放行李",
     area: "難波 / 新今宮",
     image: images.shinsekai,
     start: "2 Chome-3-9 Namba Osaka",
-    end: "大阪市西成区花園北1丁目1番3号",
-    mapQuery: "大阪市西成区花園北1丁目1番3号",
+    end: hiyoriHotelAddress,
+    mapQuery: hiyoriHotelAddress,
     duration: "90 分鐘含退房、移動和寄放處理。",
-    summary: "先把後三晚基地處理好。公寓若不能寄放，就用新今宮或難波置物櫃。",
-    transit: "難波可搭南海到新今宮，或 Metro 到動物園前 / 大國町後步行。",
-    steps: ["退房前把奈良日小包整理好。", "拖行李先到新今宮住宿或附近置物櫃。", "確認晚上回來的最近出口。"],
+    summary: `先到 ${hiyoriHotelName} 寄放行李。飯店靠 JR 新今宮東口與動物園前 5 號出口，換住宿後可直接走去今宮戎神社。`,
+    transit: "從南海なんば搭南海本線到新今宮，走西口約 6 分鐘到飯店；或搭御堂筋線到動物園前，走 5 號出口約 2 分鐘。",
+    steps: ["退房前把奈良日小包整理好。", "拖行李先到 Hiyori Hotel 櫃台寄放。", "記住 JR 新今宮東口與動物園前 5 號出口，晚間回飯店最好辨認。"],
     foods: [
       food("難波站早餐", "Namba Station breakfast", "簡單吃，別讓早餐拖到奈良時間。"),
       food("新今宮便利商店", "convenience store near Shin-Imamiya Station", "買水、暖飲、小點心。"),
@@ -400,9 +418,9 @@ const activities = [
     end: "Namba Station coin locker",
     mapQuery: "Namba Station coin locker",
     duration: "45-60 分鐘。",
-    summary: "如果公寓太晚才能進房，行李先留在難波，奈良回來再取。",
+    summary: "如果飯店寄放行李臨時不順，行李先留在難波站，奈良回來再取。",
     transit: "住宿步行到難波站置物櫃，接著從大阪難波搭近鐵去奈良。",
-    steps: ["找大站置物櫃，比拖去公寓再折返更省事。", "拍下置物櫃位置和號碼。"],
+    steps: ["找大站置物櫃，比拖去飯店再折返更省事。", "拍下置物櫃位置和號碼。"],
     foods: [
       food("Namba Walk 早餐", "Namba Walk breakfast", "地下街早餐好找。"),
       food("咖啡外帶", "coffee near Osaka Namba Station", "近鐵前補咖啡。"),
@@ -410,19 +428,62 @@ const activities = [
     tips: ["這張備案適合入住規則不確定時使用。"],
   },
   {
+    id: "d2-imamiya-ebisu",
+    day: 1,
+    type: "main",
+    time: "10:15-10:55",
+    title: "今宮戎神社：換住宿後順路參拜",
+    area: "新世界 / 今宮戎",
+    image: images.imamiyaEbisu,
+    start: hiyoriHotelAddress,
+    end: "Imamiya Ebisu Shrine Osaka",
+    mapQuery: "Imamiya Ebisu Shrine Osaka",
+    duration: "30-40 分鐘，短參拜、看境內和御守即可。",
+    summary: "今宮戎神社是大阪商業信仰很有代表性的神社，從新飯店步行約 10-12 分鐘，剛好放在寄行李與奈良之間。",
+    transit: "從 Hiyori Hotel 沿新世界往北，步行到今宮戎神社；參拜後可走到大國町或惠美須町搭 Metro 前往日本橋 / 難波轉近鐵奈良線。",
+    steps: ["飯店寄放行李後只帶小包出發。", "進鳥居前先稍微停步，手水舍簡單淨手後參拜。", "參拜後不要逗留太久，往大國町 / 日本橋方向接奈良交通。"],
+    foods: [
+      food("喫茶ドレミ", "喫茶ドレミ 新世界", "若早餐還沒吃飽，可在新世界先補一點。"),
+      food("今宮戎站周邊咖啡", "今宮戎駅 カフェ", "短暫休息，不影響奈良出發。"),
+    ],
+    tips: ["正式名稱是「今宮戎神社（いまみやえびすじんじゃ）」，不要和京都的今宮神社混在一起。"],
+  },
+  {
+    id: "d2-skip-shrine",
+    day: 1,
+    type: "backup",
+    time: "10:15-10:45",
+    title: "備案：行李處理較久就直接去奈良",
+    area: "新世界 / 奈良",
+    image: images.kintetsuNara,
+    start: hiyoriHotelAddress,
+    end: "Kintetsu Nara Station",
+    mapQuery: "Kintetsu Nara Station",
+    nextActivityId: "d2-nara-park",
+    duration: "省下約 30 分鐘，保留奈良步行時間。",
+    summary: "如果寄放、退房或早餐花比較久，今宮戎留到回飯店附近散步，不延誤奈良主線。",
+    transit: "動物園前搭堺筋線到日本橋，步行轉近鐵日本橋；搭近鐵奈良線到近鐵奈良。也可依 Google Maps 當下班次走難波轉乘。",
+    steps: ["從飯店走回動物園前 5 號出口附近。", "搭堺筋線到日本橋，轉近鐵奈良線。", "抵達近鐵奈良後才開始午餐和餵鹿。"],
+    foods: [
+      food("近鐵奈良站飯糰", "Kintetsu Nara Station onigiri", "交通途中補給。"),
+      food("東向商店街午餐", "Higashimuki Shopping Street lunch Nara", "到奈良再吃，不在大阪拖時間。"),
+    ],
+    tips: ["這張備案的目的就是把奈良留完整。"],
+  },
+  {
     id: "d2-nara-park",
     day: 1,
     type: "main",
-    time: "10:45-16:00",
+    time: "11:15-16:15",
     title: "近鐵奈良 → 奈良公園 → 東大寺",
     area: "奈良",
     image: images.nara,
-    start: "Osaka Namba Station",
+    start: hiyoriHotelAddress,
     end: "Todaiji Temple Nara",
     mapQuery: "Todaiji Temple Nara",
     duration: "4-5 小時，含午餐和餵鹿。",
     summary: "從大阪難波或近鐵日本橋搭近鐵到近鐵奈良。出站後先走奈良公園，沿路餵鹿，再走到東大寺。",
-    transit: "新今宮先到難波 / 日本橋，轉近鐵奈良線到近鐵奈良；出站後用步行串景點。",
+    transit: "從動物園前搭堺筋線到日本橋，轉近鐵奈良線到近鐵奈良；出站後用步行串景點。",
     steps: [
       "抵達近鐵奈良後，先看 Google Maps 往奈良公園方向。",
       "鹿餅買了就快點餵，不要拿在手上逗鹿。",
@@ -475,11 +536,11 @@ const activities = [
     steps: ["近鐵奈良回程不要直接回難波，先在鶴橋下車。", "吃完用 JR 環狀線或 Metro 回新今宮。", "還有體力再去 SpaWorld。"],
     foods: [
       food("焼肉 空 鶴橋本店", "焼肉 空 鶴橋本店", "鶴橋代表型燒肉，衣服會有味道。"),
-      food("豊田商店 本店", "豊田商店 本店 鶴橋", "泡菜和小菜，適合買回公寓。"),
+      food("豊田商店 本店", "豊田商店 本店 鶴橋", "泡菜和小菜，適合買回飯店當宵夜。"),
       food("鶴橋まぐろ食堂", "鶴橋まぐろ食堂", "不吃燒肉時的市場感海鮮。"),
       food("SpaWorld", "SpaWorld Osaka", "泡完買牛奶或飲料收尾。"),
     ],
-    tips: ["住宿有洗衣機，燒肉味不用怕。"],
+    tips: ["飯店 1 樓有投幣洗衣，燒肉味衣物可以集中處理。"],
   },
   {
     id: "d2-shinsekai-dinner",
@@ -591,7 +652,7 @@ const activities = [
     area: "USJ / 新今宮",
     image: images.usj,
     start: "Universal City Station Osaka",
-    end: "大阪市西成区花園北1丁目1番3号",
+    end: hiyoriHotelAddress,
     mapQuery: "Universal CityWalk Osaka restaurants",
     duration: "晚餐後直接回房。",
     summary: "不急著擠出站，先在 CityWalk 吃飯或買伴手禮，再回新今宮。",
@@ -612,8 +673,8 @@ const activities = [
     area: "新今宮",
     image: images.shinsekai,
     start: "Universal City Station Osaka",
-    end: "大阪市西成区花園北1丁目1番3号",
-    mapQuery: "大阪市西成区花園北1丁目1番3号",
+    end: hiyoriHotelAddress,
+    mapQuery: hiyoriHotelAddress,
     duration: "回房恢復。",
     summary: "園區走到腿痠就直接回房，洗衣、泡澡、整理戰利品。",
     transit: "JR 回新今宮。",
@@ -690,6 +751,31 @@ const activities = [
     tips: ["這段不要買太多，晚上還要去戶外展。"],
   },
   {
+    id: "d4-sumiyoshi-taisha",
+    day: 3,
+    type: "backup",
+    time: "14:50-17:30",
+    title: "神社備案：住吉大社與反橋",
+    area: "住吉大社",
+    image: images.sumiyoshiTaisha,
+    start: "Daimaru Shinsaibashi Osaka",
+    end: "Sumiyoshi Taisha Osaka",
+    mapQuery: "Sumiyoshi Taisha Osaka",
+    nextActivityId: "d4-teamlab",
+    duration: "含往返約 2.5 小時，境內停留 60-75 分鐘。",
+    summary: "如果比起堀江逛街更想看大阪代表性神社，就從難波搭南海普通車到住吉大社，走反橋、本殿與境內小社。",
+    transit: "心齋橋搭御堂筋線一站到難波，走到南海なんば；搭南海本線普通車到住吉大社站，下車步行約 2 分鐘。前往 teamLab 時可先回新今宮，再從動物園前搭御堂筋線到長居。",
+    steps: ["從心齋橋先回難波，依標示走到南海なんば。", "只能搭停靠住吉大社站的普通車，不要直接跳上急行。", "出站往東約 2 分鐘到大鳥居，先看反橋，再進本殿參拜。", "17:00 前後開始回程，保留長居 teamLab 交通時間。"],
+    foods: [
+      food("洋食やろく 本店", "洋食やろく 本店 住吉大社", "住吉名物洋食，想吃玉子可樂餅可查現場營業。"),
+      food("汐かけ横丁", "汐かけ横丁 住吉公園", "住吉公園旁的餐飲集合點。"),
+      food("粉浜商店街小吃", "粉浜商店街 グルメ", "比景點餐廳更有住宅區商店街感。"),
+      food("住吉大社前 甘味", "住吉大社 甘味", "參拜後找日式甜點或熱茶。"),
+      food("粟玄", "粟玄 住吉 大阪", "想找小眾大阪甜點伴手禮可搜尋。"),
+    ],
+    tips: ["10-3 月官方參拜時間到 17:00；這張方案要準時離開心齋橋。", "境內原則上不要邊走邊吃，現金留一點給御守與賽錢。"],
+  },
+  {
     id: "d4-indoor-namba",
     day: 3,
     type: "backup",
@@ -761,7 +847,7 @@ const activities = [
     title: "木津市場早午餐",
     area: "大國町 / 木津市場",
     image: images.kuromon,
-    start: "大阪市西成区花園北1丁目1番3号",
+    start: hiyoriHotelAddress,
     end: "Osaka Kizu Market",
     mapQuery: "Osaka Kizu Market",
     duration: "75-90 分鐘。",
@@ -783,7 +869,7 @@ const activities = [
     title: "備案：黑門市場 + 日本橋",
     area: "黑門 / 日本橋",
     image: images.kuromon,
-    start: "大阪市西成区花園北1丁目1番3号",
+    start: hiyoriHotelAddress,
     end: "Kuromon Market Osaka",
     mapQuery: "Kuromon Market Osaka",
     duration: "90 分鐘。",
@@ -804,7 +890,7 @@ const activities = [
     title: "備案：睡飽，飯店附近早餐",
     area: "新今宮",
     image: images.shinsekai,
-    start: "大阪市西成区花園北1丁目1番3号",
+    start: hiyoriHotelAddress,
     end: "Shin-Imamiya Station",
     mapQuery: "Shin-Imamiya Station breakfast",
     duration: "60-90 分鐘。",
@@ -910,6 +996,74 @@ const activityDetails = {
       source("Osaka Metro NiNE：道具屋筋", "https://metronine.osaka/en/spot-details/?spot_id=15623450142899")
     ]
   },
+  "d2-luggage-shinimamiya": {
+    jpName: "日和ホテル大阪新世界（ひよりホテル おおさか しんせかい）",
+    stationAccess: [
+      "從第一晚難波住宿前往南海なんば站，搭南海本線到「新今宮」站；飯店官方寫南海新今宮西口步行約 6 分鐘。",
+      "若改搭 Metro，可在難波搭御堂筋線到「動物園前」站，走 5 號出口約 2 分鐘。",
+      "JR 新今宮站請走東口，官方步行約 2 分鐘；這個出口也最適合之後去 USJ。"
+    ],
+    musts: {
+      eat: ["新世界早餐", "車站飯糰"],
+      drink: ["飯店迎賓飲料（依當日提供）", "便利商店熱茶"],
+      experience: ["先寄放大行李", "記住動物園前 5 號出口", "確認 1 樓投幣洗衣位置"]
+    },
+    article: [
+      "Hiyori Hotel Osaka Shinsekai 的最大優勢是出口非常清楚：JR 新今宮東口、Metro 動物園前 5 號出口都約 2 分鐘。南海新今宮西口則約 6 分鐘，回關西機場時很好用。",
+      "這裡不是舊公寓式住宿。洗衣設備在飯店 1 樓，是投幣式洗衣；公共微波爐同樣在 1 樓並可 24 小時使用。抵達後先問櫃台寄放行李，再只帶奈良日需要的小包。",
+      "飯店就在新世界核心，SpaWorld 約 2 分鐘、通天閣約 3 分鐘。晚間從 JR 或 Metro 回來都不用再走長距離，這也讓奈良、USJ 與機場日更省力。"
+    ],
+    sources: [
+      source("Hiyori Hotel 官方交通", "https://shinsekai.hiyori-hotel.jp/access/"),
+      source("Hiyori Hotel 官方館內設施", "https://shinsekai.hiyori-hotel.jp/facilities/")
+    ]
+  },
+  "d2-imamiya-ebisu": {
+    jpName: "今宮戎神社（いまみやえびすじんじゃ）",
+    stationAccess: [
+      "從 Hiyori Hotel Osaka Shinsekai 步行約 10-12 分鐘；飯店官方位置在 JR 新今宮東口 / 動物園前 5 號出口約 2 分鐘處。",
+      "今宮戎神社官方交通：南海高野線「今宮戎」站往東很快就到；Metro 惠美須町 5 號出口約 8 分鐘、JR 新今宮約 10 分鐘。",
+      "參拜後去奈良：走到大國町或惠美須町，接 Metro 到日本橋，再轉近鐵奈良線。"
+    ],
+    musts: {
+      eat: ["新世界復古喫茶", "惠美須町小店"],
+      drink: ["喫茶店咖啡", "參拜後熱茶"],
+      experience: ["看南側鳥居", "向商業與福德之神參拜", "記住今宮戎的日文正式名稱"]
+    },
+    article: [
+      "今宮戎神社是浪速區很有大阪性格的神社，祭祀與商業繁盛、福德圓滿有關的えびす様。最有名的是每年 1 月的十日戎，但平日來反而能安靜看境內，不需要在人潮裡趕路。",
+      "這張卡之所以放在換住宿後，是因為新飯店就在新世界核心，從飯店走過去約 10 分鐘上下。參拜不需要排成大型景點，留 30-40 分鐘就夠，接著往日本橋轉近鐵去奈良。",
+      "正式名稱是「今宮戎神社」，不是京都北區的「今宮神社」。在 Google Maps 或車站標示上請看「今宮戎」與「えびす」兩個關鍵字。"
+    ],
+    sources: [
+      source("今宮戎神社官方交通", "https://www.imamiya-ebisu.jp/access"),
+      source("大阪觀光局：今宮戎神社", "https://osaka-info.jp/experience/en/osaka/spot/533"),
+      source("Hiyori Hotel Osaka Shinsekai 官方交通", "https://shinsekai.hiyori-hotel.jp/access/")
+    ]
+  },
+  "d4-sumiyoshi-taisha": {
+    jpName: "住吉大社（すみよしたいしゃ）",
+    stationAccess: [
+      "從心齋橋搭御堂筋線到難波，依站內標示步行到南海なんば站。",
+      "搭南海本線普通車到「住吉大社」站；不要搭不停靠的急行。出站後往東步行約 2 分鐘就是入口。",
+      "另一種體驗是搭阪堺電車到「住吉鳥居前」，下車就是大鳥居與反橋前方。"
+    ],
+    musts: {
+      eat: ["洋食やろく玉子可樂餅", "粉浜商店街小吃", "住吉大社前甘味"],
+      drink: ["日式熱茶", "商店街咖啡"],
+      experience: ["走反橋（太鼓橋）", "看住吉造本殿", "找御守與おもかる石"]
+    },
+    article: [
+      "住吉大社是大阪最有代表性的神社之一，也是全國眾多住吉神社的總本社。它和航海安全、和歌、藝能、商業與緣結等信仰都有關，境內比今宮戎大很多，建議至少留 60-75 分鐘。",
+      "第一次去先看紅色反橋，再依境內動線走本殿。住吉造的建築線條和一般印象中的華麗神社不同；不要只在橋邊拍照就離開。官方 10 月到 3 月參拜時間為 06:30-17:00，所以午後版本必須準時出發。",
+      "這張卡是堀江散步的替代版本，不是硬塞的第四個景點。選住吉大社時就不要再逛 Orange Street；17:00 左右離開，再回新今宮 / 動物園前轉御堂筋線到長居看 teamLab。"
+    ],
+    sources: [
+      source("住吉大社官方網站", "https://www.sumiyoshitaisha.net/en/"),
+      source("住吉大社官方 FAQ 與參拜時間", "https://www.sumiyoshitaisha.net/en/faq.html"),
+      source("住吉大社官方境內地圖", "https://www.sumiyoshitaisha.net/en/cmn/pdf/map_en.pdf")
+    ]
+  },
   "d4-pokemon": {
     jpName: "ポケモンセンターオーサカDX / ポケモンカフェ大阪",
     stationAccess: [
@@ -935,7 +1089,7 @@ const activityDetails = {
   "d2-nara-park": {
     jpName: "近鉄奈良駅 / 奈良公園 / 東大寺",
     stationAccess: [
-      "從新今宮先到大阪難波或近鐵日本橋，轉近鐵奈良線到「近鉄奈良」站。",
+      "從 Hiyori Hotel 走到動物園前站，搭堺筋線到日本橋；步行轉近鐵日本橋，搭近鐵奈良線到「近鉄奈良」站。",
       "近鐵奈良站往東走就是奈良公園方向，官方觀光資訊寫奈良公園離近鐵奈良很近；JR 奈良則約 20 分鐘步行。",
       "東大寺在公園深處，從近鐵奈良邊餵鹿邊走過去，比單純導航直衝更舒服。"
     ],
@@ -968,7 +1122,7 @@ const activityDetails = {
     },
     article: [
       "鶴橋適合放在奈良回程，因為近鐵會經過。這裡不是精緻漂亮飯，而是市場、燒肉、泡菜、韓式小菜混在一起的站邊感。你們喜歡 local 食物，這段比回道頓堀吃連鎖更有意思。",
-      "官方與旅遊介紹都會提到鶴橋站周邊有多個市場與商店街，燒肉店非常密集。衣服可能會有味道，但你們住的公寓有洗衣機，反而很適合排這晚。",
+      "官方與旅遊介紹都會提到鶴橋站周邊有多個市場與商店街，燒肉店非常密集。衣服可能會有味道，但 Hiyori Hotel 1 樓有投幣洗衣，這晚回去可以集中處理。",
       "如果奈良走太累，就不要硬加 SpaWorld；直接回新今宮洗衣也很好。泡湯是恢復選項，不是任務。"
     ],
     sources: [
@@ -1027,7 +1181,7 @@ const areaDefaults = {
   "新今宮": {
     stationAccess: ["用 JR 新今宮、南海新今宮、Osaka Metro 動物園前 / 大國町當回家錨點。", "晚上回房優先走大站與大路線，不硬抄小路。"],
     musts: { eat: ["串炸", "鍋物", "超市熟食"], drink: ["泡湯後牛奶", "便利商店熱飲"], experience: ["回房洗衣", "SpaWorld 或新世界散步"] },
-    article: ["新今宮這幾天是基地，不是每次都要當景點玩。它的價值在於 JR、南海、Metro 交會，去奈良、USJ、長居、機場都能接上。", "晚上如果累了，直接在新世界或住宿附近吃，不要為了名店再跨區。房間有洗衣機和微波爐，超市熟食也是很好的旅行解法。"]
+    article: ["Hiyori Hotel Osaka Shinsekai 這幾天是基地，不是每次都要當景點玩。JR 新今宮東口與動物園前 5 號出口都約步行 2 分鐘，去奈良、USJ、長居、機場都能接上。", "晚上如果累了，直接在新世界或住宿附近吃，不要為了名店再跨區。飯店 1 樓有投幣洗衣與 24 小時微波爐，超市熟食也是很好的旅行解法。"]
   },
   "奈良": {
     stationAccess: ["從大阪難波 / 近鐵日本橋搭近鐵奈良線到近鉄奈良。", "近鐵奈良站往東步行就是奈良公園方向。"],
@@ -1075,7 +1229,7 @@ const defaultFoodPools = {
   ],
   tsuruhashi: [
     food("焼肉 空 鶴橋本店", "焼肉 空 鶴橋本店", "鶴橋代表型燒肉，衣服會有味道。"),
-    food("豊田商店 本店", "豊田商店 本店 鶴橋", "泡菜和小菜，適合買回公寓。"),
+    food("豊田商店 本店", "豊田商店 本店 鶴橋", "泡菜和小菜，適合買回飯店當宵夜。"),
     food("鶴橋まぐろ食堂", "鶴橋まぐろ食堂", "不吃燒肉時的市場感海鮮。"),
     food("鶴橋商店街 チヂミ", "鶴橋商店街 チヂミ", "韓式煎餅，小份分食。"),
     food("鶴橋ホルモン", "鶴橋 ホルモン", "想吃更 local 可以看內臟燒肉。"),
@@ -1136,6 +1290,8 @@ const mediaByActivity = {
   "d1-indoor-dinner": { hero: images.nambaParks, gallery: [images.nambaParks, images.nankaiNamba, images.dotonbori] },
   "d2-luggage-shinimamiya": { hero: images.shinsekai, gallery: [images.nankaiNamba, images.shinsekai, images.spaWorld] },
   "d2-locker-backup": { hero: images.nankaiNamba, gallery: [images.nankaiNamba, images.nambaParks, images.dotonbori] },
+  "d2-imamiya-ebisu": { hero: images.imamiyaEbisu, gallery: [images.imamiyaEbisu, images.shinsekai, images.nankaiNamba] },
+  "d2-skip-shrine": { hero: images.kintetsuNara, gallery: [images.kintetsuNara, images.nara, images.todaiji] },
   "d2-nara-park": { hero: images.nara, gallery: [images.kintetsuNara, images.nara, images.todaiji] },
   "d2-nara-short": { hero: images.kintetsuNara, gallery: [images.kintetsuNara, images.nara, images.todaiji] },
   "d2-tsuruhashi-spa": { hero: images.tsuruhashiMarket, gallery: [images.tsuruhashiMarket, images.kimchiShop, images.spaWorld] },
@@ -1149,6 +1305,7 @@ const mediaByActivity = {
   "d4-pokemon": { hero: images.pokemon, gallery: [images.pokemon, images.daimaru, images.amerikamura] },
   "d4-pretty-lunch": { hero: images.daimaru, gallery: [images.daimaru, images.nambaParks, images.hozenji] },
   "d4-horie-walk": { hero: images.amerikamura, gallery: [images.amerikamura, images.daimaru, images.dotonbori] },
+  "d4-sumiyoshi-taisha": { hero: images.sumiyoshiTaisha, gallery: [images.sumiyoshiTaisha, images.shinsekai, images.teamlab] },
   "d4-indoor-namba": { hero: images.nambaParks, gallery: [images.nambaParks, images.kuromon, images.nankaiNamba] },
   "d4-teamlab": { hero: images.teamlab, gallery: [images.teamlab, images.nambaParks, images.shinsekai] },
   "d4-tennoji-night": { hero: images.shinsekai, gallery: [images.shinsekai, images.nambaParks, images.spaWorld] },
@@ -1179,7 +1336,7 @@ function normalizeFoods(activity) {
     seen.add(item.name);
     return true;
   });
-  activity.foods = merged.slice(0, Math.max(5, merged.length));
+  activity.foods = merged.slice(0, 8);
   activity.foodIntro = activity.foodIntro || foodIntros[kind] || foodIntros.namba;
 }
 
@@ -1266,13 +1423,15 @@ const days = [
   },
   {
     kicker: "Day 2 / 11.29 Sun",
-    title: "搬到新今宮、奈良餵鹿、鶴橋、SpaWorld",
-    note: "先處理換住宿，再去奈良。晚上回大阪吃鶴橋或新世界，泡湯當恢復選項。",
-    base: "住宿：Apartment Hotel 11 Shinimamiya 3",
+    title: "搬到 Hiyori、今宮戎、奈良餵鹿、鶴橋",
+    note: "先到新飯店寄行李，順路走今宮戎神社，再去奈良。晚上回大阪吃鶴橋或新世界，泡湯當恢復選項。",
+    base: `住宿：${hiyoriHotelName}`,
     transport: "主交通：南海 / 近鐵 / JR 環狀線",
     activityIds: [
       "d2-luggage-shinimamiya",
       "d2-locker-backup",
+      "d2-imamiya-ebisu",
+      "d2-skip-shrine",
       "d2-nara-park",
       "d2-nara-short",
       "d2-tsuruhashi-spa",
@@ -1283,7 +1442,7 @@ const days = [
     kicker: "Day 3 / 11.30 Mon",
     title: "Universal Studios Japan 一日",
     note: "USJ 需要完整一天。從新今宮用 JR 到西九條轉夢咲線，出 Universal City 後步行進園。",
-    base: "住宿：新今宮",
+    base: `住宿：${hiyoriHotelName}`,
     transport: "主交通：JR 環狀線 / JR 夢咲線",
     activityIds: [
       "d3-usj-arrive",
@@ -1296,14 +1455,15 @@ const days = [
   },
   {
     kicker: "Day 4 / 12.01 Tue",
-    title: "心齋橋寶可夢、堀江、美國村、長居 teamLab",
-    note: "這天主線是御堂筋線：心齋橋逛寶可夢，晚上到長居看 teamLab。",
-    base: "住宿：新今宮",
+    title: "心齋橋寶可夢、堀江或住吉大社、長居 teamLab",
+    note: "下午可在堀江散步或改去住吉大社；晚上回御堂筋線到長居看 teamLab。",
+    base: `住宿：${hiyoriHotelName}`,
     transport: "主交通：Metro 御堂筋線",
     activityIds: [
       "d4-pokemon",
       "d4-pretty-lunch",
       "d4-horie-walk",
+      "d4-sumiyoshi-taisha",
       "d4-indoor-namba",
       "d4-teamlab",
       "d4-tennoji-night",
@@ -1313,7 +1473,7 @@ const days = [
     kicker: "Day 5 / 12.02 Wed",
     title: "木津市場或黑門、難波補買、回機場",
     note: "15:25 起飛，這天只排南區短距離。12:00 前後離開市區比較安心。",
-    base: "住宿：新今宮 → KIX T2",
+    base: `住宿：${hiyoriHotelName} → KIX T2`,
     transport: "主交通：南海 / JR / Metro",
     activityIds: [
       "d5-kizu-market",
@@ -1508,7 +1668,11 @@ function renderActivityDetail() {
   const day = days[activity.day];
   const dayActivities = day.activityIds.map((id) => activityById[id]);
   const mainActivities = dayActivities.filter((item) => item.type === "main");
-  const next = activity.type === "main" ? nextMainAfter(mainActivities, activity.id) : null;
+  const next = activity.nextActivityId
+    ? activityById[activity.nextActivityId]
+    : activity.type === "main"
+      ? nextMainAfter(mainActivities, activity.id)
+      : null;
   const nextOrigin = activity.end;
   const nextDestination = next?.end;
 
