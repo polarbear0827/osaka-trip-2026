@@ -241,6 +241,19 @@ const hotels = [
     address: hiyoriHotelAddressJa,
     role: "位在新世界核心，JR 新今宮東口與 Metro 動物園前 5 號出口都約步行 2 分鐘；通天閣約 3 分鐘、SpaWorld 約 2 分鐘。館內 1 樓有投幣洗衣與 24 小時微波爐。",
     stations: ["JR 新今宮（東口）", "動物園前（5 號出口）", "南海新今宮（西口）", "阪堺 新今宮駅前"],
+    mealPlan: "已加購 CONA 早餐",
+    perks: [
+      ["06:00-12:00", "免費晨間咖啡", "不想吃太多時，可搭配超商飯糰或三明治。"],
+      ["07:00-10:00", "CONA 和洋早餐 buffet", "已加購；L.O. 09:30。大阪名物與菜色依當日供應。"],
+      ["Check-in", "每人挑一件 Happy Present", "入浴劑、面膜等選項依現場供應。"],
+      ["12:00-18:00", "免費迎賓飲料", "咖啡、茶飲、抹茶拿鐵等依當日供應。"],
+      ["18:00-19:30", "免費 Happy Hour", "生啤酒或日本酒，依現場供應。"],
+      ["20:00-22:00", "免費日和高湯茶泡飯", "L.O. 21:30；配料與其他小食依當日供應。"],
+    ],
+    sourceLinks: [
+      ["飯店官方早餐", "https://shinsekai.hiyori-hotel.jp/breakfast/"],
+      ["飯店官方服務", "https://shinsekai.hiyori-hotel.jp/services/"],
+    ],
     links: [
       ["飯店 Google Maps", hiyoriHotelName],
       ["附近便利商店", `convenience store near ${hiyoriHotelName}`],
@@ -568,19 +581,20 @@ const activities = [
     id: "d3-usj-arrive",
     day: 2,
     type: "main",
-    time: "07:30-09:30",
-    title: "新今宮 → 西九條 → Universal City",
+    time: "07:00-09:30",
+    title: "CONA 早餐 → Universal City",
     area: "USJ",
     image: images.usj,
     start: "Shin-Imamiya Station",
     end: "Universal City Station Osaka",
     mapQuery: "Universal City Station Osaka",
-    duration: "抓 60-90 分鐘含轉車和入園前排隊。",
-    summary: "USJ 這天完整留給園區。早點出門，先把官方 App、門票 QR code、整理券都準備好。",
+    duration: "早餐 25-30 分鐘，交通與入園前排隊抓 60-90 分鐘。",
+    summary: "07:00 先吃已加購的 CONA 早餐，07:30 左右離開飯店，再從 JR 新今宮東口搭車去 USJ。",
     transit: "JR 新今宮搭大阪環狀線到西九條，轉 JR 夢咲線到 Universal City。",
-    steps: ["出門前確認票券、App、行動電源。", "新今宮上 JR，到西九條轉夢咲線。", "Universal City 出站後跟人潮步行進園。"],
+    steps: ["07:00 到 1 樓 CONA 吃早餐，USJ 日不要慢慢吃到 08:00。", "出門前確認票券、App、行動電源。", "JR 新今宮到西九條轉夢咲線。", "Universal City 出站後跟人潮步行進園。"],
     foods: [
-      food("便利商店早餐", "convenience store near Shin-Imamiya Station", "入園前先吃，不要空腹排隊。"),
+      food("Hiyori Hotel CONA 早餐", "Hiyori Hotel Osaka Shinsekai breakfast CONA", "已加購；07:00 開始，L.O. 09:30。"),
+      food("CONA 大阪名物專區", "Hiyori Hotel Osaka Shinsekai breakfast", "章魚燒、魚板、串炸等品項依當日供應。"),
       food("Universal CityWalk 咖啡", "Universal CityWalk Osaka coffee", "入園前最後補給。"),
     ],
     tips: ["SUPER NINTENDO WORLD 依當天規則可能需要整理券或指定入場。"],
@@ -589,8 +603,8 @@ const activities = [
     id: "d3-usj-late",
     day: 2,
     type: "backup",
-    time: "09:00-10:30",
-    title: "備案：晚一點入園，保留重點設施",
+    time: "08:00-10:30",
+    title: "備案：睡飽吃 CONA，再晚一點入園",
     area: "USJ",
     image: images.usj,
     start: "Shin-Imamiya Station",
@@ -599,8 +613,8 @@ const activities = [
     duration: "睡飽再玩，不追早鳥。",
     summary: "如果前一天奈良太累，就把 USJ 改成晚點入園，鎖定 3-4 個最想玩的重點。",
     transit: "同樣 JR 到 Universal City。",
-    steps: ["早餐吃完整一點。", "入園後先看 App 等待時間，不來回折返。"],
-    foods: [food("CityWalk 早餐", "Universal CityWalk Osaka breakfast", "晚入園時比較從容。")],
+    steps: ["08:00 左右到 CONA 慢慢吃早餐。", "入園後先看 App 等待時間，不來回折返。"],
+    foods: [food("Hiyori Hotel CONA 早餐", "Hiyori Hotel Osaka Shinsekai breakfast CONA", "已加購，晚入園版本就完整吃。")],
     tips: ["這天不要再排大阪景點。"],
   },
   {
@@ -699,7 +713,7 @@ const activities = [
     duration: "2-4 小時，依 Cafe 預約和購物時間調整。",
     summary: "寶可夢中心 DX 和 Cafe 都在心齋橋大丸。Cafe 有訂到就坐，沒訂到就逛店和改百貨午餐。",
     transit: "從動物園前 / 大國町搭御堂筋線到心齋橋，出站步行到大丸。",
-    steps: ["先確認 Cafe 預約時間。", "先逛 Pokémon Center，重物可晚點再買。", "如果 Cafe 沒位，百貨地下街或周邊午餐。"],
+    steps: ["早上先在 CONA 吃已加購早餐，不需要另外找早餐店。", "確認 Cafe 預約時間。", "先逛 Pokémon Center，重物可晚點再買。", "如果 Cafe 沒位，百貨地下街或周邊午餐。"],
     foods: [
       food("Pokémon Cafe", "Pokemon Cafe Osaka", "有預約才穩，不要現場賭。"),
       food("心齋橋大丸地下街", "Daimaru Shinsaibashi depachika", "沒訂到 Cafe 時很好用。"),
@@ -843,18 +857,19 @@ const activities = [
     id: "d5-kizu-market",
     day: 4,
     type: "main",
-    time: "09:00-10:45",
-    title: "木津市場早午餐",
+    time: "07:30-10:45",
+    title: "CONA 早餐 → 木津市場少量補吃",
     area: "大國町 / 木津市場",
     image: images.kuromon,
     start: hiyoriHotelAddress,
     end: "Osaka Kizu Market",
     mapQuery: "Osaka Kizu Market",
-    duration: "75-90 分鐘。",
-    summary: "比黑門更偏批發市場感，離大國町近。回程日只排南區短距離，不拖大行李進市場。",
+    duration: "早餐約 45 分鐘，市場停留 60-75 分鐘。",
+    summary: "早餐已加購，所以先在 CONA 吃七分飽，再去較有批發市場感的木津市場少量補吃，不浪費早餐也不把自己塞太撐。",
     transit: "從新今宮 / 大國町一帶步行或搭一站；大行李先寄放或留住宿。",
-    steps: ["先退房或整理行李。", "只帶小包去市場。", "吃完回難波補買或直接往機場。"],
+    steps: ["07:30 左右到 CONA 吃早餐，市場日不要吃到十分飽。", "整理行李並詢問寄放，只帶小包去市場。", "市場以玉子、熟食或小份料理為主。", "吃完回難波補買或直接往機場。"],
     foods: [
+      food("Hiyori Hotel CONA 早餐", "Hiyori Hotel Osaka Shinsekai breakfast CONA", "已加購，先吃七分飽。"),
       food("木津市場食堂", "大阪木津卸売市場 食堂", "現場看當天開什麼。"),
       food("天ぷら 大吉 なんば店", "天ぷら 大吉 なんば店", "市場系天婦羅，坐下吃比較穩。"),
       food("市場玉子 / 熟食", "Osaka Kizu Market tamagoyaki", "小份補吃。"),
@@ -865,18 +880,19 @@ const activities = [
     id: "d5-kuromon-nihonbashi",
     day: 4,
     type: "backup",
-    time: "09:00-10:45",
-    title: "備案：黑門市場 + 日本橋",
+    time: "07:30-10:45",
+    title: "備案：CONA 早餐 + 黑門市場 / 日本橋",
     area: "黑門 / 日本橋",
     image: images.kuromon,
     start: hiyoriHotelAddress,
     end: "Kuromon Market Osaka",
     mapQuery: "Kuromon Market Osaka",
     duration: "90 分鐘。",
-    summary: "如果想回熟悉的難波圈，就黑門小吃 + 日本橋補買。",
+    summary: "先吃已加購早餐，再回熟悉的難波圈；黑門只少量吃，日本橋以補買為主。",
     transit: "Metro 到日本橋或難波後步行。",
-    steps: ["行李先寄放。", "黑門少量吃，不豪賭。", "日本橋補小東西後回難波。"],
+    steps: ["先在 CONA 吃早餐並把行李寄放。", "黑門少量吃，不豪賭。", "日本橋補小東西後回難波。"],
     foods: [
+      food("Hiyori Hotel CONA 早餐", "Hiyori Hotel Osaka Shinsekai breakfast CONA", "已加購，先吃再出門。"),
       food("黒門 三平", "黒門 三平 大阪", "海鮮丼或握壽司小份。"),
       food("まぐろや黒銀", "まぐろや黒銀 黒門市場本店", "路過吃鮪魚。"),
     ],
@@ -886,20 +902,20 @@ const activities = [
     id: "d5-sleep-in",
     day: 4,
     type: "backup",
-    time: "09:00-10:30",
-    title: "備案：睡飽，飯店附近早餐",
+    time: "08:30-10:30",
+    title: "備案：睡飽，CONA 早餐後直接退房",
     area: "新今宮",
     image: images.shinsekai,
     start: hiyoriHotelAddress,
     end: "Shin-Imamiya Station",
     mapQuery: "Shin-Imamiya Station breakfast",
     duration: "60-90 分鐘。",
-    summary: "前一晚太累就睡飽退房，把時間留給機場和補買。",
+    summary: "前一晚太累就睡飽，把已加購的 CONA 早餐吃完再退房，取消市場，把時間留給機場和補買。",
     transit: "住宿周邊步行。",
-    steps: ["吃簡單早餐。", "整理行李和退房。", "直接往難波或機場。"],
+    steps: ["08:30 左右到 CONA 吃早餐，最晚不要超過 L.O. 09:30。", "整理行李和退房。", "直接往難波或機場。"],
     foods: [
-      food("新今宮咖啡", "coffee near Shin-Imamiya Station", "簡單醒腦。"),
-      food("便利商店早餐", "convenience store near Shin-Imamiya Station", "最省事。"),
+      food("Hiyori Hotel CONA 早餐", "Hiyori Hotel Osaka Shinsekai breakfast CONA", "已加購，睡飽版本也不要錯過。"),
+      food("免費晨間咖啡", "Hiyori Hotel Osaka Shinsekai morning coffee", "06:00-12:00，可外帶。"),
     ],
     tips: ["回程日不要把自己逼到趕飛機。"],
   },
@@ -1004,18 +1020,22 @@ const activityDetails = {
       "JR 新今宮站請走東口，官方步行約 2 分鐘；這個出口也最適合之後去 USJ。"
     ],
     musts: {
-      eat: ["新世界早餐", "車站飯糰"],
-      drink: ["飯店迎賓飲料（依當日提供）", "便利商店熱茶"],
-      experience: ["先寄放大行李", "記住動物園前 5 號出口", "確認 1 樓投幣洗衣位置"]
+      eat: ["已加購 CONA 和洋早餐", "20:00 後日和高湯茶泡飯"],
+      drink: ["06:00-12:00 晨間咖啡", "12:00-18:00 迎賓飲料", "18:00-19:30 Happy Hour"],
+      experience: ["先寄放大行李", "Check-in 每人挑一件 Happy Present", "確認 1 樓投幣洗衣位置"]
     },
     article: [
       "Hiyori Hotel Osaka Shinsekai 的最大優勢是出口非常清楚：JR 新今宮東口、Metro 動物園前 5 號出口都約 2 分鐘。南海新今宮西口則約 6 分鐘，回關西機場時很好用。",
       "這裡不是舊公寓式住宿。洗衣設備在飯店 1 樓，是投幣式洗衣；公共微波爐同樣在 1 樓並可 24 小時使用。抵達後先問櫃台寄放行李，再只帶奈良日需要的小包。",
+      "你們已加購 1 樓 CONA 早餐，供應時間是 07:00-10:00、L.O. 09:30。USJ 日建議 07:00 開門就吃，其他兩天可以慢一點；早餐內容與大阪名物專區會依當日供應調整。",
+      "免費服務可以當作行程緩衝：晨間咖啡 06:00-12:00、迎賓飲料 12:00-18:00、Happy Hour 18:00-19:30、高湯茶泡飯 20:00-22:00（L.O. 21:30）。入住時也記得每人挑一件 Happy Present。",
       "飯店就在新世界核心，SpaWorld 約 2 分鐘、通天閣約 3 分鐘。晚間從 JR 或 Metro 回來都不用再走長距離，這也讓奈良、USJ 與機場日更省力。"
     ],
     sources: [
       source("Hiyori Hotel 官方交通", "https://shinsekai.hiyori-hotel.jp/access/"),
-      source("Hiyori Hotel 官方館內設施", "https://shinsekai.hiyori-hotel.jp/facilities/")
+      source("Hiyori Hotel 官方館內設施", "https://shinsekai.hiyori-hotel.jp/facilities/"),
+      source("Hiyori Hotel 官方早餐", "https://shinsekai.hiyori-hotel.jp/breakfast/"),
+      source("Hiyori Hotel 官方免費服務", "https://shinsekai.hiyori-hotel.jp/services/")
     ]
   },
   "d2-imamiya-ebisu": {
@@ -1317,7 +1337,7 @@ const mediaByActivity = {
 };
 
 function activityKind(activity) {
-  if (activity.id.includes("arrive") || activity.area.includes("關西機場")) return "airport";
+  if (activity.id.startsWith("d1-arrive") || activity.area.includes("關西機場")) return "airport";
   if (activity.area.includes("奈良")) return "nara";
   if (activity.area.includes("鶴橋")) return "tsuruhashi";
   if (activity.area.includes("USJ") || activity.area.includes("Universal")) return "usj";
@@ -1441,7 +1461,7 @@ const days = [
   {
     kicker: "Day 3 / 11.30 Mon",
     title: "Universal Studios Japan 一日",
-    note: "USJ 需要完整一天。從新今宮用 JR 到西九條轉夢咲線，出 Universal City 後步行進園。",
+    note: "07:00 先吃已加購的 CONA 早餐，07:30 左右出發；從 JR 新今宮到西九條轉夢咲線。",
     base: `住宿：${hiyoriHotelName}`,
     transport: "主交通：JR 環狀線 / JR 夢咲線",
     activityIds: [
@@ -1456,7 +1476,7 @@ const days = [
   {
     kicker: "Day 4 / 12.01 Tue",
     title: "心齋橋寶可夢、堀江或住吉大社、長居 teamLab",
-    note: "下午可在堀江散步或改去住吉大社；晚上回御堂筋線到長居看 teamLab。",
+    note: "早上可在 CONA 慢慢吃早餐；下午在堀江散步或改去住吉大社，晚上到長居看 teamLab。",
     base: `住宿：${hiyoriHotelName}`,
     transport: "主交通：Metro 御堂筋線",
     activityIds: [
@@ -1471,8 +1491,8 @@ const days = [
   },
   {
     kicker: "Day 5 / 12.02 Wed",
-    title: "木津市場或黑門、難波補買、回機場",
-    note: "15:25 起飛，這天只排南區短距離。12:00 前後離開市區比較安心。",
+    title: "CONA 早餐、木津或黑門少量補吃、回機場",
+    note: "早餐已加購，先在飯店吃再去市場；15:25 起飛，12:00 前後離開市區比較安心。",
     base: `住宿：${hiyoriHotelName} → KIX T2`,
     transport: "主交通：南海 / JR / Metro",
     activityIds: [
@@ -1633,12 +1653,30 @@ function renderStayCards() {
           <h3>${escapeText(hotel.title)}</h3>
           <p class="address">${escapeText(hotel.address)}</p>
           <p>${escapeText(hotel.role)}</p>
+          ${hotel.mealPlan ? `<strong class="meal-plan">${escapeText(hotel.mealPlan)}</strong>` : ""}
           <div class="station-list">
             ${hotel.stations.map((station) => `<strong>${escapeText(station)}</strong>`).join("")}
           </div>
+          ${
+            hotel.perks
+              ? `<div class="hotel-perks" aria-label="飯店餐飲與免費服務">${hotel.perks
+                  .map(
+                    ([time, title, note]) => `
+                      <div>
+                        <span>${escapeText(time)}</span>
+                        <strong>${escapeText(title)}</strong>
+                        <p>${escapeText(note)}</p>
+                      </div>`
+                  )
+                  .join("")}</div>`
+              : ""
+          }
           <div class="link-grid">
             ${hotel.links
               .map(([label, query]) => `<a href="${mapSearch(query)}" target="_blank" rel="noreferrer">${label}</a>`)
+              .join("")}
+            ${(hotel.sourceLinks || [])
+              .map(([label, url]) => `<a href="${url}" target="_blank" rel="noreferrer">${label}</a>`)
               .join("")}
           </div>
         </article>

@@ -612,6 +612,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
+  align-items: start;
 }
 
 .stay-card {
@@ -641,6 +642,57 @@ h1 {
 .address {
   color: var(--ink) !important;
   font-weight: 900;
+}
+
+.meal-plan {
+  display: inline-flex;
+  margin-top: 4px;
+  padding: 7px 10px;
+  background: var(--teal-dark);
+  border-radius: var(--radius);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 950;
+}
+
+.hotel-perks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.hotel-perks > div {
+  min-width: 0;
+  padding: 13px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.hotel-perks span,
+.hotel-perks strong {
+  display: block;
+}
+
+.hotel-perks span {
+  margin-bottom: 4px;
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.hotel-perks strong {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.hotel-perks p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
 }
 
 .station-list,
@@ -1109,6 +1161,10 @@ h1 {
   .day-overview,
   .route-facts,
   .transit-connector {
+    grid-template-columns: 1fr;
+  }
+
+  .hotel-perks {
     grid-template-columns: 1fr;
   }
 
