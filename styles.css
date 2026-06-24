@@ -291,6 +291,7 @@ h1 {
 }
 
 .planner-section {
+  scroll-margin-top: 132px;
   background: #102724;
   color: #fff;
 }
@@ -1170,6 +1171,11 @@ h1 {
 
   .route-card {
     flex-basis: min(86vw, 520px);
+  }
+
+  .button.small,
+  .day-tab {
+    min-height: 44px;
   }
 
   .day-meta {

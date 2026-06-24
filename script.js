@@ -17,13 +17,6 @@ const images = {
     "https://commons.wikimedia.org/wiki/File:Shinsekai_and_Tsutenkaku_at_night_2019-04-12.jpg",
     "新世界"
   ),
-  kuromon: image(
-    "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/9/9b/JP-osaka-arkade.jpg/1280px-JP-osaka-arkade.jpg&w=1280",
-    "大阪黑門市場拱廊",
-    "Wikimedia Commons",
-    "https://commons.wikimedia.org/wiki/File:JP-osaka-arkade.jpg",
-    "黑門市場"
-  ),
   nara: image(
     "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/2/29/Deer_at_nara_park_1.jpg/1280px-Deer_at_nara_park_1.jpg&w=1280",
     "奈良公園的鹿",
@@ -45,27 +38,6 @@ const images = {
     "https://commons.wikimedia.org/wiki/File:Kintetsu_Nara_Station_20110409_(8406710279).jpg",
     "近鐵奈良"
   ),
-  tsuruhashi: image(
-    "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Osaka_Ikuno_Korea_Town_001.jpg/1280px-Osaka_Ikuno_Korea_Town_001.jpg&w=1280",
-    "大阪生野韓國城商店街",
-    "Wikimedia Commons",
-    "https://commons.wikimedia.org/wiki/File:Osaka_Ikuno_Korea_Town_001.jpg",
-    "鶴橋 / 生野"
-  ),
-  tsuruhashiMarket: image(
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Tsuruhashi_market_by_andyket_in_Higashinari,_Osaka.jpg?width=1280",
-    "大阪鶴橋市場街景",
-    "Wikimedia Commons",
-    "https://commons.wikimedia.org/wiki/File:Tsuruhashi_market_by_andyket_in_Higashinari,_Osaka.jpg",
-    "鶴橋市場"
-  ),
-  kimchiShop: image(
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Kimchi_shop_by_Ken_OHYAMA_in_Tsuruhashi_Market,_Osaka.jpg?width=1280",
-    "鶴橋市場泡菜店",
-    "Wikimedia Commons",
-    "https://commons.wikimedia.org/wiki/File:Kimchi_shop_by_Ken_OHYAMA_in_Tsuruhashi_Market,_Osaka.jpg",
-    "鶴橋小菜"
-  ),
   spaWorld: image(
     "https://commons.wikimedia.org/wiki/Special:FilePath/SpaWorld.jpg?width=1280",
     "大阪 SpaWorld 建築外觀",
@@ -73,19 +45,26 @@ const images = {
     "https://commons.wikimedia.org/wiki/File:SpaWorld.jpg",
     "SpaWorld"
   ),
-  usj: image(
-    "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Universal_Studios_Japan_entrance.jpg/1280px-Universal_Studios_Japan_entrance.jpg&w=1280",
-    "大阪環球影城入口",
+  ramenOsaka: image(
+    "https://commons.wikimedia.org/wiki/Special:FilePath/A_bowl_of_ramen_in_Osaka%2C_Japan.jpg?width=1280",
+    "大阪拉麵實拍",
     "Wikimedia Commons",
-    "https://commons.wikimedia.org/wiki/File:Universal_Studios_Japan_entrance.jpg",
-    "USJ"
+    "https://commons.wikimedia.org/wiki/File:A_bowl_of_ramen_in_Osaka,_Japan.jpg",
+    "大阪拉麵"
   ),
-  citywalk: image(
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Universal_Citywalk_Osaka_at_night_2.jpg?width=1280",
-    "Universal CityWalk Osaka 夜景",
+  ramenShio: image(
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Bowl_of_shio_ramen_with_pork.jpg?width=1280",
+    "日式鹽味叉燒拉麵實拍",
     "Wikimedia Commons",
-    "https://commons.wikimedia.org/wiki/File:Universal_Citywalk_Osaka_at_night_2.jpg",
-    "Universal CityWalk"
+    "https://commons.wikimedia.org/wiki/File:Bowl_of_shio_ramen_with_pork.jpg",
+    "鹽味拉麵"
+  ),
+  owl: image(
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Barn_Owl_R1_1749.jpg?width=1280",
+    "貓頭鷹近照（咖啡廳體驗示意）",
+    "Wikimedia Commons",
+    "https://commons.wikimedia.org/wiki/File:Barn_Owl_R1_1749.jpg",
+    "貓頭鷹（示意）"
   ),
   umeda: image(
     "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/7/77/Osaka_Umeda_Sky_Building_Panoramablick_05.jpg/1280px-Osaka_Umeda_Sky_Building_Panoramablick_05.jpg&w=1280",
@@ -149,13 +128,6 @@ const images = {
     "Wikimedia Commons",
     "https://commons.wikimedia.org/wiki/File:Kansai_International_Airport_Terminal2.JPG",
     "KIX T2"
-  ),
-  kizuMarket: image(
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Osaka_Kizu_Wholesale_Market_(40473538664).jpg?width=1280",
-    "大阪木津卸売市場",
-    "Wikimedia Commons",
-    "https://commons.wikimedia.org/wiki/File:Osaka_Kizu_Wholesale_Market_(40473538664).jpg",
-    "木津市場"
   ),
   daimaru: image(
     "https://commons.wikimedia.org/wiki/Special:FilePath/DAIMARU_Shinsaibashi_store_Osaka_Japan01-r.jpg?width=1280",
@@ -282,7 +254,7 @@ const activities = [
     steps: [
       "下飛機後先處理入境、領行李、買水或簡單補給。",
       "從 T2 跟著標示搭接駁車到 Aeroplaza / 關西機場站。",
-      "搭南海往難波，抵達後先放行李，不要拖著行李逛市場。",
+      "搭南海往難波，抵達後先放行李，不要拖著行李進鬧區。",
     ],
     foods: [
       food("南海難波站飯糰 / 便當", "Nankai Namba Station onigiri bento", "先止餓，不把第一餐押在排隊名店。"),
@@ -334,25 +306,28 @@ const activities = [
     tips: ["如果天色太暗或下雨，這張卡可以直接跳過。"],
   },
   {
-    id: "d1-kuromon-lite",
+    id: "d1-hozenji-sweets",
     day: 0,
     type: "backup",
     time: "16:45-18:00",
-    title: "備案：黑門市場只看不吃飽",
-    area: "日本橋 / 黑門",
-    image: images.kuromon,
+    title: "備案：法善寺、水掛不動、日式甘味",
+    area: "法善寺 / 千日前",
+    image: images.hozenji,
     start: "2 Chome-3-9 Namba Osaka",
-    end: "Kuromon Market Osaka",
-    mapQuery: "Kuromon Market Osaka",
-    duration: "45-60 分鐘，只當偵查。",
-    summary: "黑門偏觀光，但第一晚路過看一圈可以。不要把晚餐預算全壓在這裡。",
-    transit: "從難波或日本橋步行進市場。",
-    steps: ["先看價格和開店狀況。", "想吃就買小份，晚餐仍留給裏難波。"],
+    end: "Hozenji Temple Osaka",
+    mapQuery: "Hozenji Temple Osaka",
+    duration: "45-60 分鐘，參拜、巷弄和甜點。",
+    summary: "不想再走神社與廚具街，就改走法善寺橫丁。看水掛不動明王，再選一份大阪老甘味。",
+    transit: "從難波住宿步行約 10-15 分鐘；最近為 Osaka Metro 難波站與近鐵日本橋站。",
+    steps: ["先進法善寺參拜水掛不動明王。", "穿過石疊橫丁看老店與燈籠。", "甘味只選一間，留肚子給晚餐。"],
     foods: [
-      food("黒門 三平", "黒門 三平 大阪", "想坐下吃海鮮時的選項。"),
-      food("まぐろや黒銀", "まぐろや黒銀 黒門市場本店", "小份鮪魚，路過吃即可。"),
+      food("夫婦善哉", "夫婦善哉 法善寺", "兩碗小紅豆湯，很適合兩人旅行。"),
+      food("浪芳庵 本店", "浪芳庵 本店", "烤麻糬與和菓子。"),
+      food("甘党まえだ なんばウォーク店", "甘党まえだ なんばウォーク店", "叭好燒、紅豆湯與抹茶甘味。"),
+      food("鳴門鯛焼本舗 千日前相合橋店", "鳴門鯛焼本舗 千日前相合橋店", "鯢魚燒適合邊走邊分食。"),
+      food("道頓堀今井 本店", "道頓堀今井 本店", "不想吃甜就改狐狸烏龍麵。"),
     ],
-    tips: ["市場觀光價明顯，少量吃會比較開心。"],
+    tips: ["法善寺正式日文是「法善寺（ほうぜんじ）」，水掛不動在寺內。"],
   },
   {
     id: "d1-uranamba-dinner",
@@ -501,7 +476,7 @@ const activities = [
       "抵達近鐵奈良後，先看 Google Maps 往奈良公園方向。",
       "鹿餅買了就快點餵，不要拿在手上逗鹿。",
       "體力夠就走到東大寺；不夠就只做公園和商店街。",
-      "回大阪時可從近鐵奈良直接搭到鶴橋。"
+      "回大阪時搭近鐵奈良線往大阪難波，在大阪難波下車就能接晚餐。"
     ],
     foods: [
       food("志津香 公園店", "志津香 公園店 奈良", "釜飯，冷天很適合，排太久就換。"),
@@ -533,27 +508,30 @@ const activities = [
     tips: ["縮短版的重點是不要趕，奈良慢慢走比較舒服。"],
   },
   {
-    id: "d2-tsuruhashi-spa",
+    id: "d2-namba-ramen-spa",
     day: 1,
     type: "main",
     time: "17:00-22:00",
-    title: "鶴橋市場晚餐 → SpaWorld 泡湯",
-    area: "鶴橋 / 新世界",
-    image: images.tsuruhashi,
+    title: "奈良 → 難波拉麵 → SpaWorld 泡湯",
+    area: "難波拉麵 / 新世界",
+    image: images.ramenShio,
     start: "Kintetsu Nara Station",
     end: "SpaWorld Osaka",
     mapQuery: "SpaWorld Osaka",
     duration: "晚餐 90 分鐘，泡湯 90-120 分鐘。",
-    summary: "奈良回大阪時直接在鶴橋下車。站邊商店街、燒肉、泡菜小菜都很有在地感，最後回新今宮泡湯。",
-    transit: "近鐵奈良到鶴橋；晚餐後搭 JR / Metro 回新今宮或動物園前。",
-    steps: ["近鐵奈良回程不要直接回難波，先在鶴橋下車。", "吃完用 JR 環狀線或 Metro 回新今宮。", "還有體力再去 SpaWorld。"],
+    summary: "奈良回程直到大阪難波，從蛤蜊清湯、高井田黑醬油、牡蠣白湯到豚骨都有。只挑一碗，再回飯店旁泡湯。",
+    transit: "近鐵奈良搭近鐵奈良線到大阪難波；吃完從難波搭御堂筋線到動物園前，5 號出口後步行約 2 分鐘到飯店 / SpaWorld。",
+    steps: ["近鐵奈良站搭往大阪難波方向的車。", "拉麵只選一間，排隊超過 30 分鐘就換難波同區備選。", "吃完搭御堂筋線回動物園前。", "還有體力再去 SpaWorld。"],
     foods: [
-      food("焼肉 空 鶴橋本店", "焼肉 空 鶴橋本店", "鶴橋代表型燒肉，衣服會有味道。"),
-      food("豊田商店 本店", "豊田商店 本店 鶴橋", "泡菜和小菜，適合買回飯店當宵夜。"),
-      food("鶴橋まぐろ食堂", "鶴橋まぐろ食堂", "不吃燒肉時的市場感海鮮。"),
+      food("なにわ麺次郎", "なにわ麺次郎 大阪難波", "近鐵大阪難波站改札內，蛤蜊鹽味與焦蒜香。"),
+      food("麺屋丈六 難波店", "麺屋丈六 難波店", "高井田系黑醬油中華麵，口味鮮明。"),
+      food("NEXT□", "NEXT□ 難波", "牡蠣白湯、清湯與沾麵，店內風格也特別。"),
+      food("花丸軒 法善寺店", "花丸軒 法善寺店", "大塊叉燒的濃厚豚骨，晚點也好用。"),
+      food("ぼっこ志", "ぼっこ志 難波", "濃鬱雞白湯，想吃滑順濃湯就選這間。"),
+      food("らーめん砦 大國町店", "らーめん砦 大國町店", "豚骨與貝湯系，回飯店路上的備選。"),
       food("SpaWorld", "SpaWorld Osaka", "泡完買牛奶或飲料收尾。"),
     ],
-    tips: ["飯店 1 樓有投幣洗衣，燒肉味衣物可以集中處理。"],
+    tips: ["なにわ麺次郎在近鐵改札內，若沒有要再進站，改選地面上的麺屋丈六或 NEXT□。"],
   },
   {
     id: "d2-shinsekai-dinner",
@@ -567,7 +545,7 @@ const activities = [
     end: "Shinsekai Osaka",
     mapQuery: "Shinsekai Osaka",
     duration: "2-3 小時。",
-    summary: "奈良走到累就別再去鶴橋，直接回住宿附近吃新世界。",
+    summary: "奈良走到累就不再去難波排拉麵，直接回住宿附近吃新世界。",
     transit: "奈良回難波 / 日本橋，再回新今宮；或依 Google Maps 當下轉乘。",
     steps: ["先回新今宮放東西。", "新世界找串炸或鍋物。", "回房洗衣。"],
     foods: [
@@ -575,129 +553,157 @@ const activities = [
       food("串かつ てんぐ", "串かつ てんぐ 新世界 大阪", "排隊較可控時可選。"),
       food("なべや", "なべや 西成 大阪", "冷天鍋物，坐下來吃比較恢復。"),
     ],
-    tips: ["這張備案比硬撐鶴橋更適合腿痠日。"],
+    tips: ["這張備案比硬撐難波排隊更適合腿痠日。"],
   },
   {
-    id: "d3-usj-arrive",
+    id: "d3-fukushima-ramen",
     day: 2,
     type: "main",
-    time: "07:00-09:30",
-    title: "CONA 早餐 → Universal City",
-    area: "USJ",
-    image: images.usj,
-    start: "Shin-Imamiya Station",
-    end: "Universal City Station Osaka",
-    mapQuery: "Universal City Station Osaka",
-    duration: "早餐 25-30 分鐘，交通與入園前排隊抓 60-90 分鐘。",
-    summary: "07:00 先吃已加購的 CONA 早餐，07:30 左右離開飯店，再從 JR 新今宮東口搭車去 USJ。",
-    transit: "JR 新今宮搭大阪環狀線到西九條，轉 JR 夢咲線到 Universal City。",
-    steps: ["07:00 到 1 樓 CONA 吃早餐，USJ 日不要慢慢吃到 08:00。", "出門前確認票券、App、行動電源。", "JR 新今宮到西九條轉夢咲線。", "Universal City 出站後跟人潮步行進園。"],
+    time: "10:30-13:30",
+    title: "福島拉麵午餐 → 梅田短散步",
+    area: "福島拉麵 / 梅田",
+    image: images.ramenOsaka,
+    start: hiyoriHotelAddress,
+    end: "JR Fukushima Station Osaka",
+    mapQuery: "JR Fukushima Station Osaka ramen",
+    duration: "交通約 25 分鐘，排隊與用餐抓 90-120 分鐘。",
+    summary: "早上在 CONA 慢慢吃已加購早餐，中午去大阪拉麵密度很高的福島。鴨湯醬油、雞白湯、魚介與豚骨只挑一碗。",
+    transit: "從 JR 新今宮東口搭大阪環狀線外回到福島站；出站後「燃えよ麺助」約步行 1 分鐘，其他店依 Google Maps 步行。",
+    steps: ["09:00 左右到 1 樓 CONA 吃早餐，午餐要吃拉麵就不要吃太撐。", "從 JR 新今宮東口進站，搭大阪環狀線外回往大阪 / 福島方向。", "燃えよ麺助排太久就直接換福島同區第二間，不為一碗空等兩小時。", "吃完可沿福島散步到梅田，也可搭 JR 一站到大阪站。"],
     foods: [
-      food("Hiyori Hotel CONA 早餐", "Hiyori Hotel Osaka Shinsekai breakfast CONA", "已加購；07:00 開始，L.O. 09:30。"),
-      food("CONA 大阪名物專區", "Hiyori Hotel Osaka Shinsekai breakfast", "章魚燒、魚板、串炸等品項依當日供應。"),
-      food("Universal CityWalk 咖啡", "Universal CityWalk Osaka coffee", "入園前最後補給。"),
+      food("燃えよ麺助", "燃えよ麺助 大阪福島", "紀州鴨醬油與金色貝湯；排隊常見。"),
+      food("らーめん人生JET", "らーめん人生JET 福島", "大阪人氣雞白湯，濃鬱但有雞鮮味。"),
+      food("烈志笑魚油 麺香房 三く", "烈志笑魚油 麺香房 三く", "魚介風味拉麵，想吃海鮮系湯頭可選。"),
+      food("極濃豚骨らーめん 小僧", "極濃豚骨らーめん 小僧 福島", "非常濃的豚骨，口味重再選。"),
+      food("つけ麺みさわ 本店", "つけ麺みさわ 福島大阪", "想換沾麵時的備案。"),
+      food("麦と麺助", "麦と麺助 中津", "雞與魚介清湯；若後續改去中津再吃。"),
     ],
-    tips: ["SUPER NINTENDO WORLD 依當天規則可能需要整理券或指定入場。"],
+    tips: ["這段是選店池，不是要連吃六碗；現場以排隊、休息日和想吃的湯頭決定。"],
   },
   {
-    id: "d3-usj-late",
+    id: "d3-namba-ramen",
     day: 2,
     type: "backup",
-    time: "08:00-10:30",
-    title: "備案：睡飽吃 CONA，再晚一點入園",
-    area: "USJ",
-    image: images.usj,
-    start: "Shin-Imamiya Station",
-    end: "Universal Studios Japan",
-    mapQuery: "Universal Studios Japan",
-    duration: "睡飽再玩，不追早鳥。",
-    summary: "如果前一天奈良太累，就把 USJ 改成晚點入園，鎖定 3-4 個最想玩的重點。",
-    transit: "同樣 JR 到 Universal City。",
-    steps: ["08:00 左右到 CONA 慢慢吃早餐。", "入園後先看 App 等待時間，不來回折返。"],
-    foods: [food("Hiyori Hotel CONA 早餐", "Hiyori Hotel Osaka Shinsekai breakfast CONA", "已加購，晚入園版本就完整吃。")],
-    tips: ["這天不要再排大阪景點。"],
+    time: "10:30-13:30",
+    title: "備案：不跑梅田，難波拉麵選一碗",
+    area: "難波拉麵",
+    image: images.ramenShio,
+    start: hiyoriHotelAddress,
+    end: "Namba Station Osaka",
+    mapQuery: "Namba Station Osaka ramen",
+    duration: "交通約 10 分鐘，用餐與散步 2 小時。",
+    summary: "奈良後想睡飽就不跑福島，難波同樣有蛤蜊、牡蠣、高井田黑醬油、雞白湯與豚骨。",
+    transit: "從動物園前 5 號出口附近搭御堂筋線到難波；出站後依選定店家步行 2-12 分鐘。",
+    steps: ["先看想吃的湯頭，再挑店。", "なにわ麺次郎在近鐵改札內，沒有要進站就不要硬找。", "午後要去千日前，吃完不需要回飯店。"],
+    foods: [
+      food("なにわ麺次郎", "なにわ麺次郎 大阪難波", "近鐵大阪難波站改札內，蛤蜊鹽味。"),
+      food("麺屋丈六 難波店", "麺屋丈六 難波店", "大阪高井田系黑醬油中華麵。"),
+      food("NEXT□", "NEXT□ 難波", "牡蠣白湯、清湯與沾麵。"),
+      food("花丸軒 法善寺店", "花丸軒 法善寺店", "大塊叉燒豚骨，接法善寺最順。"),
+      food("ぼっこ志", "ぼっこ志 難波", "濃鬱雞白湯。"),
+      food("難波ラーメン一座", "難波ラーメン一座", "多店集中，下雨或意見不合時好用。"),
+    ],
+    tips: ["難波站群很大，Google Maps 要看清楚是南海、Metro 還是近鐵改札。"],
   },
   {
-    id: "d3-usj-day",
+    id: "d3-owl-cafe",
     day: 2,
     type: "main",
-    time: "09:30-18:30",
-    title: "USJ 園區日：Nintendo、Harry Potter、熱門設施",
-    area: "USJ 園內",
-    image: images.usj,
-    start: "Universal City Station Osaka",
-    end: "Universal Studios Japan",
-    mapQuery: "Universal Studios Japan",
-    duration: "完整園區日。",
-    summary: "這天不追 local 食物，重點是體驗和體力管理。用 App 看等待時間、整理券、表演和餐廳狀態。",
-    transit: "園內步行，行程依 App 當天等待時間調整。",
-    steps: ["進園先確認整理券和必玩區域。", "午餐避開尖峰，餓了就吃，不為餐廳影響設施。", "下午安排商店和比較不刺激的設施緩衝。"],
+    time: "14:30-16:00",
+    title: "Sunset Owl Cafe 貓頭鷹咖啡廳",
+    area: "千日前 / 貓頭鷹咖啡廳",
+    image: images.owl,
+    start: "JR Fukushima Station Osaka",
+    end: "Sunset Owl Cafe Osaka",
+    mapQuery: "Sunset Owl Cafe Osaka",
+    duration: "官方觀光頁列為 50 分鐘一個時段，含一杯飲料。",
+    summary: "夕焼けのふくろうカフェ在千日前 Tomato Building B1。不強迫抱、摸或拍每隻貓頭鷹，以店員說明與動物當下狀態為優先。",
+    transit: "從 JR 福島搭大阪環狀線到大阪站，步行到梅田站轉 Metro 御堂筋線到難波；從難波站步行約 7 分鐘。若已在難波吃拉麵，直接步行前往。",
+    steps: ["出發前先開官方 / Google Maps 確認當日時段與預約方式。", "地址是大阪市中央區千日前 1-9-12 Tomato Building B1。", "現場先聽觸摸、拍照與休息中動物的規則。", "不閃光、不喊叫、不驚醒動物；若動物正在休息就只觀察。"],
     foods: [
-      food("園區限定餐", "Universal Studios Japan restaurant", "USJ 日吃氣氛，不用追 local。"),
-      food("桶裝爆米花", "Universal Studios Japan popcorn", "可當紀念品和補給。"),
-      food("園內熱飲", "Universal Studios Japan hot drink", "11 月底排隊會冷。"),
+      food("Sunset Owl Cafe", "Sunset Owl Cafe Osaka", "50 分鐘體驗與一杯飲料，以現場最新規則為準。"),
+      food("夫婦善哉", "夫婦善哉 法善寺", "體驗後可吃小碗紅豆湯。"),
+      food("浪芳庵 本店", "浪芳庵 本店", "烤麻糬與日式茶。"),
+      food("甘党まえだ", "甘党まえだ なんばウォーク店", "叭好燒、抹茶與紅豆甘味。"),
+      food("鳴門鯛焼本舗 千日前相合橋店", "鳴門鯛焼本舗 千日前相合橋店", "鯢魚燒可兩人分食。"),
     ],
-    tips: ["鞋子、行動電源、雨衣比穿搭更重要。"],
+    tips: ["官方觀光頁目前列為近鐵日本橋站步行約 4 分鐘、Metro 難波站約 7 分鐘；營業時段仍請當天再查。"],
   },
   {
-    id: "d3-usj-rain",
+    id: "d3-owl-cafe-skip",
     day: 2,
     type: "backup",
-    time: "09:30-18:30",
-    title: "備案：雨天室內設施 + CityWalk",
-    area: "USJ",
-    image: images.usj,
-    start: "Universal City Station Osaka",
-    end: "Universal Studios Japan",
-    mapQuery: "Universal Studios Japan",
-    duration: "依雨勢調整。",
-    summary: "下雨也能玩，但用室內設施、商店、表演和 CityWalk 讓節奏舒服一點。",
-    transit: "JR 進出，不增加跨區。",
-    steps: ["先買或穿雨衣。", "等雨勢小再做戶外拍照。", "提早用 CityWalk 吃飯也可以。"],
-    foods: [food("CityWalk 餐廳", "Universal CityWalk Osaka restaurants", "雨天最實際。")],
-    tips: ["雨天不要拿傘在園內走太多，雨衣比較順。"],
+    time: "14:30-16:00",
+    title: "備案：沒預約到就逛法善寺與日式甘味",
+    area: "法善寺 / 難波",
+    image: images.hozenji,
+    start: "Namba Station Osaka",
+    end: "Hozenji Temple Osaka",
+    mapQuery: "Hozenji Temple Osaka",
+    duration: "60-90 分鐘。",
+    summary: "貓頭鷹咖啡廳沒位子、臨時休息，或現場狀態讓你們不想進去，就不勉強，直接走法善寺。",
+    transit: "從 Metro 難波站 / 近鐵日本橋站步行約 5-10 分鐘到法善寺。",
+    steps: ["參拜水掛不動明王。", "沿法善寺橫丁看石疊、燈籠與老店。", "選一間甘味休息，不要每間都吃。"],
+    foods: [
+      food("夫婦善哉", "夫婦善哉 法善寺", "法善寺旁的代表甘味。"),
+      food("浪芳庵 本店", "浪芳庵 本店", "麻糬與和菓子。"),
+      food("甘党まえだ", "甘党まえだ なんばウォーク店", "經典日式甘味。"),
+      food("鳴門鯛焼本舗", "鳴門鯛焼本舗 千日前相合橋店", "熱鯢魚燒。"),
+      food("丸福珈琲店 千日前本店", "丸福珈琲店 千日前本店", "想坐久一點可改老派咖啡。"),
+    ],
+    tips: ["備案不會比主線差，而且與晚餐都在同一個步行圈。"],
   },
   {
-    id: "d3-citywalk-home",
+    id: "d3-japanese-food-dinner",
     day: 2,
     type: "main",
-    time: "19:00-22:00",
-    title: "Universal CityWalk 晚餐 → 回新今宮",
-    area: "USJ / 新今宮",
-    image: images.usj,
-    start: "Universal City Station Osaka",
-    end: hiyoriHotelAddress,
-    mapQuery: "Universal CityWalk Osaka restaurants",
-    duration: "晚餐後直接回房。",
-    summary: "不急著擠出站，先在 CityWalk 吃飯或買伴手禮，再回新今宮。",
-    transit: "Universal City → 西九條 → 新今宮。",
-    steps: ["出園後先吃飯，避開離園尖峰。", "回程照 JR 夢咲線到西九條，再轉環狀線。"],
+    time: "16:30-21:00",
+    title: "日本必吃晚餐：壽司、炸豬排、烏龍麵、關東煮",
+    area: "難波 / 法善寺 / 裏難波",
+    image: images.hozenji,
+    start: "Sunset Owl Cafe Osaka",
+    end: "Hozenji Yokocho Osaka",
+    mapQuery: "Hozenji Yokocho Osaka dinner",
+    duration: "只選一間主餐，餐後散步；不是八間全吃。",
+    summary: "這一餐不再吃邊走邊拿的食物，好好坐下來選一種日本經典：壽司、炸豬排、狐狸烏龍麵、關東煮、烤鳥或大阪燒。",
+    transit: "貓頭鷹咖啡廳、法善寺、千日前與裏難波之間以步行為主；飯後從難波搭御堂筋線到動物園前。",
+    steps: ["先決定今晚想吃的類型，不要先決定網路排名。", "點進 Google Maps 看當天營業、排隊和最後點餐。", "排太久就換同類型的第二間。", "飯後短走道頓堀或法善寺橫丁，再回飯店。"],
     foods: [
-      food("Universal CityWalk Osaka", "Universal CityWalk Osaka restaurants", "不是 local，但 USJ 日最省力。"),
-      food("西九條站邊居酒屋", "西九条 居酒屋 大阪", "如果想更像大阪，可在轉車站附近吃。"),
+      food("ときすし 本店", "ときすし 本店 大阪", "裏難波壽司，可好好坐著吃。"),
+      food("とんかつ吉兆", "とんかつ吉兆 大阪難波", "老派炸豬排定食。"),
+      food("道頓堀今井 本店", "道頓堀今井 本店", "大阪風高湯狐狸烏龍麵。"),
+      food("正宗屋 相合橋", "正宗屋 相合橋", "土手燒、關東煮與大眾酒場感。"),
+      food("福太郎 本店", "福太郎 本店 大阪", "大阪燒與蔥燒，想補經典大阪味就選這間。"),
+      food("八重勝", "八重勝 新世界 大阪", "回飯店附近再吃串炸的選項。"),
+      food("裏難波 烤鳥", "裏なんば 焼き鳥", "想吃烤鳥串與居酒屋小菜就現場挑店。"),
+      food("天ぷら大吉 なんばこめじるし店", "天ぷら大吉 なんばこめじるし店", "想吃坐下來的天婦羅與蛤蜊湯。"),
     ],
-    tips: ["回住宿後不再跨區，留體力給隔天。"],
+    tips: ["上午已吃拉麵，晚餐優先選壽司、炸豬排、關東煮或烏龍麵，旅行的味道才不會全部一樣。"],
   },
   {
-    id: "d3-laundry-night",
+    id: "d3-shinsekai-food",
     day: 2,
     type: "backup",
-    time: "19:00-21:30",
-    title: "備案：提早回房洗衣整理戰利品",
-    area: "新今宮",
+    time: "16:30-20:30",
+    title: "備案：回新世界吃串炸、鍋物、壽司",
+    area: "新世界 / 新今宮",
     image: images.shinsekai,
-    start: "Universal City Station Osaka",
+    start: "Namba Station Osaka",
     end: hiyoriHotelAddress,
-    mapQuery: hiyoriHotelAddress,
-    duration: "回房恢復。",
-    summary: "園區走到腿痠就直接回房，洗衣、泡澡、整理戰利品。",
-    transit: "JR 回新今宮。",
-    steps: ["回程買超市熟食或便利商店。", "回房先洗衣，隔天比較輕鬆。"],
+    mapQuery: "Shinsekai Osaka restaurants",
+    duration: "晚餐後直接回房，節省體力。",
+    summary: "午後累了就不在難波繼續排隊，搭御堂筋線回動物園前，在飯店步行圈吃一頓。",
+    transit: "從難波搭 Osaka Metro 御堂筋線到動物園前，5 號出口後步行約 2 分鐘回飯店；新世界店家都在附近步行圈。",
+    steps: ["先回房放東西。", "串炸、鍋物、壽司三選一。", "趁 20:00-22:00 回飯店看當日免費高湯茶泡飯供應。"],
     foods: [
-      food("新今宮超市熟食", "supermarket near Shin-Imamiya Osaka", "回房吃最省力。"),
-      food("便利商店熱食", "convenience store near Shin-Imamiya Station", "USJ 日晚餐備案。"),
+      food("八重勝", "八重勝 新世界 大阪", "老派串炸代表。"),
+      food("串かつ てんぐ", "串かつ てんぐ 新世界", "新世界串炸備選。"),
+      food("なべや", "なべや 西成 大阪", "冷天吃鍋物很恢復。"),
+      food("佐兵衛すし 本店", "佐兵衛すし 本店 大阪", "不想吃炸物就改壽司。"),
+      food("喫茶ドレミ", "喫茶ドレミ 新世界", "復古布丁、蜜瓜蘇打與下午茶。"),
+      food("Hiyori Hotel 高湯茶泡飯", "Hiyori Hotel Osaka Shinsekai dashi chazuke", "依飯店當日時段與供應狀況。"),
     ],
-    tips: ["這是體力管理，不是行程失敗。"],
+    tips: ["這天已經有很多吃的選擇，備案的價值是早點回房，不是再多塞一站。"],
   },
   {
     id: "d4-pokemon",
@@ -733,7 +739,7 @@ const activities = [
     end: "Shinsaibashi Station Osaka",
     mapQuery: "Shinsaibashi lunch Osaka",
     duration: "2-3 小時。",
-    summary: "這趟多數吃市場和小店，這餐可以安排漂亮一點，當作節奏變化。",
+    summary: "這趟會吃很多拉麵與日本料理，這餐可以安排漂亮一點，當作節奏變化。",
     transit: "御堂筋線到心齋橋，周邊步行。",
     steps: ["先逛寶可夢中心。", "中午找洋食、咖啡或百貨餐廳。"],
     foods: [
@@ -796,7 +802,7 @@ const activities = [
     time: "15:00-17:30",
     title: "備案：難波 Parks / 高島屋室內逛",
     area: "難波",
-    image: images.kuromon,
+    image: images.nambaParks,
     start: "Shinsaibashi Station Osaka",
     end: "Namba Parks Osaka",
     mapQuery: "Namba Parks Osaka",
@@ -854,49 +860,28 @@ const activities = [
     tips: ["這張備案交通最省，適合下雨或腿痠。"],
   },
   {
-    id: "d5-kizu-market",
+    id: "d5-hotel-breakfast",
     day: 4,
     type: "main",
-    time: "07:30-10:45",
-    title: "CONA 早餐 → 木津市場少量補吃",
-    area: "大國町 / 木津市場",
-    image: images.kuromon,
+    time: "07:30-09:45",
+    title: "CONA 早餐 → 退房寄行李",
+    area: "Hiyori Hotel / 新世界",
+    image: images.shinsekai,
     start: hiyoriHotelAddress,
-    end: "Osaka Kizu Market",
-    mapQuery: "Osaka Kizu Market",
-    duration: "早餐約 45 分鐘，市場停留 60-75 分鐘。",
-    summary: "早餐已加購，所以先在 CONA 吃七分飽，再去較有批發市場感的木津市場少量補吃，不浪費早餐也不把自己塞太撐。",
-    transit: "從新今宮 / 大國町一帶步行或搭一站；大行李先寄放或留住宿。",
-    steps: ["07:30 左右到 CONA 吃早餐，市場日不要吃到十分飽。", "整理行李並詢問寄放，只帶小包去市場。", "市場以玉子、熟食或小份料理為主。", "吃完回難波補買或直接往機場。"],
+    end: hiyoriHotelAddress,
+    mapQuery: hiyoriHotelAddress,
+    duration: "早餐 45-60 分鐘，整理與退房抓 60 分鐘。",
+    summary: "回程日就好好吃已加購的 CONA 和洋早餐，再整理行李。章魚燒、魚板、串炸等大阪名物以當日供應為準。",
+    transit: "這段全部在飯店內；退房後先詢問櫃檯寄放行李，只帶小包去難波吃最後一餐。",
+    steps: ["07:30-08:30 到 1 樓 CONA 吃早餐，別錯過 L.O. 09:30。", "回房確認護照、充電器、藥品與戰利品。", "退房後寄行李，拍下寄放憑證。", "帶小包前往難波，中午回來拿行李或直接從難波去機場。"],
     foods: [
-      food("Hiyori Hotel CONA 早餐", "Hiyori Hotel Osaka Shinsekai breakfast CONA", "已加購，先吃七分飽。"),
-      food("木津市場食堂", "大阪木津卸売市場 食堂", "現場看當天開什麼。"),
-      food("天ぷら 大吉 なんば店", "天ぷら 大吉 なんば店", "市場系天婦羅，坐下吃比較穩。"),
-      food("市場玉子 / 熟食", "Osaka Kizu Market tamagoyaki", "小份補吃。"),
+      food("Hiyori Hotel CONA 和洋早餐", "Hiyori Hotel Osaka Shinsekai breakfast CONA", "已加購，07:00-10:00，官方列 L.O. 09:30。"),
+      food("CONA 大阪名物專區", "Hiyori Hotel Osaka Shinsekai breakfast Osaka specialties", "章魚燒、魚板、串炸等以小份品嘗，依當日菜色。"),
+      food("免費晨間咖啡", "Hiyori Hotel Osaka Shinsekai morning coffee", "06:00-12:00 可外帶，依飯店現場供應。"),
+      food("新世界便利商店飯糰", "convenience store near Hiyori Hotel Osaka Shinsekai", "若午餐不想太撐，買一個留車上。"),
+      food("南海新今宮站飲料", "Nankai Shin-Imamiya Station drinks", "取行李後去機場前補水。"),
     ],
-    tips: ["市場日越早越有感，不要拖到接近中午。"],
-  },
-  {
-    id: "d5-kuromon-nihonbashi",
-    day: 4,
-    type: "backup",
-    time: "07:30-10:45",
-    title: "備案：CONA 早餐 + 黑門市場 / 日本橋",
-    area: "黑門 / 日本橋",
-    image: images.kuromon,
-    start: hiyoriHotelAddress,
-    end: "Kuromon Market Osaka",
-    mapQuery: "Kuromon Market Osaka",
-    duration: "90 分鐘。",
-    summary: "先吃已加購早餐，再回熟悉的難波圈；黑門只少量吃，日本橋以補買為主。",
-    transit: "Metro 到日本橋或難波後步行。",
-    steps: ["先在 CONA 吃早餐並把行李寄放。", "黑門少量吃，不豪賭。", "日本橋補小東西後回難波。"],
-    foods: [
-      food("Hiyori Hotel CONA 早餐", "Hiyori Hotel Osaka Shinsekai breakfast CONA", "已加購，先吃再出門。"),
-      food("黒門 三平", "黒門 三平 大阪", "海鮮丼或握壽司小份。"),
-      food("まぐろや黒銀", "まぐろや黒銀 黒門市場本店", "路過吃鮪魚。"),
-    ],
-    tips: ["黑門偏觀光，當補吃就好。"],
+    tips: ["回程日不需要再用第二頓早餐證明吃得多；留空間給最後一碗拉麵或日本定食。"],
   },
   {
     id: "d5-sleep-in",
@@ -910,7 +895,7 @@ const activities = [
     end: "Shin-Imamiya Station",
     mapQuery: "Shin-Imamiya Station breakfast",
     duration: "60-90 分鐘。",
-    summary: "前一晚太累就睡飽，把已加購的 CONA 早餐吃完再退房，取消市場，把時間留給機場和補買。",
+    summary: "前一晚太累就睡飽，把已加購的 CONA 早餐吃完再退房，把時間留給機場和補買。",
     transit: "住宿周邊步行。",
     steps: ["08:30 左右到 CONA 吃早餐，最晚不要超過 L.O. 09:30。", "整理行李和退房。", "直接往難波或機場。"],
     foods: [
@@ -920,24 +905,29 @@ const activities = [
     tips: ["回程日不要把自己逼到趕飛機。"],
   },
   {
-    id: "d5-namba-shopping",
+    id: "d5-last-ramen-shopping",
     day: 4,
     type: "main",
     time: "11:00-12:10",
-    title: "難波高島屋 / Namba Parks 補買",
-    area: "難波",
-    image: images.dotonbori,
-    start: "Osaka Kizu Market",
+    title: "難波最後一碗拉麵 / 日本食 → 補買",
+    area: "難波拉麵 / 日本食",
+    image: images.ramenOsaka,
+    start: hiyoriHotelAddress,
     end: "Namba Station Osaka",
     mapQuery: "Namba Station Osaka",
     duration: "60-70 分鐘。",
-    summary: "買伴手禮、藥妝、零食，行李整理好就往機場。這段不排景點。",
-    transit: "大國町 / 難波周邊步行或一站 Metro；接著從南海難波往關西機場。",
-    steps: ["只買能安心帶上飛機和入境台灣的東西。", "12:00 前後開始往機場移動。", "Peach 在 KIX T2，抵達機場後再抓接駁和報到時間。"],
+    summary: "回台灣前再選一碗沒吃過的拉麵，或改吃壽司、蛋包飯、烏龍麵、炸豬排。用餐後只留 20-30 分鐘補買，不排景點。",
+    transit: "從動物園前搭御堂筋線到難波；用餐後從南海難波搭 Airport Express / Rapi:t 往關西機場，再接驗航站接駁去 T2。",
+    steps: ["拉麵只挑沒吃過的湯頭；排隊過長就改日本定食。", "只買能安心帶上飛機和入境台灣的東西。", "12:00 前後開始往機場移動。", "Peach 在 KIX T2，抵達機場後再抓接駁和報到時間。"],
     foods: [
-      food("高島屋地下食品", "Takashimaya Osaka depachika souvenirs", "甜點、餅乾、熟食觀察。"),
-      food("藥妝補買", "drugstore near Namba Station Osaka", "藥品以自用量為主。"),
-      food("南海難波站便當", "Nankai Namba Station bento", "機場前最後補給。"),
+      food("なにわ麺次郎", "なにわ麺次郎 大阪難波", "改札內蛤蜊拉麵，有近鐵進站需求再選。"),
+      food("NEXT□", "NEXT□ 難波", "牡蠣拉麵與沾麵。"),
+      food("花丸軒 法善寺店", "花丸軒 法善寺店", "叉燒豚骨，營業時段彈性較大。"),
+      food("道頓堀今井 本店", "道頓堀今井 本店", "不想吃第二碗拉麵就改狐狸烏龍麵。"),
+      food("北極星 心齋橋本店", "北極星 心齋橋本店", "日式蛋包飯。"),
+      food("とんかつ吉兆", "とんかつ吉兆 大阪難波", "炸豬排定食。"),
+      food("ときすし 本店", "ときすし 本店 大阪", "最後一餐想吃飯就改壽司。"),
+      food("高島屋大阪店地下食品", "Takashimaya Osaka depachika souvenirs", "用餐後補餅乾與甜點。"),
     ],
     tips: ["回程日不要買需冷藏太久的東西。"],
   },
@@ -971,7 +961,7 @@ const activityDetails = {
       "Peach 抵達 KIX Terminal 2。出關後先找「AEROPLAZA / Terminal 1 / Railway」方向，搭免費接駁巴士到 Aeroplaza，官方時間約 7-9 分鐘。",
       "Aeroplaza 連到「関西空港駅」。進站時看清楚南海電鐵 Nankai，不要走到 JR 閘口。",
       "往難波可選南海 Airport Express，約 44 分鐘到南海なんば；或加價搭特急 Rapi:t，最快約 34 分鐘且有指定席。",
-      "南海なんば到第一晚住宿再用 Google Maps 步行。抵達日先不要拖行李進市場。"
+      "南海なんば到第一晚住宿再用 Google Maps 步行。抵達日先不要拖行李進鬧區。"
     ],
     musts: {
       eat: ["南海難波站飯糰或便當", "高島屋地下街甜點"],
@@ -981,7 +971,7 @@ const activityDetails = {
     article: [
       "這張卡的核心不是景點，而是把第一天的節奏穩住。Peach 在關西機場 T2，T2 本身沒有鐵路站，所以第一步一定是搭免費接駁巴士到 Aeroplaza / 關西機場站。第一次來大阪最容易混亂的地方，就是以為一出航廈就能直接搭鐵路。",
       "到關西機場站後，去難波最直覺的是南海電鐵。一般 Airport Express 比較便宜、不需指定席；Rapi:t 較快、有指定席與行李空間。你們抵達時間是下午，若出關順利可以看現場班次決定，不需要出發前把這段排死。",
-      "到南海難波後先去住宿，不要被道頓堀或黑門市場吸走。第一天身上有行李、手機電量也可能掉很快，先把房間、交通卡、現金和晚餐方向整理好，後面才會順。"
+      "到南海難波後先去住宿，不要被道頓堀人潮吸走。第一天身上有行李、手機電量也可能掉很快，先把房間、交通卡、現金和晚餐方向整理好，後面才會順。"
     ],
     sources: [
       source("關西機場 T2 接駁", "https://www.kansai-airport.or.jp/en/access/t2"),
@@ -1017,7 +1007,7 @@ const activityDetails = {
     stationAccess: [
       "從第一晚難波住宿前往南海なんば站，搭南海本線到「新今宮」站；飯店官方寫南海新今宮西口步行約 6 分鐘。",
       "若改搭 Metro，可在難波搭御堂筋線到「動物園前」站，走 5 號出口約 2 分鐘。",
-      "JR 新今宮站請走東口，官方步行約 2 分鐘；這個出口也最適合之後去 USJ。"
+      "JR 新今宮站請走東口，官方步行約 2 分鐘；這個出口也適合之後去福島、梅田與天王寺。"
     ],
     musts: {
       eat: ["已加購 CONA 和洋早餐", "20:00 後日和高湯茶泡飯"],
@@ -1027,9 +1017,9 @@ const activityDetails = {
     article: [
       "Hiyori Hotel Osaka Shinsekai 的最大優勢是出口非常清楚：JR 新今宮東口、Metro 動物園前 5 號出口都約 2 分鐘。南海新今宮西口則約 6 分鐘，回關西機場時很好用。",
       "這裡不是舊公寓式住宿。洗衣設備在飯店 1 樓，是投幣式洗衣；公共微波爐同樣在 1 樓並可 24 小時使用。抵達後先問櫃台寄放行李，再只帶奈良日需要的小包。",
-      "你們已加購 1 樓 CONA 早餐，供應時間是 07:00-10:00、L.O. 09:30。USJ 日建議 07:00 開門就吃，其他兩天可以慢一點；早餐內容與大阪名物專區會依當日供應調整。",
+      "你們已加購 1 樓 CONA 早餐，供應時間是 07:00-10:00、L.O. 09:30。拉麵日建議 09:00 左右吃、取用七分飽；早餐內容與大阪名物專區會依當日供應調整。",
       "免費服務可以當作行程緩衝：晨間咖啡 06:00-12:00、迎賓飲料 12:00-18:00、Happy Hour 18:00-19:30、高湯茶泡飯 20:00-22:00（L.O. 21:30）。入住時也記得每人挑一件 Happy Present。",
-      "飯店就在新世界核心，SpaWorld 約 2 分鐘、通天閣約 3 分鐘。晚間從 JR 或 Metro 回來都不用再走長距離，這也讓奈良、USJ 與機場日更省力。"
+      "飯店就在新世界核心，SpaWorld 約 2 分鐘、通天閣約 3 分鐘。晚間從 JR 或 Metro 回來都不用再走長距離，這也讓奈良、梅田、長居與機場日更省力。"
     ],
     sources: [
       source("Hiyori Hotel 官方交通", "https://shinsekai.hiyori-hotel.jp/access/"),
@@ -1128,26 +1118,93 @@ const activityDetails = {
       source("Japan Travel：奈良公園交通", "https://www.japan.travel/en/destinations/kansai/nara/nara-park-and-around/")
     ]
   },
-  "d2-tsuruhashi-spa": {
-    jpName: "鶴橋 / 大阪コリアタウン / スパワールド",
+  "d2-namba-ramen-spa": {
+    jpName: "大阪難波ラーメン / スパワールド",
     stationAccess: [
-      "近鐵奈良回大阪時在「鶴橋」下車，不必先回難波。",
-      "鶴橋站周邊就是市場與燒肉街，JR 大阪環狀線、近鐵、Osaka Metro 千日前線都能到。",
-      "晚餐後可搭 JR 環狀線回新今宮，或用 Metro 回動物園前，再步行到 SpaWorld。"
+      "從近鐵奈良站搭近鐵奈良線往大阪難波；部分車種需轉車，以 Google Maps 當時班次為準。",
+      "なにわ麺次郎在近鐵大阪難波站改札內；NEXT□靠近道具屋筋，麺屋丈六在難波千日前巷內。",
+      "吃完後從 Metro 難波站搭御堂筋線到動物園前，5 號出口後步行約 2 分鐘到 SpaWorld / Hiyori Hotel。"
     ],
     musts: {
-      eat: ["鶴橋燒肉", "泡菜小菜", "韓式煎餅"],
-      drink: ["泡湯後牛奶", "燒肉配烏龍茶或啤酒"],
-      experience: ["聞到整區燒肉味", "逛泡菜與韓式小菜店", "SpaWorld 放鬆腿"]
+      eat: ["蛤蜊鹽味拉麵", "高井田黑醬油中華麵", "牡蠣白湯"],
+      drink: ["拉麵後補水", "泡湯後牛奶"],
+      experience: ["用售票機點餐", "比較不同湯頭", "SpaWorld 放鬆奈良走累的腿"]
     },
     article: [
-      "鶴橋適合放在奈良回程，因為近鐵會經過。這裡不是精緻漂亮飯，而是市場、燒肉、泡菜、韓式小菜混在一起的站邊感。你們喜歡 local 食物，這段比回道頓堀吃連鎖更有意思。",
-      "官方與旅遊介紹都會提到鶴橋站周邊有多個市場與商店街，燒肉店非常密集。衣服可能會有味道，但 Hiyori Hotel 1 樓有投幣洗衣，這晚回去可以集中處理。",
-      "如果奈良走太累，就不要硬加 SpaWorld；直接回新今宮洗衣也很好。泡湯是恢復選項，不是任務。"
+      "奈良回程改到大阪難波吃拉麵，交通很直覺：近鐵奈良線的目標就是大阪難波站。難波不只有常見連鎖，同一個步行圈就能吃到蛤蜊、牡蠣、雞白湯和高井田系黑醬油。",
+      "第一次去最容易卡在「なにわ麺次郎為什麼找不到」：它在近鐵大阪難波站改札內。如果已經出站、不打算再進改札，直接選地面的 NEXT□、麺屋丈六或花丸軒會更順。",
+      "拉麵是晚餐，SpaWorld 則是恢復選項。奈良走了一整天，腿還有力再泡；若只想回房，就把泡湯留給其他晚上。"
     ],
     sources: [
-      source("Osaka Info：鶴橋市場", "https://osaka-info.jp/en/spot/osaka-tsuruhashi-market/"),
-      source("The KANSAI Guide：鶴橋", "https://www.the-kansai-guide.com/en/directory/item/12304/")
+      source("難波拉麵導覽", "https://ramengateway.com/en/articles/namba-ramen-guide"),
+      source("なにわ麺次郎資訊", "https://ramengateway.com/en/shops/naniwa-menjiro-namba"),
+      source("NEXT□ 資訊", "https://ramengateway.com/en/shops/next-shikaku-namba")
+    ]
+  },
+  "d3-fukushima-ramen": {
+    jpName: "大阪・福島ラーメン巡り",
+    stationAccess: [
+      "JR 新今宮東口搭大阪環狀線外回，往大阪、福島方向，在「福島」下車。",
+      "燃えよ麺助從 JR 福島站步行約 1 分鐘；食評資訊也列出從 JR 新福島與阪神福島可步行抵達。",
+      "吃完要去千日前，可搭 JR 一站到大阪站，走到梅田轉御堂筋線到難波。"
+    ],
+    musts: {
+      eat: ["燃えよ麺助紀州鴨醬油", "金色貝湯", "人生JET雞白湯"],
+      drink: ["拉麵後的水或無糖茶", "福島咖啡"],
+      experience: ["在售票機選麵", "看排隊果斷換店", "吃一碗而不是趕店"]
+    },
+    article: [
+      "福島是大阪站西邊一站，街區不大，但拉麵選擇密集。主選「燃えよ麺助」的理由不是只看名氣，而是它把和歌山紀州鴨、醬油與貝類清湯做成兩種風格。Time Out Osaka 2026 介紹也提到這兩種主要選項。",
+      "這間常排隊、座位少，所以行程卡才會把人生JET、三く、小僧與沾麵みさわ放在同一區。排隊超過你們的耐心，換店才是正確玩法。",
+      "點餐前先認漢字：鴨是鴨湯醬油，貝是較清爽的貝湯，白湯則是濃鬱乳白湯。兩人可選不同湯頭互相喝一口，不需要另外加第二碗。"
+    ],
+    sources: [
+      source("Time Out Osaka：Moeyo Mensuke", "https://www.timeout.com/osaka/restaurants/moeyo-mensuke"),
+      source("Tabelog：燃えよ麺助", "https://tabelog.com/en/osaka/A2701/A270108/27091454/"),
+      source("Tabelog：2025 大阪拉麵選店", "https://tabelog.com/en/matome/3526/")
+    ]
+  },
+  "d3-owl-cafe": {
+    jpName: "夕焼けのふくろうカフェ / Sunset Owl Cafe",
+    stationAccess: [
+      "地址為大阪市中央區千日前 1-9-12 Tomato Building B1。",
+      "OSAKA-INFO 列出：近鐵日本橋站步行約 4 分鐘；近鐵大阪難波與 Metro 難波站約 7 分鐘；JR 難波約 13 分鐘。",
+      "建築入口到後找 Tomato Building 與 B1 標示，不要只靠地圖的藍點在路邊繞。"
+    ],
+    musts: {
+      eat: ["體驗後的夫婦善哉", "浪芳庵麻糬", "鯢魚燒"],
+      drink: ["時段內附的一杯飲料", "附近老派咖啡"],
+      experience: ["觀察不同種類貓頭鷹", "跟著店員說明互動", "不觸摸正在休息的動物"]
+    },
+    article: [
+      "OSAKA-INFO 的現行頁面將這間店列在千日前 Tomato Building 地下 1 樓，一個時段約 50 分鐘並含一杯飲料。頁面也說明，不同種類的貓頭鷹會分為可互動與僅觀察，不是每隻都能觸摸。",
+      "把它排在千日前，交通上比較友善：難波拉麵備案吃完直接走過去；從福島主線則回梅田轉御堂筋線。體驗完就能接法善寺與晚餐，不用折返。",
+      "最重要的現場原則是不閃光、不喊叫、不追著動物拍照，而且接受「今天它不想被碰」。若現場狀態讓你們不舒服，就啟用法善寺甘味備案，完全不需要勉強進去。"
+    ],
+    sources: [
+      source("OSAKA-INFO EXPERIENCE：Sunset Owl Cafe", "https://osaka-info.jp/experience/en/osaka/spot/460")
+    ]
+  },
+  "d3-japanese-food-dinner": {
+    jpName: "大阪難波の寿司・とんかつ・うどん・おでん",
+    stationAccess: [
+      "從 Sunset Owl Cafe 步行到法善寺 / 裏難波約 5-12 分鐘，不需搭車。",
+      "要回飯店時，搭 Metro 御堂筋線從難波到動物園前；5 號出口後步行約 2 分鐘。",
+      "若最後選八重勝或新世界鍋物，可先回動物園前，再在飯店步行圈吃。"
+    ],
+    musts: {
+      eat: ["壽司或炸豬排", "狐狸烏龍麵或關東煮", "大阪燒或串炸"],
+      drink: ["居酒屋烏龍茶", "餐後熱茶"],
+      experience: ["先選料理再選店", "看手寫菜單", "排太久就換同類型第二間"]
+    },
+    article: [
+      "「日本必吃」不等於一晚把所有東西都點過。這張卡的用法是先選今晚最想吃的類型：米飯系就選壽司或蛋包飯，炸物系選炸豬排或串炸，湯物系選狐狸烏龍麵或關東煮。",
+      "難波的好處是同類店密度高。福太郎排太久，就捨棄大阪燒改吃ときすし；とんかつ吉兆休息，就改道頓堀今井的狐狸烏龍麵。一餐的目標是吃得好，不是按排名打卡。",
+      "因為中午已經有拉麵，晚餐最推薦切換到壽司、炸豬排、關東煮或烤鳥。這樣一天吃到的質地、湯底與調味都不同，旅行記憶才會更完整。"
+    ],
+    sources: [
+      source("OSAKA-INFO Discover Osaka Guidebook", "https://octb.osaka-info.jp/common/img/downloads/discoverosaka_guidebook.pdf"),
+      source("Inside Osaka：What to Eat in Osaka", "https://insideosaka.com/what-to-eat-in-osaka/")
     ]
   },
   "d4-teamlab": {
@@ -1172,46 +1229,45 @@ const activityDetails = {
       source("Osaka Metro NiNE：teamLab 交通", "https://metronine.osaka/en/article_tour/20230901-teamlab-botanicalgarden/")
     ]
   },
-  "d5-kizu-market": {
-    jpName: "大阪木津卸売市場",
+  "d5-hotel-breakfast": {
+    jpName: "日和ホテル大阪新世界 CONA 朝食",
     stationAccess: [
-      "從新今宮或大國町出發最順，大國町站步行約 5-10 分鐘可到木津市場一帶。",
-      "回程日不要拖大行李進市場；先寄放或留住宿，再用小包去吃早午餐。",
-      "吃完可往難波 / 南海なんば移動，準備搭南海往關西機場。"
+      "早餐在飯店 1 樓 CONA，不需移動；官方列供應 07:00-10:00，最後入店 / 點餐時間請依現場。",
+      "退房後要去難波，可從動物園前 5 號出口附近搭御堂筋線三站到難波。",
+      "若不想折返，可帶行李從南海新今宮直接往關西機場。"
     ],
     musts: {
-      eat: ["市場定食", "玉子燒", "天ぷら大吉"],
-      drink: ["市場咖啡", "熱茶"],
-      experience: ["看批發市場早晨感", "只買常溫好帶的小東西"]
+      eat: ["已加購和洋早餐", "依當日供應品嘗大阪名物"],
+      drink: ["06:00-12:00 晨間咖啡", "早餐飲品"],
+      experience: ["不趕路吃完最後一頓飯店早餐", "退房前二次檢查房間"]
     },
     article: [
-      "木津市場比黑門更像真正市場，不是每間店都為觀光客設計。這正好符合你想吃 local 的方向，但它也比較吃時間點，太晚到就少了市場感。",
-      "回程日的原則是短距離、不要拖行李、不要吃太撐。市場早午餐後就往難波補買，12 點前後開始往機場移動會比較安心。",
-      "如果看到生鮮很想買，請提醒自己：新鮮肉品、蔬果、需冷藏鮮食都不適合當回台伴手禮。吃在當地，帶走常溫的。"
+      "你們已經加購 CONA 早餐，回程日沒有必要另外再找早餐點。和洋自助餐能先吃到飯、湯、蛋、麵包與當日大阪名物小品，中午再依肚子狀態決定拉麵還是定食。",
+      "吃完回房時做一次系統化檢查：床下、插座、浴室、保險箱、冰箱。手提行李另留一袋放護照、行動電源、藥品和機上外套，不要全塞入託運箱。",
+      "最後半天的價值是穩定。若吃飯、補買與取行李的時間變緊，就從南海新今宮直接去機場，不為最後一間店賭飛機。"
+    ],
+    sources: [
+      source("Hiyori Hotel 官方早餐", "https://shinsekai.hiyori-hotel.jp/breakfast/"),
+      source("Hiyori Hotel 官方免費服務", "https://shinsekai.hiyori-hotel.jp/services/")
     ]
   }
 };
 
 const areaDefaults = {
   "難波": {
-    stationAccess: ["以 Osaka Metro / 南海 / 近鐵的難波站群為中心；第一次去請直接開 Google Maps 到該卡地點。", "站到點之間大多是步行圈，行李日避免鑽市場。"],
+    stationAccess: ["以 Osaka Metro / 南海 / 近鐵的難波站群為中心；第一次去請直接開 Google Maps 到該卡地點。", "站到點之間大多是步行圈，行李日避免鑽狹窄巷弄。"],
     musts: { eat: ["粉物或老派定食"], drink: ["咖啡或熱茶"], experience: ["看街區招牌", "鑽巷弄找小店"] },
     article: ["難波不是單一車站，而是一整片站群與商店街。第一次去最重要的是先分清楚南海なんば、Osaka Metro なんば、近鐵/阪神大阪難波、日本橋各自的位置，再用 Google Maps 接最後一段步行。", "這區很適合把吃飯放進散步裡：主街拍照，真正想吃 local 一點就往法善寺、裏難波、千日前和道具屋筋附近鑽。"]
   },
   "新今宮": {
     stationAccess: ["用 JR 新今宮、南海新今宮、Osaka Metro 動物園前 / 大國町當回家錨點。", "晚上回房優先走大站與大路線，不硬抄小路。"],
     musts: { eat: ["串炸", "鍋物", "超市熟食"], drink: ["泡湯後牛奶", "便利商店熱飲"], experience: ["回房洗衣", "SpaWorld 或新世界散步"] },
-    article: ["Hiyori Hotel Osaka Shinsekai 這幾天是基地，不是每次都要當景點玩。JR 新今宮東口與動物園前 5 號出口都約步行 2 分鐘，去奈良、USJ、長居、機場都能接上。", "晚上如果累了，直接在新世界或住宿附近吃，不要為了名店再跨區。飯店 1 樓有投幣洗衣與 24 小時微波爐，超市熟食也是很好的旅行解法。"]
+    article: ["Hiyori Hotel Osaka Shinsekai 這幾天是基地，不是每次都要當景點玩。JR 新今宮東口與動物園前 5 號出口都約步行 2 分鐘，去奈良、福島、長居與機場都能接上。", "晚上如果累了，直接在新世界或住宿附近吃，不要為了名店再跨區。飯店 1 樓有投幣洗衣與 24 小時微波爐，超市熟食也是很好的旅行解法。"]
   },
   "奈良": {
     stationAccess: ["從大阪難波 / 近鐵日本橋搭近鐵奈良線到近鉄奈良。", "近鐵奈良站往東步行就是奈良公園方向。"],
     musts: { eat: ["柿葉壽司", "釜飯"], drink: ["熱茶"], experience: ["餵鹿", "慢走公園"] },
     article: ["奈良適合慢慢走，不適合把地名塞成任務清單。近鐵奈良站出來後往公園方向走，鹿會慢慢變多，東大寺則在更裡面。", "把午餐當彈性選項，不要為一間店犧牲公園散步。"]
-  },
-  "USJ": {
-    stationAccess: ["從 JR 新今宮搭大阪環狀線到西九條，轉 JR 夢咲線到 Universal City。", "Universal City 出站後跟人潮步行約 5 分鐘到 USJ 入口。"],
-    musts: { eat: ["園區限定餐", "CityWalk 晚餐"], drink: ["熱飲"], experience: ["Nintendo / Harry Potter / 熱門設施", "用官方 App 看等待時間"] },
-    article: ["USJ 日不要追大阪 local 食物，這天重點是體力和園區體驗。早餐先吃、行動電源帶滿、雨衣比傘好用。", "出園後可以在 CityWalk 吃完再回新今宮，避開離園人潮。"]
   }
 };
 
@@ -1231,14 +1287,6 @@ const defaultFoodPools = {
     food("會津屋 なんば店", "会津屋 なんば店", "章魚燒可分食，不必當整餐。"),
     food("裏難波居酒屋", "裏なんば 居酒屋", "現場看人潮和菜單挑小店。"),
   ],
-  market: [
-    food("木津市場食堂", "大阪木津卸売市場 食堂", "市場日看當天開什麼，越早越有感。"),
-    food("天ぷら 大吉 なんば店", "天ぷら 大吉 なんば店", "市場系天婦羅，坐下吃比較穩。"),
-    food("黒門 三平", "黒門 三平 大阪", "黑門想坐下吃海鮮時的選項。"),
-    food("まぐろや黒銀", "まぐろや黒銀 黒門市場本店", "路過吃鮪魚，小份就好。"),
-    food("市場玉子 / 熟食", "Osaka Kizu Market tamagoyaki", "小份補吃，回程日不吃太撐。"),
-    food("日本橋咖啡", "Nipponbashi Osaka coffee", "市場後找地方坐一下。"),
-  ],
   nara: [
     food("志津香 公園店", "志津香 公園店 奈良", "釜飯，冷天很適合，排太久就換。"),
     food("柿の葉ずし 平宗 奈良店", "柿の葉ずし 平宗 奈良店", "奈良特色，適合買小份。"),
@@ -1247,13 +1295,35 @@ const defaultFoodPools = {
     food("まほろば大仏プリン本舗", "まほろば大仏プリン本舗 近鉄奈良", "想買甜點或伴手禮小點。"),
     food("東向商店街午餐", "Higashimuki Shopping Street lunch Nara", "排隊失敗時回商店街找飯。"),
   ],
-  tsuruhashi: [
-    food("焼肉 空 鶴橋本店", "焼肉 空 鶴橋本店", "鶴橋代表型燒肉，衣服會有味道。"),
-    food("豊田商店 本店", "豊田商店 本店 鶴橋", "泡菜和小菜，適合買回飯店當宵夜。"),
-    food("鶴橋まぐろ食堂", "鶴橋まぐろ食堂", "不吃燒肉時的市場感海鮮。"),
-    food("鶴橋商店街 チヂミ", "鶴橋商店街 チヂミ", "韓式煎餅，小份分食。"),
-    food("鶴橋ホルモン", "鶴橋 ホルモン", "想吃更 local 可以看內臟燒肉。"),
-    food("SpaWorld 牛奶 / 飲料", "SpaWorld Osaka milk drink", "泡完湯的收尾儀式。"),
+  ramenFukushima: [
+    food("燃えよ麺助", "燃えよ麺助 大阪福島", "紀州鴨醬油與金色貝湯。"),
+    food("らーめん人生JET", "らーめん人生JET 福島", "大阪人氣雞白湯。"),
+    food("烈志笑魚油 麺香房 三く", "烈志笑魚油 麺香房 三く", "魚介風味湯頭。"),
+    food("極濃豚骨らーめん 小僧", "極濃豚骨らーめん 小僧 福島", "重口味濃厚豚骨。"),
+    food("つけ麺みさわ 本店", "つけ麺みさわ 福島大阪", "想換沾麵時的選項。"),
+  ],
+  ramenNamba: [
+    food("なにわ麺次郎", "なにわ麺次郎 大阪難波", "改札內蛤蜊鹽味拉麵。"),
+    food("麺屋丈六 難波店", "麺屋丈六 難波店", "高井田系黑醬油中華麵。"),
+    food("NEXT□", "NEXT□ 難波", "牡蠣白湯、清湯與沾麵。"),
+    food("花丸軒 法善寺店", "花丸軒 法善寺店", "叉燒豚骨。"),
+    food("ぼっこ志", "ぼっこ志 難波", "濃鬱雞白湯。"),
+    food("らーめん砦 大國町店", "らーめん砦 大國町店", "豚骨與貝湯系。"),
+  ],
+  owl: [
+    food("Sunset Owl Cafe", "Sunset Owl Cafe Osaka", "時段含一杯飲料，以當天規則為準。"),
+    food("夫婦善哉", "夫婦善哉 法善寺", "兩碗小紅豆湯。"),
+    food("浪芳庵 本店", "浪芳庵 本店", "麻糬與和菓子。"),
+    food("甘党まえだ", "甘党まえだ なんばウォーク店", "日式甘味。"),
+    food("丸福珈琲店 千日前本店", "丸福珈琲店 千日前本店", "老派咖啡。"),
+  ],
+  japaneseFood: [
+    food("ときすし 本店", "ときすし 本店 大阪", "裏難波壽司。"),
+    food("とんかつ吉兆", "とんかつ吉兆 大阪難波", "炸豬排定食。"),
+    food("道頓堀今井 本店", "道頓堀今井 本店", "狐狸烏龍麵。"),
+    food("正宗屋 相合橋", "正宗屋 相合橋", "土手燒與關東煮。"),
+    food("福太郎 本店", "福太郎 本店 大阪", "大阪燒與蔥燒。"),
+    food("裏難波 烤鳥", "裏なんば 焼き鳥", "現場挑非連鎖烤鳥店。"),
   ],
   shinsekai: [
     food("八重勝", "八重勝 新世界 大阪", "新世界老派串炸代表。"),
@@ -1262,14 +1332,6 @@ const defaultFoodPools = {
     food("喫茶ドレミ", "喫茶ドレミ 新世界", "復古喫茶，適合慢慢休息。"),
     food("スーパー玉出 新今宮", "スーパー玉出 新今宮", "回房熟食、飲料、隔天早餐補給。"),
     food("ジャンジャン横丁 小吃", "ジャンジャン横丁 グルメ", "不用排名店，沿路看想吃什麼。"),
-  ],
-  usj: [
-    food("便利商店早餐", "convenience store near Shin-Imamiya Station", "入園前先吃，不要空腹排隊。"),
-    food("Kinopio's Cafe", "Kinopio's Cafe Universal Studios Japan", "Nintendo 區主題餐，依整理券和排隊狀況。"),
-    food("Three Broomsticks", "Three Broomsticks Universal Studios Japan", "Harry Potter 區氣氛餐。"),
-    food("USJ 桶裝爆米花", "Universal Studios Japan popcorn", "補給兼紀念品。"),
-    food("Universal CityWalk Osaka", "Universal CityWalk Osaka restaurants", "出園後最省力的晚餐。"),
-    food("大阪たこ焼きミュージアム", "大阪たこ焼きミュージアム Universal CityWalk", "CityWalk 補粉物。"),
   ],
   shinsaibashi: [
     food("Pokémon Cafe", "Pokemon Cafe Osaka", "有預約才穩，不要現場賭。"),
@@ -1292,11 +1354,12 @@ const defaultFoodPools = {
 const foodIntros = {
   airport: "這段重點是順利進市區，食物以車站補給和地下街為主。",
   namba: "難波不要只吃主街連鎖，往法善寺、裏難波、千日前鑽會比較有味道。",
-  market: "市場食物建議少量多樣，現場看開店狀況，不把預算押在一攤。",
   nara: "奈良午餐要彈性，排隊太久就改商店街或柿葉壽司外帶。",
-  tsuruhashi: "鶴橋就是燒肉、泡菜、小菜和站邊市場感，衣服有味道也合理。",
+  ramenFukushima: "福島拉麵店密度高，先選湯頭，再用排隊長度決定店家。",
+  ramenNamba: "難波有蛤蜊、牡蠣、黑醬油、雞白湯與豚骨，只選一碗最想吃的。",
+  owl: "咖啡廳時段本身含飲料，周邊食物放日式甘味與老派咖啡。",
+  japaneseFood: "這區先選想吃的日本料理類型，再選店：壽司、炸豬排、烏龍麵、關東煮都有。",
   shinsekai: "新世界與新今宮適合恢復體力：串炸、鍋物、喫茶、超市熟食都能成立。",
-  usj: "USJ 日不要硬追 local，園區體驗和體力管理比餐廳名單重要。",
   shinsaibashi: "心齋橋可以漂亮一點：寶可夢、百貨地下街、蛋包飯、咖啡都放在同一圈。",
   nagai: "teamLab 前先吃好、喝熱的，進場後就不要再分心找飯。",
 };
@@ -1305,7 +1368,7 @@ const mediaByActivity = {
   "d1-arrive-namba": { hero: images.kixT2, gallery: [images.kixT2, images.nankaiNamba, images.dotonbori] },
   "d1-arrive-slow": { hero: images.nankaiNamba, gallery: [images.nankaiNamba, images.nambaParks, images.dotonbori] },
   "d1-namba-walk": { hero: images.nambaYasaka, gallery: [images.nambaYasaka, images.doguyasuji, images.hozenji] },
-  "d1-kuromon-lite": { hero: images.kuromon, gallery: [images.kuromon, images.doguyasuji, images.dotonbori] },
+  "d1-hozenji-sweets": { hero: images.hozenji, gallery: [images.hozenji, images.doguyasuji, images.dotonbori] },
   "d1-uranamba-dinner": { hero: images.hozenji, gallery: [images.hozenji, images.dotonbori, images.doguyasuji] },
   "d1-indoor-dinner": { hero: images.nambaParks, gallery: [images.nambaParks, images.nankaiNamba, images.dotonbori] },
   "d2-luggage-shinimamiya": { hero: images.shinsekai, gallery: [images.nankaiNamba, images.shinsekai, images.spaWorld] },
@@ -1314,37 +1377,37 @@ const mediaByActivity = {
   "d2-skip-shrine": { hero: images.kintetsuNara, gallery: [images.kintetsuNara, images.nara, images.todaiji] },
   "d2-nara-park": { hero: images.nara, gallery: [images.kintetsuNara, images.nara, images.todaiji] },
   "d2-nara-short": { hero: images.kintetsuNara, gallery: [images.kintetsuNara, images.nara, images.todaiji] },
-  "d2-tsuruhashi-spa": { hero: images.tsuruhashiMarket, gallery: [images.tsuruhashiMarket, images.kimchiShop, images.spaWorld] },
+  "d2-namba-ramen-spa": { hero: images.ramenShio, gallery: [images.ramenShio, images.hozenji, images.spaWorld] },
   "d2-shinsekai-dinner": { hero: images.shinsekai, gallery: [images.shinsekai, images.spaWorld, images.nambaParks] },
-  "d3-usj-arrive": { hero: images.citywalk, gallery: [images.nankaiNamba, images.citywalk, images.usj] },
-  "d3-usj-late": { hero: images.nankaiNamba, gallery: [images.nankaiNamba, images.citywalk, images.usj] },
-  "d3-usj-day": { hero: images.usj, gallery: [images.usj, images.citywalk, images.dotonbori] },
-  "d3-usj-rain": { hero: images.nambaParks, gallery: [images.nambaParks, images.usj, images.citywalk] },
-  "d3-citywalk-home": { hero: images.citywalk, gallery: [images.citywalk, images.usj, images.shinsekai] },
-  "d3-laundry-night": { hero: images.shinsekai, gallery: [images.shinsekai, images.spaWorld, images.nankaiNamba] },
+  "d3-fukushima-ramen": { hero: images.ramenOsaka, gallery: [images.ramenOsaka, images.ramenShio, images.umeda] },
+  "d3-namba-ramen": { hero: images.ramenShio, gallery: [images.ramenShio, images.ramenOsaka, images.hozenji] },
+  "d3-owl-cafe": { hero: images.owl, gallery: [images.owl, images.hozenji, images.dotonbori] },
+  "d3-owl-cafe-skip": { hero: images.hozenji, gallery: [images.hozenji, images.doguyasuji, images.dotonbori] },
+  "d3-japanese-food-dinner": { hero: images.hozenji, gallery: [images.hozenji, images.dotonbori, images.ramenShio] },
+  "d3-shinsekai-food": { hero: images.shinsekai, gallery: [images.shinsekai, images.spaWorld, images.hozenji] },
   "d4-pokemon": { hero: images.pokemon, gallery: [images.pokemon, images.daimaru, images.amerikamura] },
   "d4-pretty-lunch": { hero: images.daimaru, gallery: [images.daimaru, images.nambaParks, images.hozenji] },
   "d4-horie-walk": { hero: images.amerikamura, gallery: [images.amerikamura, images.daimaru, images.dotonbori] },
   "d4-sumiyoshi-taisha": { hero: images.sumiyoshiTaisha, gallery: [images.sumiyoshiTaisha, images.shinsekai, images.teamlab] },
-  "d4-indoor-namba": { hero: images.nambaParks, gallery: [images.nambaParks, images.kuromon, images.nankaiNamba] },
+  "d4-indoor-namba": { hero: images.nambaParks, gallery: [images.nambaParks, images.daimaru, images.nankaiNamba] },
   "d4-teamlab": { hero: images.teamlab, gallery: [images.teamlab, images.nambaParks, images.shinsekai] },
   "d4-tennoji-night": { hero: images.shinsekai, gallery: [images.shinsekai, images.nambaParks, images.spaWorld] },
-  "d5-kizu-market": { hero: images.kizuMarket, gallery: [images.kizuMarket, images.nankaiNamba, images.nambaParks] },
-  "d5-kuromon-nihonbashi": { hero: images.kuromon, gallery: [images.kuromon, images.doguyasuji, images.dotonbori] },
+  "d5-hotel-breakfast": { hero: images.shinsekai, gallery: [images.shinsekai, images.nankaiNamba, images.ramenOsaka] },
   "d5-sleep-in": { hero: images.shinsekai, gallery: [images.shinsekai, images.spaWorld, images.nankaiNamba] },
-  "d5-namba-shopping": { hero: images.nambaParks, gallery: [images.nambaParks, images.nankaiNamba, images.daimaru] },
+  "d5-last-ramen-shopping": { hero: images.ramenOsaka, gallery: [images.ramenOsaka, images.nankaiNamba, images.daimaru] },
   "d5-direct-airport": { hero: images.nankaiNamba, gallery: [images.nankaiNamba, images.kixT2, images.dotonbori] },
 };
 
 function activityKind(activity) {
   if (activity.id.startsWith("d1-arrive") || activity.area.includes("關西機場")) return "airport";
   if (activity.area.includes("奈良")) return "nara";
-  if (activity.area.includes("鶴橋")) return "tsuruhashi";
-  if (activity.area.includes("USJ") || activity.area.includes("Universal")) return "usj";
+  if (activity.area.includes("貓頭鷹")) return "owl";
+  if (activity.area.includes("福島拉麵")) return "ramenFukushima";
+  if (activity.area.includes("難波拉麵") || activity.title.includes("拉麵")) return "ramenNamba";
+  if (activity.area.includes("日本食") || activity.title.includes("日本必吃")) return "japaneseFood";
   if (activity.area.includes("心齋橋") || activity.area.includes("堀江") || activity.area.includes("南船場")) return "shinsaibashi";
   if (activity.area.includes("長居")) return "nagai";
   if (activity.area.includes("新今宮") || activity.area.includes("新世界") || activity.area.includes("天王寺")) return "shinsekai";
-  if (activity.area.includes("木津") || activity.area.includes("黑門") || activity.area.includes("日本橋")) return "market";
   return "namba";
 }
 
@@ -1388,9 +1451,11 @@ function normalizeFallbackPlan(activity) {
   const kind = activityKind(activity);
   const plans = {
     nara: "奈良如果下雨或走太累，就只保留近鐵奈良、東向商店街、奈良公園入口，不硬走完整個東大寺圈。",
-    usj: "USJ 遇雨就優先室內設施、商店、表演和 CityWalk；不要為了拍照在雨裡硬撐。",
+    ramenFukushima: "福島主選排隊超過 30 分鐘就換同區下一間；大雨則改難波拉麵備案。",
+    ramenNamba: "拉麵店臨時休息或排太久，就換同區另一種湯頭，不跨區追店。",
+    owl: "沒預約到、店家臨時調整，或動物狀態不適合互動，就改法善寺與日式甘味。",
+    japaneseFood: "先選料理類型再選店；排隊過長就改同區的壽司、烏龍麵、炸豬排或關東煮。",
     nagai: "teamLab 若天氣公告不穩，直接改天王寺 / 阿倍野室內夜，不要賭戶外展。",
-    market: "市場若太晚或店少，就轉難波 / 日本橋補買，回程日以不趕飛機為準。",
     shinsaibashi: "Cafe 沒訂到或排隊太久，就改大丸地下街、北極星或堀江咖啡，不讓一間店卡死整天。",
   };
   activity.fallbackPlan = plans[kind] || "排隊超過 20-30 分鐘就換同區下一個點；這趟重點是順，不是把每間店打卡完。";
@@ -1403,9 +1468,7 @@ function source(name, url) {
 function detailFallback(activity) {
   const key = activity.area.includes("奈良")
     ? "奈良"
-    : activity.area.includes("USJ") || activity.area.includes("Universal")
-      ? "USJ"
-      : activity.area.includes("新今宮") || activity.area.includes("新世界")
+    : activity.area.includes("新今宮") || activity.area.includes("新世界")
         ? "新今宮"
         : "難波";
   const fallback = areaDefaults[key];
@@ -1436,15 +1499,15 @@ const days = [
       "d1-arrive-namba",
       "d1-arrive-slow",
       "d1-namba-walk",
-      "d1-kuromon-lite",
+      "d1-hozenji-sweets",
       "d1-uranamba-dinner",
       "d1-indoor-dinner",
     ],
   },
   {
     kicker: "Day 2 / 11.29 Sun",
-    title: "搬到 Hiyori、今宮戎、奈良餵鹿、鶴橋",
-    note: "先到新飯店寄行李，順路走今宮戎神社，再去奈良。晚上回大阪吃鶴橋或新世界，泡湯當恢復選項。",
+    title: "搬到 Hiyori、今宮戎、奈良餵鹿、難波拉麵",
+    note: "先到新飯店寄行李，順路走今宮戎神社，再去奈良。晚上回大阪難波吃一碗拉麵，泡湯當恢復選項。",
     base: `住宿：${hiyoriHotelName}`,
     transport: "主交通：南海 / 近鐵 / JR 環狀線",
     activityIds: [
@@ -1454,23 +1517,23 @@ const days = [
       "d2-skip-shrine",
       "d2-nara-park",
       "d2-nara-short",
-      "d2-tsuruhashi-spa",
+      "d2-namba-ramen-spa",
       "d2-shinsekai-dinner",
     ],
   },
   {
     kicker: "Day 3 / 11.30 Mon",
-    title: "Universal Studios Japan 一日",
-    note: "07:00 先吃已加購的 CONA 早餐，07:30 左右出發；從 JR 新今宮到西九條轉夢咲線。",
+    title: "福島拉麵、貓頭鷹咖啡、日本必吃晚餐",
+    note: "先在 CONA 吃已加購早餐，中午拉麵只選一碗；下午千日前貓頭鷹咖啡，晚餐再補壽司、炸豬排、烏龍麵或關東煮。",
     base: `住宿：${hiyoriHotelName}`,
-    transport: "主交通：JR 環狀線 / JR 夢咲線",
+    transport: "主交通：JR 大阪環狀線 / Metro 御堂筋線 / 步行",
     activityIds: [
-      "d3-usj-arrive",
-      "d3-usj-late",
-      "d3-usj-day",
-      "d3-usj-rain",
-      "d3-citywalk-home",
-      "d3-laundry-night",
+      "d3-fukushima-ramen",
+      "d3-namba-ramen",
+      "d3-owl-cafe",
+      "d3-owl-cafe-skip",
+      "d3-japanese-food-dinner",
+      "d3-shinsekai-food",
     ],
   },
   {
@@ -1491,15 +1554,14 @@ const days = [
   },
   {
     kicker: "Day 5 / 12.02 Wed",
-    title: "CONA 早餐、木津或黑門少量補吃、回機場",
-    note: "早餐已加購，先在飯店吃再去市場；15:25 起飛，12:00 前後離開市區比較安心。",
+    title: "CONA 早餐、難波最後一碗、回機場",
+    note: "早餐已加購，中午依肚子選拉麵或一道日本定食；15:25 起飛，12:00 前後離開市區比較安心。",
     base: `住宿：${hiyoriHotelName} → KIX T2`,
     transport: "主交通：南海 / JR / Metro",
     activityIds: [
-      "d5-kizu-market",
-      "d5-kuromon-nihonbashi",
+      "d5-hotel-breakfast",
       "d5-sleep-in",
-      "d5-namba-shopping",
+      "d5-last-ramen-shopping",
       "d5-direct-airport",
     ],
   },
@@ -1594,7 +1656,7 @@ function nextMainAfter(mainActivities, id) {
 function renderActivityCard(activity, index = 0, total = 1) {
   const label = activity.type === "main" ? "主計畫" : "備案";
   const foods = activity.foods.slice(0, 5).map((item) => `<li>${escapeText(item.name)}</li>`).join("");
-  const stationPreview = activity.stationAccess?.[0] || activity.transit;
+  const stationPreview = activity.transit || activity.stationAccess?.[0];
   const optionLabel = total > 1 ? `${index + 1}/${total}` : "1/1";
   return `
     <article class="route-card ${activity.type === "backup" ? "is-backup" : ""}">
